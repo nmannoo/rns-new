@@ -1,0 +1,20 @@
+<div class="card">
+    <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
+        <div class="carousel-inner">
+            <div *ngFor="let slide of slidePost.images; index as i;" class="carousel-item" [class.active]="i === 0">
+              <img class="d-block w-100" src="assets/images/ph_7x4.png" alt="{{slide.imagename}}">
+            </div>
+        </div>
+        <a *ngIf="slidePost?.images?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a *ngIf="slidePost?.images?.length > 1" class="carousel-controls carousel-control-next" href="#{{elId}}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="card-body p-0">
+        <img class="img-fluid w-100" src="assets/images/shopping-fbg.png" alt="Card image cap">
+    </div>
+</div>

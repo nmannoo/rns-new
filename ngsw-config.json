@@ -1,0 +1,29 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html",
+        "/*.css",
+        "/*.js"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/css?family=Open+Sans:700,800|Roboto:300,400,500,700",
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://fonts.gstatic.com/**"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
+}

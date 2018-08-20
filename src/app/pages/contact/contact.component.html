@@ -1,0 +1,95 @@
+<div class="row py-3">
+  <div class="col-12 col-lg-6">
+    <h2 class="rns-heading-blue text-left mb-3">Contact Us</h2>
+    <p class="rns-body-text-lg">
+        Can we help you with something? Would you like to have more information on a specific product listed on our website ? Please feel free to fill in the form below. We'll try to answer as fast as possible. We'd love to hear from you!
+    </p>
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" id="contactForm" autocomplete="off">
+      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 my-2">
+        <input formControlName="name" type="text" id="name" name="name" class="mdc-text-field__input h-auto" autocomplete="off" required>
+        <label for="name" class="mdc-floating-label">Name</label>
+        <div class="mdc-notched-outline">
+          <svg>
+            <path class="mdc-notched-outline__path" />
+          </svg>
+        </div>
+        <div class="mdc-notched-outline__idle"></div>
+      </div>
+      <ng-container *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)">
+        <p *ngIf="f.name.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+          Name is a required field.
+        </p>
+      </ng-container>
+
+      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 mb-2">
+        <input formControlName="email"type="email" id="email_address" name="email_address" class="mdc-text-field__input h-auto" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$">
+        <label for="email_address" class="mdc-floating-label">Email address</label>
+        <div class="mdc-notched-outline">
+          <svg>
+            <path class="mdc-notched-outline__path" />
+          </svg>
+        </div>
+        <div class="mdc-notched-outline__idle"></div>
+      </div>
+      <ng-container *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+        <p *ngIf="f.email.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+          Email is a required field.
+        </p>
+        <p *ngIf="f.email.errors.pattern" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+          Email format is invalid.
+        </p>
+      </ng-container>
+      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 mb-2">
+        <input formControlName="subject" type="text" id="subject" name="subject" class="mdc-text-field__input h-auto" autocomplete="off" required>
+        <label for="subject" class="mdc-floating-label">Subject</label>
+        <div class="mdc-notched-outline">
+          <svg>
+            <path class="mdc-notched-outline__path" />
+          </svg>
+        </div>
+        <div class="mdc-notched-outline__idle"></div>
+      </div>
+      <ng-container *ngIf="f.subject.invalid && (f.subject.dirty || f.subject.touched)">
+        <p *ngIf="f.subject.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+          Subject is a required field.
+        </p>
+      </ng-container>
+      <div class="form-group mdc-text-field mdc-text-field--textarea w-100">
+        <textarea formControlName="message" name="message" id="message" class="mdc-text-field__input h-auto" autocomplete="off" required></textarea>
+        <label for="subject" class="mdc-floating-label">Your message</label>
+      </div>
+      <ng-container *ngIf="f.message.invalid && (f.message.dirty || f.message.touched)">
+        <p *ngIf="f.message.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+          Message is a required field.
+        </p>
+      </ng-container>
+      <div class="form-group mt-4">
+        <button mdc-button raised="true" type="submit" class="mdc-button mdc-button--raised parrot-button" [disabled]="!contactForm.valid ? 'true': null">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="card">
+      <div class="card-img-top">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.1174918544816!2d57.532569799362314!3d-20.139058756965625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c511288475d27%3A0xa0b092f643e83c89!2sRoll+n+Sheet+Ltd!5e0!3m2!1sfr!2smu!4v1534416851169" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <h4 class="rns-heading-blue text-left mb-3">Roll <span class="red">n</span> Sheet Ltd</h4>
+        <p class="rns-body-text-lg" style="line-height: 24px;">
+          Avenue des Kerries,<br>
+          Morc Raffray,<br>
+          Le Hochet,<br>
+          Mauritius<br><br>
+          <strong>Tel: </strong>+ (230) 249 3003 / <strong>Fax: </strong>+ (230) 249 2634<br>
+          <strong>Email: </strong> marketing@rollnsheet.mu
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-dialog dialogID="contactResp" title="Roll n Sheet Ltd - Contact Form" accept="Ok">
+  {{response}}
+</app-dialog>

@@ -1,0 +1,7 @@
+<div id="wrapper" class="container-fluid">
+  <app-header></app-header>
+  <main id="main-content" [@fadeAnimation]="getState(o)" class="position-relative">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+  <app-footer></app-footer>
+</div>
