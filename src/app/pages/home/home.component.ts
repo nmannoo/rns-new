@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SliderService } from '../../common/services/slider.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  public sliderdata: any;
   // test data
   public posts = [
     {
@@ -65,9 +67,16 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private slider: SliderService) { }
 
   ngOnInit() {
+    this.getSlider();
+  }
+
+  getSlider() {
+    this.slider.fetchSlider().subscribe(data => {
+      this.sliderdata = data;
+    });
   }
 
 }
