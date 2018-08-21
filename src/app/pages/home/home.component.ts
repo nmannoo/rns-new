@@ -9,6 +9,7 @@ import { SliderService } from '../../common/services/slider.service';
 })
 export class HomeComponent implements OnInit {
   public sliderdata: any;
+  public null = '';
   // test data
   public posts = [
     {
@@ -70,11 +71,11 @@ export class HomeComponent implements OnInit {
   constructor(private slider: SliderService) { }
 
   ngOnInit() {
-    this.getSlider();
+    this.getSlider(this.null);
   }
 
-  getSlider() {
-    this.slider.fetchSlider().subscribe(data => {
+  getSlider(value) {
+    this.slider.fetchSlider(value).subscribe(data => {
       this.sliderdata = data;
     });
   }

@@ -9,6 +9,7 @@ import { SliderService } from '../../common/services/slider.service';
 })
 export class AboutComponent implements OnInit {
   public sliderdata: any;
+  public null = '';
 
   constructor(private slider: SliderService) { }
 
@@ -17,7 +18,7 @@ export class AboutComponent implements OnInit {
   }
 
   getSlider() {
-    this.slider.fetchSlider().subscribe(data => {
+    this.slider.fetchSlider(this.null).subscribe(data => {
       this.sliderdata = data;
       console.log(data);
     });

@@ -12,17 +12,22 @@ import { SliderService } from '../../common/services/slider.service';
 export class ProdcatComponent implements OnInit {
   public params: any;
   public sliderdata: any;
+  public state: string;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private content: ContentService,
     private slider: SliderService
-  ) { }
+  ) {
+    this.route.params.subscribe(data => {
+      this.state = data['child'];
+    });
+  }
 
   ngOnInit() {
     this.getPageData();
-    this.getSlider();
+    this.getSlider(this.state);
   }
 
   getPageData() {
@@ -33,8 +38,8 @@ export class ProdcatComponent implements OnInit {
     });
   }
 
-  getSlider() {
-    this.slider.fetchSlider().subscribe(data => {
+  getSlider(value) {
+    this.slider.fetchSlider(value).subscribe(data => {
       this.sliderdata = data;
     });
   }

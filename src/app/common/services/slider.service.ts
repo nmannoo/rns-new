@@ -48,9 +48,11 @@ export class SliderService {
     });
   }
 
-  fetchSlider() {
-    console.log(this.state);
-    this.sliderDoc = this.afs.collection('sliders').doc(`${this.state}`);
+  fetchSlider(value) {
+    if (value === '') {
+      value = this.state;
+    }
+    this.sliderDoc = this.afs.collection('sliders').doc(`${value}`);
     this.slider = this.sliderDoc.valueChanges();
     return this.slider;
   }
