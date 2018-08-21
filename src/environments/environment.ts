@@ -24,7 +24,7 @@ export const environment = {
         background: '#0c127e'
       }
     },
-    position: 'bottom-right',
+    position: 'bottom',
     theme: 'classic',
     type: 'info',
     content: {

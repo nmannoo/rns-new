@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rns-headband {
-    background: url('assets/images/banner.webp');
+    background: url('assets/images/banner.jpg');
     background-size: cover;
     padding: 30px;
     text-align: center;
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rns-banner {
-    background: url('assets/images/banner.webp');
+    background: url('assets/images/banner.jpg');
     background-size: cover;
     height: 112px;
 }
@@ -136,7 +136,7 @@ header#contact-info .mdc-linear-progress {
 }
 
 header#contact-info {
-    background: url('assets/images/banner.webp');
+    background: url('assets/images/banner.jpg');
     background-size: cover;
     padding: 3px 0;
     color: #fff;
@@ -247,6 +247,7 @@ nav#mainmenu ul li.dropdown .dropdown-menu {
 nav#mainmenu ul li.dropdown .dropdown-menu img {
     width: 100%;
     max-width: 100%;
+    margin-top: 30px;
 }
 
 nav#mainmenu ul li.dropdown .dropdown-menu a.dropdown-item {
