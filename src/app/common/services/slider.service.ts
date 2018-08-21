@@ -31,11 +31,25 @@ export class SliderService {
       filter((rewt) => rewt.outlet === 'primary'),
       mergeMap((rewt) => rewt.data)
     ).subscribe((event) => {
-      this.state = event.state;
+      if (event.state !== undefined) {
+        this.state = event.state;
+      } else {
+        this.router.events.pipe(
+          filter(evt => evt instanceof NavigationEnd)
+        ).subscribe((evt) => {
+          let r = this.route;
+          // tslint:disable-next-line:curly
+          while (r.firstChild) r = r.firstChild;
+          r.params.subscribe(params => {
+            this.state = params['child'];
+          });
+        });
+      }
     });
   }
 
   fetchSlider() {
+    console.log(this.state);
     this.sliderDoc = this.afs.collection('sliders').doc(`${this.state}`);
     this.slider = this.sliderDoc.valueChanges();
     return this.slider;
