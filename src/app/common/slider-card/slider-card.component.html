@@ -2,14 +2,14 @@
     <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0">
-              <img class="d-block w-100" src="assets/images/{{slide}}.png" alt="{{slide}}">
+              <img class="d-block w-100" src="assets/images/products/{{slide}}.png" alt="{{slide}}">
             </div>
         </div>
-        <a *ngIf="slidePost?.images?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">
+        <a *ngIf="slidePost?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a *ngIf="slidePost?.images?.length > 1" class="carousel-controls carousel-control-next" href="#{{elId}}" role="button" data-slide="next">
+        <a *ngIf="slidePost?.length > 1" class="carousel-controls carousel-control-next" href="#{{elId}}" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

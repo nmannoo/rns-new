@@ -320,3 +320,7 @@ footer#mainfoot #copyright div {
     width: 25px !important;
     padding: 13px !important;
 }
+
+.page-item.active .page-link {
+    z-index: 0;
+}
