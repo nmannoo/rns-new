@@ -46,8 +46,28 @@ export const Navigation = [
         prefix: 'stationery',
         children: [
             {
-                slug: '/container-board',
-                name: 'Container Board'
+                slug: '/lever-arch-file',
+                name: 'Lever Arch File'
+            },
+            {
+                slug: '/document-holder',
+                name: 'Document Holder'
+            },
+            {
+                slug: '/index-pp',
+                name: 'Index PP'
+            },
+            {
+                slug: '/archive-box',
+                name: 'Archive Box'
+            },
+            {
+                slug: '/envelopes',
+                name: 'Envelopes'
+            },
+            {
+                slug: '/thermal',
+                name: 'Thermal'
             }
         ]
     },
