@@ -58,7 +58,7 @@ import { DropdownDirective } from './common/directive/dropdown.directive';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'rollnsheet'),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     HttpClientModule,
     NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig)
   ],

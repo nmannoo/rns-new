@@ -15,6 +15,9 @@ export class ContentService {
   pageContent: AngularFirestoreDocument<Content>;
   pageData: Observable<Content>;
 
+  productsCollection: AngularFirestoreCollection<any[]>;
+  products: Observable<any[]>;
+
   parent: string;
   child: string;
 
@@ -43,5 +46,11 @@ export class ContentService {
       })
     );
     return this.pageData;
+  }
+
+  fetchProducts() {
+    this.productsCollection = this.afs.collection('products');
+    this.products = this.productsCollection.valueChanges();
+    return this.products;
   }
 }

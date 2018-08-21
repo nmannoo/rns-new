@@ -1,8 +1,8 @@
 <div class="card">
     <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
         <div class="carousel-inner">
-            <div *ngFor="let slide of slidePost.images; index as i;" class="carousel-item" [class.active]="i === 0">
-              <img class="d-block w-100" src="assets/images/ph_7x4.png" alt="{{slide.imagename}}">
+            <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0">
+              <img class="d-block w-100" src="assets/images/{{slide}}.png" alt="{{slide}}">
             </div>
         </div>
         <a *ngIf="slidePost?.images?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">

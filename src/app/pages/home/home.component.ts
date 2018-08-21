@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ContentService } from '../../common/services/content.service';
 import { SliderService } from '../../common/services/slider.service';
 
 @Component({
@@ -11,72 +12,24 @@ export class HomeComponent implements OnInit {
   public sliderdata: any;
   public null = '';
   // test data
-  public posts = [
-    {
-      postname: 'thermal-1',
-      blocktitle: 'Thermal',
-      images: [
-        {
-          imagename: 'image-1'
-        },
-        {
-          imagename: 'image-2'
-        },
-        {
-          imagename: 'image-3'
-        }
-      ]
-    },
-    {
-      postname: 'thermal-2',
-      blocktitle: 'Thermal',
-      images: [
-        {
-          imagename: 'image-1'
-        },
-        {
-          imagename: 'image-2'
-        },
-        {
-          imagename: 'image-3'
-        }
-      ]
-    },
-    {
-      postname: 'thermal-3',
-      blocktitle: 'Not Thermal',
-      images: [
-        {
-          imagename: 'image-1'
-        },
-        {
-          imagename: 'image-2'
-        },
-        {
-          imagename: 'image-3'
-        }
-      ]
-    },
-    {
-      postname: 'thermal-4',
-      blocktitle: 'Not Thermal',
-      images: [
-        {
-          imagename: 'image-1'
-        }
-      ]
-    },
-  ];
+  public posts: any;
 
-  constructor(private slider: SliderService) { }
+  constructor(private slider: SliderService, private content: ContentService) { }
 
   ngOnInit() {
     this.getSlider(this.null);
+    this.getPosts();
   }
 
   getSlider(value) {
     this.slider.fetchSlider(value).subscribe(data => {
       this.sliderdata = data;
+    });
+  }
+
+  getPosts() {
+    this.content.fetchProducts().subscribe(data => {
+      this.posts = data;
     });
   }
 

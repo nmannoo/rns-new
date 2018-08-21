@@ -20,7 +20,6 @@ export class AboutComponent implements OnInit {
   getSlider() {
     this.slider.fetchSlider(this.null).subscribe(data => {
       this.sliderdata = data;
-      console.log(data);
     });
   }
 

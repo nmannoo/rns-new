@@ -31,20 +31,7 @@ export class SliderService {
       filter((rewt) => rewt.outlet === 'primary'),
       mergeMap((rewt) => rewt.data)
     ).subscribe((event) => {
-      if (event.state !== undefined) {
         this.state = event.state;
-      } else {
-        this.router.events.pipe(
-          filter(evt => evt instanceof NavigationEnd)
-        ).subscribe((evt) => {
-          let r = this.route;
-          // tslint:disable-next-line:curly
-          while (r.firstChild) r = r.firstChild;
-          r.params.subscribe(params => {
-            this.state = params['child'];
-          });
-        });
-      }
     });
   }
 
