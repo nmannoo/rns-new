@@ -1,0 +1,2349 @@
+[{
+    "name": "Abrasion Resistance",
+    "description": "The resistance of a paper or paperboard surface to being worn down, roughened, and disrupted by sliding frictional contact with other substances, as measured by weight loss of a weighed test sample."
+  },
+  {
+    "name": "Absorbency",
+    "description": "The ability of paper to absorb fluids such as water or printing ink."
+  },
+  {
+    "name": "Accelerated Aging",
+    "description": "A method of predicting the long-term aging characteristics of paper by exposing it to an elevated temperature and controlled environment of dry or moist heat for a specified time and then measuring its strength loss."
+  },
+  {
+    "name": "Acid-Free Paper",
+    "description": "A paper having no acidity and no residual acid-producing chemicals. Acid-free papers may also be slightly alkaline to resist the harmful effects of an acidic environment and provide greater longevity."
+  },
+  {
+    "name": "Acidification",
+    "description": "Decrease in the pH of soil and water due to precipitation containing dissolved ammonium compounds, sulphur and nitrogen oxides; an indirect cause of forest damage."
+  },
+  {
+    "name": "Activated Sludge Treatment",
+    "description": "A biological method of cleaning up waste waters in three stages. Stage I involves (anaerobic) equilibration. In stage II activated sludge containing micro-organisms is led into an aeration basin to speed up oxidation of organic matter and ammonia. In stage III the sludge is allowed to settle and the treated waste water is run off. Some sludge is removed and a portion is returned to the aeration basin."
+  },
+  {
+    "name": "Adhesive Paper",
+    "description": "Paper that has an adhesive substance applied to one side, which when dampened adheres to the surface it is pressed against."
+  },
+  {
+    "name": "Aerated Lagoon",
+    "description": "A biological waste water treatment method in which air (oxygen) fed into an aeration basin reduces the effluent load."
+  },
+  {
+    "name": "Air Dying",
+    "description": "Method of drying the paper web on the paper machine by blowing air along the direction of the web."
+  },
+  {
+    "name": "Air Mail Paper",
+    "description": "Light weight, thin and mainly woodfree writing papers for air mail. Anaerobic treatment Process employing micro–organisms to reduce organic matter in waste water in the absence of oxygen."
+  },
+  {
+    "name": "AOX (Absorbable Organohalogens)",
+    "description": "Absorbable organic halogens. AOX is a sum parameter measuring total concentration of chlorine bound to organic compounds in waste water. AOX measures all chlorine compounds both harmful and harmless (a sum parameter)."
+  },
+  {
+    "name": "Appearance Properties",
+    "description": "Paper properties including its whiteness, brightness, colour, gloss and opacity."
+  },
+  {
+    "name": "Art Paper",
+    "description": "High quality and rather heavy two-side coated printing paper with smooth surface. The reproduction of fine screen single-and multicolour pictures (\"art on paper\") requires a paper that has an even, well closed surface and a uniform ink absorption."
+  },
+  {
+    "name": "Artificial Parchment",
+    "description": "Woodfree paper that is produced by fine and extended grinding of certain chemical pulps and/or the admixture of special additives. As a result of the \"smeary\" grinding, the fibre structure closes homogeneously. It is used e.g. for wrapping meat and sausages or as corrugating medium for biscuit packaging."
+  },
+  {
+    "name": "Auxiliary Chemical",
+    "description": "A chemical added to a stage of paper–making aimed at improving the efficiency of a part of the process."
+  },
+  {
+    "name": "Back-Pressure Power",
+    "description": "Generation of both heat and electricity from fuel; gives greater efficiency than condensing power."
+  },
+  {
+    "name": "Bale",
+    "description": "Solid, compressed stack of pulp or paper sheets."
+  },
+  {
+    "name": "Banknote Paper",
+    "description": "Highly resistant, age-resistant, suitable for 4-colour printing, with watermark and other falsification safeguards such as embedded metal strip. Often containing cotton fibres (See \"Rag paper\")."
+  },
+  {
+    "name": "Basis Weight",
+    "description": "The weight in grams per sheet of paper cut to its basic size in square metres."
+  },
+  {
+    "name": "Bast",
+    "description": "Fibres located in the inner bark layer of trees and in outer portions of other fibrous, woody plants."
+  },
+  {
+    "name": "Beatability",
+    "description": "The ease with which pulp can be beaten to achieve the desired properties."
+  },
+  {
+    "name": "Beating",
+    "description": "Mechanical treatment of fibres to improve fibre bonding."
+  },
+  {
+    "name": "Bible Paper",
+    "description": "Thin, high quality printing paper, with an average grammage of 30 gsm, but wich be as high ad 40/50 gsm, and which has a fairly high density. It is a woodfree, bleached fibre paper, and the better grades contain rag. It needs to be strong, to be a particularly resistant to tears and creasing, and it must have a closed structure. Usually very opaque, the presence of gar and a high percentage of fillers with strong covering power, primarily titanium dioxide, help to improve its printing properties."
+  },
+  {
+    "name": "Biological Waste Water Treatment",
+    "description": "A method of cleaning up waste water using living micro–organisms such as bacteria. See: Activated sludge treatment, Aerated lagoon, Anaerobic process."
+  },
+  {
+    "name": "Biosludge",
+    "description": "Sludge formed (in the aeration basin) during biological waste water treatment or other biological treatment process."
+  },
+  {
+    "name": "Black Liquor",
+    "description": "Mixture of cooking chemicals and dissolved wood material remaining after sulphate cooking; recovered during pulp washing, concentrated by evaporation and burned in the recovery boiler to regenerate the cooking chemicals and generate energy."
+  },
+  {
+    "name": "Bleach Plant",
+    "description": "Department of a pulp mill where pulp is bleached."
+  },
+  {
+    "name": "Bleached Lined Folding Boxboard",
+    "description": "Bleached lined folding boxboard is a multi–layer paperboard that has a bleached woodfree liner on one or both sides. Between two liners there are intermediate layers and middle layers of mechanical or waste paper pulp."
+  },
+  {
+    "name": "Bleached Pulp",
+    "description": "Pulp whose natural brightness has been improved using chemicals."
+  },
+  {
+    "name": "Bleaching",
+    "description": "A chemical treatment used to whiten, brighten and improve the performance of pulp (the lignin in the wood is oxidised)."
+  },
+  {
+    "name": "Blister",
+    "description": "Oval, sharply defined, bubblelike formation that bulges out on both sides of the web. Such bubbles occur during the heatset drying of coated papers."
+  },
+  {
+    "name": "Blotting Paper",
+    "description": "Bulky, highly absorbent, filler–free paper which is mostly produced from pure cotton in the form of bleached linters and from chemical pulp."
+  },
+  {
+    "name": "Board",
+    "description": "Paper product with grammage in excess of 400 gsm, made in several layers and laminated when wet or sometimes stuck together with adhesives (casein, starch paste, animal glue, etc.). In some types the different layers have the same fibre composition, whilst in other the outer layer (the cover) is made from better quality materials to improve its surface qualities."
+  },
+  {
+    "name": "Bonding Strength",
+    "description": "Amount of resistance to the forces of picking, splitting, delamination, and splitting of ink films during printing."
+  },
+  {
+    "name": "Bond Paper",
+    "description": "A writing paper, originally used for printing stocks and bonds, now used for letterheads, stationery and forms."
+  },
+  {
+    "name": "Book Paper",
+    "description": "A paper designed and normally used primarily for printing by one or more of various printing processes."
+  },
+  {
+    "name": "Brightening",
+    "description": "Addition of optical brighteners to the stock to make the pulp/paper appear whiter."
+  },
+  {
+    "name": "Brightness",
+    "description": "A measure of the whiteness of pulp and paper. Percent of reflectance at a standard wavelength."
+  },
+  {
+    "name": "Bristol",
+    "description": "A heavyweight paper, usually 6 points or more in thickness, used for printing, filing and index systems, and mailing cards."
+  },
+  {
+    "name": "Broke",
+    "description": "This term is applied to the waste generated during the various production processes, from books, magazines, used packaging, as well as the waste and trim generated by the papermaking process itself. It may be blank or printed. In the latter case, it has to be de–inked if it is to be used for the production of \"fine\" paper."
+  },
+  {
+    "name": "Brush Glazing",
+    "description": "Glazing of coated paper with the aid of brushes."
+  },
+  {
+    "name": "Bulk",
+    "description": "The thickness of a number of sheets of paper or of a number of pages."
+  },
+  {
+    "name": "Bulk Product",
+    "description": "A mass–produced product sold in large volumes without individual specifications, usually in compliance with a standard. For example newsprint."
+  },
+  {
+    "name": "Burst Strength",
+    "description": "The resistance of paper or paperboard to rupture as measured by the hydrostatic pressure required to burst it when a uniformly distributed and increasing pressure is applied to one of its sides."
+  },
+  {
+    "name": "Calcium Carbonate",
+    "description": "Used in papermaking as a filler or coating pigment."
+  },
+  {
+    "name": "Calendered Paper",
+    "description": "Paper that has been calendered in order to obtain a smoother, more glossy surface than originally."
+  },
+  {
+    "name": "Calendering",
+    "description": "Mechanical treatment applied to paper to make it smoother and glossy. The smoothness is achieved by means of pressure, whilst the gloss is achieved by friction. As a result of the compression, calendering always reduces the thickness, the porosity, the compressibility, the opacity and the whiteness of the paper. These side effects are often undesired in the case of printing papers. Calendaring, on the other hand, has a little impact on the strength of the paper."
+  },
+  {
+    "name": "Caliper",
+    "description": "The thickness of a single sheet of paper, usually measured in nanometers."
+  },
+  {
+    "name": "Capacitor Paper",
+    "description": "See \"Electrical insulating paper\"."
+  },
+  {
+    "name": "Capacity Utilisation Rate",
+    "description": "Indicates the efficiency (%) at which a mill or machine is operating."
+  },
+  {
+    "name": "Carbon Dioxide (CO²)",
+    "description": "Produced by burning coal and other carbon containing products. Burning fossil fuels or wood based products raises atmospheric carbon dioxide levels."
+  },
+  {
+    "name": "Carbon Paper",
+    "description": "Carbon paper is a thin paper with a waxy coating, that is used to produce carbon copies on typewriters or other office equipment. Carbon base paper is made from chemical pulp."
+  },
+  {
+    "name": "Carbonless Copy Paper",
+    "description": "Paper that permits making multiple copies without intervening layers of carbon paper. The paper translates pressure into a dye reaction which transfers the image to the copy. Carbonless copy papers are mainly used for continuous form sets, for covered pay slips, for vouchers to be dispatched by post and for payment forms. In the US and some other countries, carbonless copy paper is also called NCR paper (= Non Carbon Required)."
+  },
+  {
+    "name": "Cardboard",
+    "description": "Paper product with grammages of between 151 and 400 gsm. Cardboard may comprise a single layer or several pies, stuck together when wet or with glue. It is produced with better quality raw materials than board. There are great variety of cardboards, which differ widely in their fibre composition, surface treatments and uses."
+  },
+  {
+    "name": "Cast-Coated Paper",
+    "description": "Cast–coated papers are coated papers that have obtained their high gloss by moulding on a highly polished, chromium plated drying cylinder."
+  },
+  {
+    "name": "Causticizing",
+    "description": "Process by which green liquor from sulphate pulping is converted to white liquor, thus allowing the cooking chemicals to be reused."
+  },
+  {
+    "name": "Chemical Oxygen Demand (COD)",
+    "description": "The amount of oxygen consumed in complete chemical oxidation of matter present in waste water; indicates the content of slowly degradable organic matter present."
+  },
+  {
+    "name": "Chemical Pulp",
+    "description": "Carboydrate polymer of plant origin that is the main component of the fibrous parts of plants. Various grades that differ in their separation methods and in the grade of wood used as the source are available for use in the paper industry. The paper products that can be produced vary with the grade of cellulose."
+  },
+  {
+    "name": "Chemicals Recovery",
+    "description": "In chemical pulping, the recovery, treatment and regeneration of cooking chemicals."
+  },
+  {
+    "name": "Chemi-Thermomechanical Pulp (CTMP)",
+    "description": "Chemi–mechanical pulp produced by treating wood chips with chemicals (usually sodium sulphite) and steam before mechanical defibration."
+  },
+  {
+    "name": "China Clay",
+    "description": "Mineral (kaolin) used in papermaking as both filler and coating pigment."
+  },
+  {
+    "name": "Chipboard/Grey Board",
+    "description": "Paperboard made from waste paper pulp, rough or machine glazed, also lined on one or two sides or unlined."
+  },
+  {
+    "name": "Cigarette Paper",
+    "description": "This light weight, unsized paper (grammage 18 to 24g), converted to improve glowing. It normally has a filler content of approx. 30%."
+  },
+  {
+    "name": "Clarification",
+    "description": "Separation of a solid component from a solution."
+  },
+  {
+    "name": "Clarifier",
+    "description": "Basin where sludge is removed from treated effluent by settling; see Activated sludge treatment."
+  },
+  {
+    "name": "Coating Colour Kitchen",
+    "description": "Department where coating colour is prepared and mixed."
+  },
+  {
+    "name": "Combined Deinking",
+    "description": "Deinking process combining flotation and washing; cf. flotation deinking, washing deinking."
+  },
+  {
+    "name": "Coated One-Side Label",
+    "description": "A coated one-side paper designed specifically for the requirements of label paper, including those for printing, varnishing, lacquering, bronzing, die-cutting and the labeling application."
+  },
+  {
+    "name": "Coated Paper",
+    "description": "Paper with one of more layers of coating (pigments and adhesives applied to one or both surfaces of the sheet during the coating process). Coatings are applied to confer particular characteristics, especially printablity. The choice of components determines the degree of smoothness, gloss, opacity, printability and colour yield of the inks."
+  },
+  {
+    "name": "Coating",
+    "description": "Paste of pigments and adhesives applied to one or both sides of the sheet during the coating process. The choice of pigments used determines the smoothness, gloss, opacity, printability and chromatic yield of the printing inks."
+  },
+  {
+    "name": "COBB SIZE TEST",
+    "description": "A method of measuring the degree of sizing of paper or paperboard by the weight of water absorbed under prescribed conditions during a specified time."
+  },
+  {
+    "name": "CONDENSING POWER",
+    "description": "Power generation in which fuel is burned for electricity production only."
+  },
+  {
+    "name": "CONSISTENCY",
+    "description": "Dry solids content (%) of pulp present in a pulp slurry."
+  },
+  {
+    "name": "CONVERTING",
+    "description": "The operation of treating, modifying, or otherwise manipulating the finished paper and paperboard so that it can be made into end–user products."
+  },
+  {
+    "name": "COPYING PAPER",
+    "description": "Copying paper is an uncoated paper in woodfree or mechanical grades, white or coloured in A4 and A3."
+  },
+  {
+    "name": "CORE",
+    "description": "The tube, usually made of paperboard, on which a paper roll is wound."
+  },
+  {
+    "name": "CORRUGATING MEDIUM",
+    "description": "Bands of relatively uniform width that extend around a roll parallel to the machine direction and within which are diagonal markings resembling a rope or tire-like pattern. Papers used as fluting for the production of corrugated board."
+  },
+  {
+    "name": "CORRUGATED BOARD",
+    "description": "Corrugated board is a material made up 2/3 layers of paper (flat sheet) that are stuck to other, fluted sheet. Such a structure offers specific strength and rigidity based on the layers that are joined together. There are three grades of corrugated: deep flutes (producing a board with a thickness in excess of 4.5 mm), medium flutes (from 5.5 to 4.4 mm) micro–flutes (with a thickness less than 2.5 mm)."
+  },
+  {
+    "name": "CRITICAL LOAD",
+    "description": "Highest pollutant load that, in the long term, does not damage essential characteristics in an ecosystem."
+  },
+  {
+    "name": "CROSS-MACHINE DIRECTION",
+    "description": "A direction perpendicular to the direction of web travel through the paper machine."
+  },
+  {
+    "name": "CTMP",
+    "description": "See chemi–thermomechanical pulp."
+  },
+  {
+    "name": "CUT-SIZE PAPER",
+    "description": "Paper used for printing, copying, or duplicating in small sizes and generally up to and including 11 x 17 in."
+  },
+  {
+    "name": "CWF (COATED WOODFREE)",
+    "description": "Coated woodfree paper made from pure chemical pulp, available in various sizes or on reels."
+  },
+  {
+    "name": "DANDY ROLL",
+    "description": "A cylinder on a paper machine used to improve formation; also wire roll."
+  },
+  {
+    "name": "DECOR PAPER",
+    "description": "Woodfree, white or single-colour paper, often printed with various patterns, e.g. wood grains. The final product consists of laminated boards or directly coated particle boards used for furniture production."
+  },
+  {
+    "name": "DECKLE",
+    "description": "A term sometimes used to refer to the width or trim of a paper machine."
+  },
+  {
+    "name": "DEFIBRATION",
+    "description": "Separation of wood fibres by mechanical and/or chemical means."
+  },
+  {
+    "name": "DEINKABILITY",
+    "description": "Suitability of recovered paper for deinking; depends on paper grade, printing process used, age of paper, and other factors."
+  },
+  {
+    "name": "DEINKED PULP (DIP)",
+    "description": "Paper pulp produced by deinking of recovered paper."
+  },
+  {
+    "name": "DEINKING",
+    "description": "Removal of printing ink and impurities from recovered paper; to produce recycled fibre pulp with maximum whiteness and purity."
+  },
+  {
+    "name": "DEINKING LOSS",
+    "description": "Unwanted loss of solid material from pulp during deinking (usually 10-40%)."
+  },
+  {
+    "name": "DELIGNIFICATION",
+    "description": "The removal of lignin, the material that binds wood fibres together, during the chemical pulping process."
+  },
+  {
+    "name": "DEPOSIT",
+    "description": "Mass of airborne pollutants deposited on a unit area of land or water in a given time, e.g. grams per square metre per year (g/m²/a)."
+  },
+  {
+    "name": "DERESINATION",
+    "description": "Reducing the resin (pitch) content of wood prior to cooking either by storage or using bleaching chemicals to reduce the resin content in pulp."
+  },
+  {
+    "name": "DIGESTER HOUSE",
+    "description": "That part of a chemical pulp mill where cooking takes place."
+  },
+  {
+    "name": "DIGITAL PRINTING",
+    "description": "Printing system that cuts out the intermediate stages between prepress (creation of text and images on the computer) and printing. It eliminates the preparation of printings elements, make ready times and the start-up procedure required for conventional presses. In addition, presses are only capable of printing the physical image borne by their printings elements, which is identical for the every impression. Digital presses can be personalized for each single run."
+  },
+  {
+    "name": "DIRECT COOKING",
+    "description": "Cooking in which heating is achieved by blowing steam into the cooking liquor."
+  },
+  {
+    "name": "DISPERSION",
+    "description": "The separation of a substance into the smallest possible particles using another substance (the medium). Used in papermaking to homogenize pulp properties and remove impurities."
+  },
+  {
+    "name": "DISSOLVING PULP",
+    "description": "A chemical pulp grade used, for example, in the production of acetate and viscose fibres and cellulose films."
+  },
+  {
+    "name": "DOCUMENT PAPER",
+    "description": "Document paper is paper with a high ageing resistance. It is woodfree but may also contain rags or be fully made from rags and is used for documents that have to be preserved for a longer period."
+  },
+  {
+    "name": "DOUBLE COATING",
+    "description": "Coating of paper or board twice on one or both sides."
+  },
+  {
+    "name": "DRAINAGE",
+    "description": "Formation of a paper or board web on the wire by removing water at the paper machine wet end."
+  },
+  {
+    "name": "DRAWING PAPER",
+    "description": "General term for paper intended to be used for drawing. The quality of normal drawing paper varies greatly, depending upon the intended use. It is almost never contains wood pulp, whilst the finer grades that are intended to be kept for long periods contain a high percentage of rag or are entirely rag papers. The stock is always well sized in order to resist penetration by water–colours. It may often also be sized with starch or animal size and the surface is, to a greater or lesser degree, rough. The best grades are part hand, part machine made on cylinder machines, whilst medium and cheap grades are produced on Fourdrinier machines. Only very high quality paper is made by hand. Grammages ranges from 100 to 400 gsm. Given the intended use, these papers are never watermarked other than with the manufacturer’s mark. Ingres paper is a high quality drawing paper. This is a laid paper made by hand or partly by hand partly by machine. With a coarse, distinctive grain, a grammage of 90–100 gsm and is often in pastel shades. Technical drawing paper, also referred to as tracing paper, is a dense, highly transparent paper with grammages ranging from 30 to 100 gsm."
+  },
+  {
+    "name": "DRY COATING",
+    "description": "Coating method in which a binder is applied to the paper surface followed by dry coating pigment."
+  },
+  {
+    "name": "DRY CREPING",
+    "description": "Creping of a dry paper web."
+  },
+  {
+    "name": "DRY END",
+    "description": "Final part of the paper machine from the drying section onwards."
+  },
+  {
+    "name": "DRY SOLIDS",
+    "description": "Mass of dried sample as a percentage of mass of original sample."
+  },
+  {
+    "name": "DRY STRENGTH",
+    "description": "Mechanical strength of a dry paper sheet (includes tensile strength, tearing resistance and folding endurance)."
+  },
+  {
+    "name": "DUPLEX BOARD",
+    "description": "Duplex board consists of two layers, mostly made from waste paper pulp. It is used for packaging purposes."
+  },
+  {
+    "name": "ELASTIC STRENGTH",
+    "description": "The ability of paper or board to resist stress acting in the plane of the sample."
+  },
+  {
+    "name": "ELECTRICAL INSULATING PAPER",
+    "description": "Strong, pore–free paper, sometimes impregnated with synthetic resins, made from chemical pulp. Electrical insulating paper must neither contain fillers nor conductive contaminants (metals, coal, etc.) nor salts or acids. Cable papers, that are wound around line wires in a spiral-like fashion, are electrical insulating papers with a particularly high strength in machine direction. Electrical insulating papers also include electrolytic papers and capacitor paper."
+  },
+  {
+    "name": "ELECTROSTATIC PRECIPITATOR",
+    "description": "Used to clean up flue and process gases. Removes 99.5–99.8% of dust particles emitted from recovery boilers, lime kilns and bark–fired boilers."
+  },
+  {
+    "name": "EMULSION COATING",
+    "description": "Coating of paper with an emulsion containing plastic or resin."
+  },
+  {
+    "name": "EMBOSSING",
+    "description": "Raised, heavily printed areas in a press sheet due to a deformation of the paper from the tack of the ink film and blanket."
+  },
+  {
+    "name": "ENVELOPE PAPER",
+    "description": "Envelope paper can be woodfree or wood–containing, machine glazed or calendered, white or in colour and is used for envelopes. It must be opaque, writable, and printable and must have a high folding strength."
+  },
+  {
+    "name": "ENZYME BLEACHING",
+    "description": "Bleaching technique in which cooked and oxygen–delignified chemical pulp is treated with enzymes prior to final bleaching. Allows pulp to be bleached without chlorine chemicals."
+  },
+  {
+    "name": "EVAPORATION PLANT",
+    "description": "Unit used at pulp mills to concentrate spent liquor to make it suitable for burning and chemicals recovery."
+  },
+  {
+    "name": "EXTENDED COOKING",
+    "description": "Method of cooking pulp to low lignin content, thereby reducing the need for bleaching chemicals."
+  },
+  {
+    "name": "FASTNESS",
+    "description": "Resistance to colour fading"
+  },
+  {
+    "name": "FCO PAPER",
+    "description": "Film coated paper where the coating is applied with two rollers."
+  },
+  {
+    "name": "FLIMSY",
+    "description": "Paper which was long used for making carbon copies of letters either by pressing or by using carbon paper on a typewriter. Nowadays, those thin sheets of paper have disappeared from the shelves of retailers, as they have been replaced by photocopiers."
+  },
+  {
+    "name": "FIBRE LOSS",
+    "description": "Loss of fibre material in pulp and paper processing."
+  },
+  {
+    "name": "FIBREBOARD",
+    "description": "Board made from defibrated wood chips, used as a building board."
+  },
+  {
+    "name": "FIBRILLATION",
+    "description": "A structural change occurring in the walls of chemical pulp fibres during beating."
+  },
+  {
+    "name": "FILLER",
+    "description": "Pigment, added to papermaking stock to improve properties such as opacity and smoothness, and often to reduce cost."
+  },
+  {
+    "name": "FILLER CONTENT",
+    "description": "Percentage of filler in a paper."
+  },
+  {
+    "name": "FILTER PAPER",
+    "description": "Unsized paper made from chemical pulp, in some cases also with an admixture of rags, sometimes with a wet strength finish. Filtration rate and selectivity, which are both dependent on the number and the size of the pores, can be controlled by specific grinding of the pulps and creping."
+  },
+  {
+    "name": "FINE PAPER",
+    "description": "High–quality printing, writing or copy paper produced from chemical pulp and usually containing less than 10% mechanical pulp."
+  },
+  {
+    "name": "FINE PAPER",
+    "description": "Quality term for a large number of woodfree printing papers, based on chemical pulp with usually less than 10 % mechanical pulp. Sometimes fine paper also is made with an admixture of rags or wholly from rag pulp."
+  },
+  {
+    "name": "FLAME RESISTANT PAPER",
+    "description": "Flame resistant paper may ignite but must extinguish immediately so that it chars. This property is imparted to the paper by impregnation with certain chemicals."
+  },
+  {
+    "name": "FLEXOGRAPHIC PRINTING",
+    "description": "A method of relief letterpress printing using flexible rubber or photopolymer plates on wet rotary presses."
+  },
+  {
+    "name": "FLONG PAPER",
+    "description": "A pulp–like, coated–type paper."
+  },
+  {
+    "name": "FLOTATION DEINKING",
+    "description": "Deinking process in which air is blown into a dilute fibre suspension. Ink particles adhere to the air bubbles and rise to the surface, where they are removed."
+  },
+  {
+    "name": "FLUE GAS SCRUBBER",
+    "description": "Equipment for removing impurities from flue gases by dissolving them in aqueous solution."
+  },
+  {
+    "name": "FLUFF",
+    "description": "Loose fibers projecting from a paper's surface."
+  },
+  {
+    "name": "FLUFFING",
+    "description": "The removal of fibrous materials from a paper’s surface during printing."
+  },
+  {
+    "name": "FODDER PULP",
+    "description": "Protein produced from pulp mill spent liquors and sometimes mixed with animal feeds."
+  },
+  {
+    "name": "FOLDING BOXBOARD",
+    "description": "Single or multilayer paperboard made from primary and/or secondary fibres, sometimes with a coated front, used to make consumer packaging (cartons)."
+  },
+  {
+    "name": "FOLDING ENDURANCE",
+    "description": "The number of double folds a paper will withstand under tension and specified conditions before it breaks at the fold line."
+  },
+  {
+    "name": "FORMATION",
+    "description": "Refers to the uniformity or lack of it in the distribution of the fibers when manufacturing paper; can be observed by looking through the sheet; a good formation is uniform or \"Close\", while a poor formation is not."
+  },
+  {
+    "name": "FOUR-SIDED TRIM (TRIM 4)",
+    "description": "After the job is printed and folded, a trim will be taken off all four sides to remove any reference or registration marks and give a clean edge to the pile of sheets."
+  },
+  {
+    "name": "FOURDRINIER WIRE",
+    "description": "Horizontally moving metal or plastic mesh belt (wire) on which the paper web is formed."
+  },
+  {
+    "name": "FREE SHEET",
+    "description": "A paper that does not contain groundwood or mechanical pulp."
+  },
+  {
+    "name": "FSC - FOREST STEWARDSHIP COUNCIL",
+    "description": "An independent, international, environmentally and socially oriented forest certification organization. It trains, accredits and monitors third-party certifiers around the world and works to establish international forest management standards. Environment Paper has four colors that are FSC certified."
+  },
+  {
+    "name": "FULLY BLEACHED PULP",
+    "description": "Pulp that has been bleached to the highest brightness attainable (> 90 ISO)."
+  },
+  {
+    "name": "GLOSS",
+    "description": "An extra quantity of varnish, which gives a glossy appearance when dry."
+  },
+  {
+    "name": "GRADE",
+    "description": "The classification given to paper due to its unique characteristics, which includes brightness, opacity, content."
+  },
+  {
+    "name": "GRAIN DIRECTION",
+    "description": "The direction of the fibers in paper."
+  },
+  {
+    "name": "GRAIN LONG",
+    "description": "Term used to designate that the grain of the paper is parallel to the longest measurement of a sheet of paper. The fibers are aligned parallel to the length of the sheet."
+  },
+  {
+    "name": "GRAIN SHORT",
+    "description": "Opposite of grain long. Grain of the paper runs at the right angles to the longest dimension of the sheet. Fiber alignment in grain short paper parallels the sheet? Shortest dimension."
+  },
+  {
+    "name": "GRAMMAGE",
+    "description": "The basis weight of paper stated in metric terms of grams per square meter and expressed as g/m2. To convert from basis weight to grams per square meter (g/m2), multiply basis weight by 1406.5 (a constant factor) and divide by the number of square inches in base sheet."
+  },
+  {
+    "name": "GUILLOTINE",
+    "description": "Device that is used to cut or trim stacks of paper to the desired size."
+  },
+  {
+    "name": "GUMMING",
+    "description": "In platemaking, the process of applying a thin coating of gum to the non-printing areas of a lithographic plate."
+  },
+  {
+    "name": "HIGH BULK",
+    "description": "A paper (normally book paper) specifically manufactured to retain a thickness not found in papers of the same basis weight. Frequently used to give thickness to a book with minimal amount of pages."
+  },
+  {
+    "name": "HUMIDIFICATION",
+    "description": "The addition of moisture to the air."
+  },
+  {
+    "name": "HUMIDITY",
+    "description": "Moisture condition of the air. Relative humidity is the percent of moisture relative to the actual amount which air at any given temperature can retain without precipitation."
+  },
+  {
+    "name": "HYDRATION",
+    "description": "A papermaking process that involves beating the pulp so as to increase its ability to hold water and produce a paper with the proper moisture content."
+  },
+  {
+    "name": "INK ABSORPTION",
+    "description": "The degree with which paper will absorb ink."
+  },
+  {
+    "name": "INK-IN-WATER EMULSION",
+    "description": "An emulsion of ink and water in which the ink is broken up into fine droplets surrounded by water."
+  },
+  {
+    "name": "INK RECEPTIVITY",
+    "description": "The ability of a paper surface to accept ink uniformly and adequately from the plate or blanket during printing"
+  },
+  {
+    "name": "INK RUB RESISTANCE",
+    "description": "The resistance of an ink film to scuffing or rubbing on paper or paperboard and as measured by abrasion or rub testing equipment."
+  },
+  {
+    "name": "INTERNATIONAL STANDARDS ORGANIZATIONS (ISO)",
+    "description": "An organization for the coordinating and establishment of uniform, internationally accepted standards."
+  },
+  {
+    "name": "IVORY BOARD",
+    "description": "High quality board made in white or colours with a bright clear appearance, particularly used for visiting cards and similar high quality printed work."
+  },
+  {
+    "name": "JOINT",
+    "description": "The flexible hinge where the cover of a casebound book meets the spine, the permitting the cover to open without breaking the spine of the book or breaking apart the signatures."
+  },
+  {
+    "name": "KRAFT PAPER",
+    "description": "A strong paper made from sulfate pulp, used for paper products like wrapping, bags and envelopes."
+  },
+  {
+    "name": "LIGHTWEIGHT COATED (LWC)",
+    "description": "Coated paper whose basis weight is below 60gsm."
+  },
+  {
+    "name": "LONG GRAIN SHEET",
+    "description": "A sheet whose longer dimension parallels the grain direction."
+  },
+  {
+    "name": "LOW BULK",
+    "description": "Refers to papers somewhat thinner than the usual papers of the same weight, having a smooth surface, and which is a “thin” sheet."
+  },
+  {
+    "name": "MACHINE DIRECTION",
+    "description": "The direction in which the fibers flow to the paper machine; the direction of web travel through the paper machine."
+  },
+  {
+    "name": "MACHINE FINISH",
+    "description": "A smooth finish obtained with calendaring, produced on the paper machine. Often, expressed as M.F."
+  },
+  {
+    "name": "MACHINE GLAZED",
+    "description": "Having a highly polished finish applied to one side of the paper when it dries against the polished surface of the large-diameter cylinder of the paper machine."
+  },
+  {
+    "name": "MAKING ORDER",
+    "description": "An order for items not stocked and made up in accordance with the specifications of the purchaser."
+  },
+  {
+    "name": "MATT PAPER",
+    "description": "A coated paper having a dull smooth surface, reflecting most of the incident light in all directions."
+  },
+  {
+    "name": "MECHANICAL PULP",
+    "description": "Pulp produced using a non-chemical process and by mechanical treatment. Papers made from mechanical pulp often have good opacity and bulk but yellow more quickly than paper produced from chemically made pulp. Newspapers are often printed on papers having a proportion of mechanical pulp."
+  },
+  {
+    "name": "MILL BRAND",
+    "description": "A brand name given by the manufacturer for its paper product."
+  },
+  {
+    "name": "MOISTURE CONTENT",
+    "description": "The amount of moisture contained by paper, expressed as a percentage of its total weight."
+  },
+  {
+    "name": "NAP",
+    "description": "A slight surface texture of some writing surfaces."
+  },
+  {
+    "name": "NASTA",
+    "description": "National Association of State Textbook Administrators, an organization that establishes specifications for all material used to manufacture elementary and high school textbooks."
+  },
+  {
+    "name": "NEWSPRINT",
+    "description": "A generic term used to describe paper of the type used to print newspapers, usually of very high groundwood content."
+  },
+  {
+    "name": "NINEPOINT",
+    "description": "Paperboards used as the fluted component in the manufacturing of multi-ply combined board or wrapping."
+  },
+  {
+    "name": "NIP",
+    "description": "The point of contact between two rolls, as in a calendering operation."
+  },
+  {
+    "name": "NLT",
+    "description": "No less than - relating to quantity information for trade tolerances."
+  },
+  {
+    "name": "NMT",
+    "description": "No more than - relating to quantity information for trade tolerances."
+  },
+  {
+    "name": "NOMINAL WEIGHT",
+    "description": "The basis weight used when ordering paper. In manufacturing the basis weight used as a target, allowing for normal manufacturing tolerances, usually of plus or minus 5%. The weight stated as the basis or substance weight of paper; accepted trade tolerance, necessary because of variables in manufacturing paper, is plus (+) or minus (-) 5% of nominal weight."
+  },
+  {
+    "name": "NONRETURNABLE CORE",
+    "description": "A core, usually of fiber, which is normally used only once."
+  },
+  {
+    "name": "NONWOVEN FABRIC",
+    "description": "Cloth-like material made from long natural and synthetic fibers formed from a slurry on a wire screen or by laying on a fine mesh screen from an air suspension."
+  },
+  {
+    "name": "NWR",
+    "description": "Term used to identify narrow width rolls usually under 17 inches."
+  },
+  {
+    "name": "OCR",
+    "description": "Abbreviation for \"Optical Character Recognition\"; human readable images which are optically scanned (read) by data and word processing machines."
+  },
+  {
+    "name": "OCR PAPER",
+    "description": "Paper made for the specific needs of optical character recognition equipment."
+  },
+  {
+    "name": "OFF-MACHINE COATING",
+    "description": "Indicates the process of applying coating material that is not performed on the paper machine, but as a separate operation."
+  },
+  {
+    "name": "OFF-SET",
+    "description": "See set-off."
+  },
+  {
+    "name": "OFFSET",
+    "description": "The most commonly used indirect printing method, in which an impression of type or a design on a flat plate is printed on a cylinder from which it is impressed upon the surface to be printed. Short for offset lithography, but see offset printing."
+  },
+  {
+    "name": "OFFSET CORE",
+    "description": "A core that is not evenly aligned with the edge of the roll."
+  },
+  {
+    "name": "OFFSET LITHOGRAPHY",
+    "description": "Offset printing has become the commonly used name for this type of planographic printing; also called lithographic or stone printing. The method of printing using a plate in a single plane, where the non- image area is distinguished from the image area by creating water receptive and non-water receptive areas on the plate. Today, this is generally accomplished on metal surfaces, by either light sensitive coatings or electronic methods."
+  },
+  {
+    "name": "OFFSET PAPER",
+    "description": "A printing paper, uncoated or coated made for the requirements of offset printing. See book papers."
+  },
+  {
+    "name": "OFFSET PRINTING",
+    "description": "Also known as indirect printing. The method by which the printing plate is removed from the point of transfer of the printing ink to the paper to be printed, generally by means of a resilient blanket or roll; the resilient blanket or roll actually makes the impression on the paper, thus \"offsets\" the ink. Unless stated otherwise, can also be specific to the offset lithography or planographic printing process, using a resilient blanket to minimize wear on the plate by the paper being printed."
+  },
+  {
+    "name": "OFFSET WINDING",
+    "description": "Also called staggered winding; frequent or abrupt off-sets on the end of a roll."
+  },
+  {
+    "name": "OLEOPHILIC",
+    "description": "Describes the surface of a material that is easily coated by and is compatible with an organic oil; for the opposite see oleophobic. In offset lithography, the image areas of the plate are very oil receptive or oleophilic."
+  },
+  {
+    "name": "OLEOPHOBIC",
+    "description": "Describes the surface of a material that is not easily coated by and actually repels an organic, non-polar oil; for the opposite see oleophilic. In offset lithography, the non-image areas of the plate have been wet with a water based fountain solution and do not accept the oil based ink and these non-image areas are said to be oleophobic."
+  },
+  {
+    "name": "ONIONSKIN",
+    "description": "A thin, lightweight paper used primarily for typewritten correspondence."
+  },
+  {
+    "name": "OPACITY",
+    "description": "Property of paper which obstructs the passage of light and show-through of printing. The characteristic of paper to block the transmission of light, or the ability to provide (low opacity, like tracing paper) or prevent (high opacity) \"show through\" of dark printing; the human eye is good at comparing this property, but it can be measured by instrument, and is expressed as a percentage of the light that can not pass through the sheet of paper, i.e., a 98% opacity means that 98% of the light can not pass through the sheet, and is absorbed in or reflected from the incident surface."
+  },
+  {
+    "name": "OPAQUE INK",
+    "description": "An ink that does not allow light to pass through it and \"hides\" the paper or previous printing under it; normally not used in multicolor process printing, where transparent inks are required. See process inks."
+  },
+  {
+    "name": "OPAQUES",
+    "description": "Papers that have been opacified to achieve a high level of opacity and a minimum amount of show-through."
+  },
+  {
+    "name": "OPAS",
+    "description": "An abbreviation for \"On/Off Press Application System,\" a business unit of the Mead Corporation's Fine Paper Division; it is a patented system and materials which allows printers and converters to produce their own carbonless paper on site, either prior to or during the printing of multiple part or ply business forms."
+  },
+  {
+    "name": "OPTICAL BRIGHTENERS",
+    "description": "See fluorescent dyes."
+  },
+  {
+    "name": "OPTICAL DENSITY",
+    "description": "The intensity of the color or printed image, usually (but not always) referenced to black and/or white."
+  },
+  {
+    "name": "ORANGE PEEL",
+    "description": "A granular or pebble-like textured appearance (like an orange peel) that appears as a defect on the surface of a coated or printed paper."
+  },
+  {
+    "name": "OSHA",
+    "description": "An abbreviation for \"Occupational Safety and Health Act\" and is a U.S. federal act, with an agency responsible for establishing and enforcing the health and safety standards for all employees of business."
+  },
+  {
+    "name": "OUT-OF-SQUARE",
+    "description": "Sheet paper which is cut or trimmed with other than 90 degree corners, or that is cut non-parallel or not at right angles to the grain of the paper (cut on the bias)."
+  },
+  {
+    "name": "OUTTURN SAMPLE",
+    "description": "A representative sample taken from a run of paper or a specified shipment."
+  },
+  {
+    "name": "OVEN-DRY (OD)",
+    "description": "Moisture-free (also bone dry) conditions of pulp and paper. Usually determined by drying a known sample to a constant weight in a completely dry atmosphere at a specified temperature."
+  },
+  {
+    "name": "OVERCOATING",
+    "description": "See varnish."
+  },
+  {
+    "name": "OVER-PRINT",
+    "description": "See desensitize (of CF carbonless papers)."
+  },
+  {
+    "name": "OVERRUN",
+    "description": "A quantity of paper made in excess of the amount ordered. Trade customs allow for a certain tolerance for overruns and underruns. A quantity of paper made in excess of the amount ordered; trade practices permit a certain tolerance for overruns and underruns, with the percentage usually dependent upon the size of the order. Also, in printing, copies printed in excess of the quantity ordered."
+  },
+  {
+    "name": "PACKING",
+    "description": "In printing presses, paper or other sheet materials used to underlay the plate and/ or blanket (between the cylinder and plate or blanket), to bring the surface of the plate or blanket to the desired height to obtain proper squeeze pressure for printing: can also be adjusted to compensate for minor dimensional changes in the paper in multipass, multicolor printing jobs, but only around the circumference of the cylinder (the print length)."
+  },
+  {
+    "name": "PACKAGING",
+    "description": "The paper and board used for wrapping or packing goods."
+  },
+  {
+    "name": "PACKING LIST",
+    "description": "A document accompanying shipments listing units shipped (rolls, skids, cartons) including identification numbers and weights."
+  },
+  {
+    "name": "PADDING COMPOUND",
+    "description": "Also called edge padding glue or adhesive. A liquid adhesive mixture which when brushed or sprayed onto the side of a pile of paper adheres the sheets together along one edge, thus forming a pad."
+  },
+  {
+    "name": "PALLET",
+    "description": "A pallet is a light, low platform constructed of wood or other suitable material such as solid or laminated paperboard on which various materials (e.g., paper and paperboard) can be loaded and fastened for shipment. A pallet usually consists of two platforms held apart by posts (instead of runners as in a skid) firmly affixed thereto both top and bottom are so arranged that the load can be transported by fork lift truck through entry at either side or end."
+  },
+  {
+    "name": "PAPER",
+    "description": "Homogenous sheet of felted cellulose fibers, bound together by interweaving and by the use of bonding agents and made in a variety of types. A relatively homogeneous matting of primarily cellulose fibers which are formed from a water suspension on the paper machine wire and bound together by entanglement of the fibers and by bonding agents, and subsequently dried."
+  },
+  {
+    "name": "PAPER MACHINE",
+    "description": "The machine upon which paper is produced from a suspension of cellulose fibers and other components in water (the furnish) by forming, pressing, drying, surface sizing (in some cases), calendering, and winding on a reel."
+  },
+  {
+    "name": "PAPER MASTER",
+    "description": "See paper plates."
+  },
+  {
+    "name": "PAPER PLATES",
+    "description": "A plate for an offset duplicating printing press (offset lithography) made of paper: can be called a \"paper master\" or \"master.\""
+  },
+  {
+    "name": "PAPERSTOCK",
+    "description": "Water slurry of various pulp fibers, dyes, additives and chemicals pumped to the paper machine for formation into sheets."
+  },
+  {
+    "name": "PAPETERIE",
+    "description": "A wide variety of writing papers. used for personal correspondence and greeting cards, with good sizing for pen and ink, with good opacity arid stiffness, and that fold well."
+  },
+  {
+    "name": "PAPYRUS",
+    "description": "An aquatic plant found in northern Africa. Although papyrus is considered to be the first paper, it's not, in the strict definition of the word, paper (which is a matted web of individual fibers). Rather, early papyrus \"paper\" was made by peeling the plant, which is constructed like an onion, and placing one layer on top of another. The natural juices acted like glue, bonding the layers and leaving the cellular structure of the plant layers intact."
+  },
+  {
+    "name": "PARCHMENT",
+    "description": "Animal skins or linings stretched and prepared as writing/painting surfaces. Produces a smooth, buttery surface. Originally a writing surface made from animal skins; today made from cellulose fiber paper by dipping unsized stock in sulfuric acid, to simulate the appearance and feel of genuine parchment; called \"vegetable parchment\" if made from cellulose fiber paper."
+  },
+  {
+    "name": "PASTE-UP",
+    "description": "Assembled on one page for photographing the various art, display and text copy for a printing job; another term used is \"mechanical.\""
+  },
+  {
+    "name": "PASTE DRYER/DRIER",
+    "description": "In ink making, a type of dryer used in inks, usually a combination of dryer compounds; see dryers."
+  },
+  {
+    "name": "PASTER",
+    "description": "See splice."
+  },
+  {
+    "name": "PATENT COATED",
+    "description": "Paperboard made and lined with white or colored fibers on a multi-cylinder machine, possessing a high-surface finish suitable for use in making cartons."
+  },
+  {
+    "name": "PERFECT",
+    "description": "A term used to describe the binding process where the signatures of a book are held together by a flexible adhesive."
+  },
+  {
+    "name": "PERFECT BINDING",
+    "description": "Binding which uses glue to hold each page in place after the folds along the spine have been cut off. A process of holding pages of a book together with glue (like padding), using no stitching or sewing. The backbones of the books are usually roughened, the adhesive applied, and finished with a wraparound cover."
+  },
+  {
+    "name": "PERFECTING PRESS",
+    "description": "A printing press that prints on both sides of the page in a single pass. The terms apply to printing both sides of the paper in the same pass on the printing press. Also to print on the back of a sheet already printed on one side. Printing can be on opposite sides, either blanket-to-blanket or sequentially."
+  },
+  {
+    "name": "PERFORATE",
+    "description": "Punching a series of holes or slits in a line in the paper, to weaken it so tearing will occur easily along that line. Also the making of slits in paper during folding, at the fold, to prevent wrinkles and to allow air to escape."
+  },
+  {
+    "name": "PERFS",
+    "description": "The actual holes or slots created during perforating."
+  },
+  {
+    "name": "PERMANENCE",
+    "description": "The ability of a paper to resist change in one or more of its properties during storage and with aging. The resistance to paper to the destructive effects of age; also the \"archival\" properties of the paper or printed job. A lack of permanence is indicated by a significant loss in strength of the paper or a fade in the color or shades of the paper or printed image. The permanence of paper is chiefly dependent upon the purity of the cellulose used to make the paper, the acidity (see pH) in the paper as a result of manufacture or later contact, and the storage of the paper away from heat, light, and moisture."
+  },
+  {
+    "name": "PH",
+    "description": "In chemistry, pH is a measure of the concentration of hydrogen ions in a solution, which is a measure of acidity or alkalinity. The pH scale runs from 0 to 14 and each number indicates a ten fold increase. Seven is pH neutral: numbers below 7 indicate increasing acidity, with 1 being the most acid. Numbers above 7 indicate increased alkalinity with 14 being the most alkaline. Paper with a pH below 5 is considered highly acidic. Buffered papers typically have a pH between 8.5 and 9.5. A scientific scale from 0 to 14, measured by instruments, and defining the strength of an acid or alkaline (basic) liquid. From 0 to 7 is acid-, from 7 to 14 is alkaline, while 7 is considered \"neutral\". i.e., neither acid or alkaline."
+  },
+  {
+    "name": "PHOTOCONDUCTOR",
+    "description": "See photoreceptor."
+  },
+  {
+    "name": "PHOTORECEPTOR",
+    "description": "The surface or plate in an electrostatic/ xerographic copier or printer where the image and non-image areas are distinguished. The characteristic of a photoreceptor material is that it holds an electrostatic charge on its surface in the dark, and until the charge is dissipated or erased by exposure to light; when a material has this property with respect to electrostatic charges and light, it is known as a photoconductor. See electrostatic copier/ printer."
+  },
+  {
+    "name": "PH SCALE",
+    "description": "The potential of the hydrogen ion. A measure of the degree of acidity or alkalinity. A value of 7.0 is neutral on a scale of 0-14. Lower values are acidic, higher are alkaline. Book papers should be neutral or alkaline for longevity."
+  },
+  {
+    "name": "PICA",
+    "description": "See point (2)."
+  },
+  {
+    "name": "PICKING",
+    "description": "When fibers or fillers are picked from the sheets surface during printing (low surface strength or high ink tacks). The lifting of any material off of, or out of, the paper surface during the printing impression; sometimes due to surface contamination, inadequate surface sizing, inadequate surface strength, or to the ink being too tacky. Generally, the pick will adhere to the blanket and interfere with future impressions;, can appear to be hickeys in the printed surface. For measurement of picking see I.G.T. and wax pick."
+  },
+  {
+    "name": "PIGMENT",
+    "description": "Insoluble mineral or organic powder used to coat or fill paper. Many pigments are mineral and inorganic compounds used in coating to give smooth surface and opacity. 1) Minerals and other materials used in the manufacture and coating of paper, to provide desired properties. 2) Minerals and other materials, ing colorants, used in the manufacture of printing inks; finely divided solid materials."
+  },
+  {
+    "name": "PILING",
+    "description": "The accumulation of paper pigments on the printing blanket. The collecting of ink particles upon rollers, blankets and plates, caused either by the inability of an ink vehicle to hold the ink pigment in suspension, or by microscopic pick and/or removal of pigment from the surface of the paper by the ink, and accumulating in the ink on the blanket, usually evidenced in the trailing edge of the image areas, resulting from extra thickness on the press blanket in the image area. If \"milking\" or \"whitening\" is severe enough, an accumulation of foreign material can occur in the nonimage areas, also creating an extra thickness there; this is also called non- image area \"piling.\""
+  },
+  {
+    "name": "PINHOLES",
+    "description": "Imperfections in paper which appear as minute holes upon looking through the sheet: accentuated by lower basis weights."
+  },
+  {
+    "name": "PLAIN PAPER",
+    "description": "Bond quality uncoated paper used in plain paper copiers."
+  },
+  {
+    "name": "PLANOGRAPHIC PRINTING",
+    "description": "See offset lithography."
+  },
+  {
+    "name": "PLATE",
+    "description": "Depending on the printing process, the means by which the image area is separated from the non-image area; the image carrier."
+  },
+  {
+    "name": "PLATE CYLINDER",
+    "description": "The cylinder on the printing press around which the plate is mounted."
+  },
+  {
+    "name": "PLATE GAP",
+    "description": "See cylinder gap."
+  },
+  {
+    "name": "PLYBOND",
+    "description": "Internal bond strength, measure of the resistance of a sheet of paper to delaminate or blister, due to stresses created during printing and drying."
+  },
+  {
+    "name": "PLY",
+    "description": "The number of pieces of paper that make up a multi-layered, pasted or multi-cylinder-formed paperboard."
+  },
+  {
+    "name": "PMS color",
+    "description": "An abbreviation for \"Pantone Matching System\"; an ink color system containing about 500 color swatches, each of which is identified by a color number and a formula for the ink."
+  },
+  {
+    "name": "POINT",
+    "description": "1) Refers to the thickness of a sheet of paper in one thousands of an inch. See caliper. 2) A unit of printing type measurement; 0.0 138 of an inch--12 points to the pica--each pica being about 1/6th of an inch, or 72 points to the inch."
+  },
+  {
+    "name": "POOR SPLICE",
+    "description": "See splice."
+  },
+  {
+    "name": "POOR START",
+    "description": "Also called bad start; is when there is an obvious difference in the mechanical appearance between paper near the core and the remainder of the side of the roll."
+  },
+  {
+    "name": "POROSITY",
+    "description": "A measurement of the ability of paper to allow fluids (liquids and gases) to pass through paper and paperboard, which is an important factor in ink penetration. A test which measures the time required for a given amount of air to flow through a sheet of paper; defines how open or tight the sheet of paper is with respect to the passage of air through the sheet."
+  },
+  {
+    "name": "POROUS PRINTING",
+    "description": "See screen printing and mimeograph printing."
+  },
+  {
+    "name": "POST CONSUMER WASTE",
+    "description": "Paper products which have served their intended end uses and have now been separated or diverted from solid waste for the purpose of recycling."
+  },
+  {
+    "name": "PORTRAIT MODE",
+    "description": "A printer (usually driven by a computer) output orientation in which the printed lines run perpendicular to the direction of movement of paper. See landscape mode."
+  },
+  {
+    "name": "PPI",
+    "description": "Pages per inch."
+  },
+  {
+    "name": "PRE-COLLATED",
+    "description": "Sheet papers purchased in a predetermined sequence, generally for the sheet printing of business forms. See collated."
+  },
+  {
+    "name": "PRECONSUMER WASTE",
+    "description": "Manufacturing wastes such as envelope cuttings, bindery trimmings, rejected unused paper, obsolete inventories, and printed paper, which have never reached the consumer."
+  },
+  {
+    "name": "PRESSBOARD",
+    "description": "Manufactured on a wet machine from sulfate pulp and cotton fiber or a combination of both and finished with a high polish. Thickness ranges from .031 to .250 of an inch. Principal qualities: uniform thickness and density, excellent ply adhesion and good forming and molding properties. Available in a variety of colors."
+  },
+  {
+    "name": "PRESS RUN",
+    "description": "The quantity specified for any given printing job. Also, the number of impressions made from a printing plate."
+  },
+  {
+    "name": "PRESS SECTION",
+    "description": "See wet press."
+  },
+  {
+    "name": "PRIMARY COLORS",
+    "description": "The additive primary colors are the three major wavelengths of light in the visible spectrum: red, green and blue, and are used in applications such as the cathode ray tube of a color television set. The subtractive primary colors are used when dealing with reflected light, such as from a full color printed piece, and are yellow, magenta, and cyan. These are the three colors of ink used in process printing. In paper making, red, yellow, and blue are the primary colors in the dyeing of paper, any two of which can be mixed together to obtain secondary colors and hues (green, orange, and violet)."
+  },
+  {
+    "name": "PRINTABILITY",
+    "description": "Ease with which paper can be printed to high-quality standards with the least amount of spoilage."
+  },
+  {
+    "name": "PRINT CONTRAST",
+    "description": "A differential measurement of light reflectance between the image and background areas."
+  },
+  {
+    "name": "PRINTING INKS",
+    "description": "Special coatings applied over specific areas of the paper surface by means of a printing press."
+  },
+  {
+    "name": "PRINTER",
+    "description": "One who transfers ink onto a substrate in order to recreate a visual image. This is usually done using one of four main printing processes: letterpress, intaglio, planography, or silkscreen."
+  },
+  {
+    "name": "PRINTING",
+    "description": "The act of producing an image on a page from a machine designed for that purpose, such as a printing press or a computer printer like a laser or ink jet."
+  },
+  {
+    "name": "PRINT ON-DEMAND",
+    "description": "Refers to the ability to print very small quantities (50-500 copies), quickly and cost-effectively. Traditionally, printing involved an enormous amount of setup time, which resulted in it only being used for large print runs, particularly for color work. Today, the technology has advanced to the point where true on-demand printing is a reality."
+  },
+  {
+    "name": "PROCESS COLOR/INKS",
+    "description": "A four color reproduction. In four color printing, the process colors are yellow, red (magenta), blue (cyan) and black. Transparent inks used in three-color and four-color printing of full color pictures or drawings; subtractive primary ink colors are yellow, magenta, and cyan. See three and four-color process."
+  },
+  {
+    "name": "PROCESS PRINTING",
+    "description": "The printing from two or more halftone plates, to produce intermediate shades, hues, and tonal values. See three and four-color process."
+  },
+  {
+    "name": "PROHIBITIVE MATERIALS",
+    "description": "As published by the Institute of Scrap Recycling Industries, Inc., any materials which by their presence in a packing of paper stock, in excess of the amount allowed, will make the packaging unusable as the grade specified. Additionally, this includes any materials that may be damaging to equipment."
+  },
+  {
+    "name": "PROOFS",
+    "description": "Samples of copy and/or layout made at various stages of production of a printing job."
+  },
+  {
+    "name": "PSYCHROMETER",
+    "description": "An instrument for determining the relative humidity of an atmosphere."
+  },
+  {
+    "name": "PUBLISHER",
+    "description": "Coordinates the production of printed materials such as books, that are sold to the public."
+  },
+  {
+    "name": "PUFFING",
+    "description": "See fiber puffing."
+  },
+  {
+    "name": "PULP",
+    "description": "Fibrous material in papermaking produced either mechanically or chemically from fibrous cellulose raw material (wood most common) or Any cellulose plant fiber cleaned and beaten into a wet mixture used to form sheets of paper."
+  },
+  {
+    "name": "PULPER",
+    "description": "A device composed of a cylindrical vat in which a rotor separates the fibers and suspends them in water."
+  },
+  {
+    "name": "PULPING",
+    "description": "The act of processing wood (or other plant) to obtain the primary raw material for making paper, usually cellulose fiber. Wood is the most widely used source of fibers for the paper making process. Chemical pulping is generally of the \"Kraft\" or Sulfate process, the Soda process, or the Sulfite process-see each. Wood pulp can also be obtained for paper making by purely mechanical means (\"groundwood\") or in combination with chemicals or at elevated temperatures. See semi-chemical and thermomechanical pulps; refiner mechanical pulp (RMP)."
+  },
+  {
+    "name": "PVA (POLYVINYLACETATE):",
+    "description": "An archival white glue that is stronger than gel medium. It mixes well with gloss medium. Transparent even after many coats and remains water soluble. Mixed with gel it becomes water resistant."
+  },
+  {
+    "name": "QUEEN ROLL",
+    "description": "The second roll from the bottom in a calender stack, usually smaller in diameter than the king roll, but larger than the rest of the rolls above it."
+  },
+  {
+    "name": "QUEUE",
+    "description": "1) Waiting in line, or the order by which tasks will be carried out. 2) A set of tasks stored in computer memory for use by a device or machine, in a specified order."
+  },
+  {
+    "name": "QUIRED",
+    "description": "A ream of paper in which the sheets are folded in half instead of flat."
+  },
+  {
+    "name": "RADIATION CURING",
+    "description": "Inks have been developed to eliminate solvents (VOCs) when printing by web offset, by having the ability built into the ink to become a hardened image; 100% of the ink composition becomes hardened into the dried ink film. Generally the hardening reaction is triggered by either exposure to Ultra Violet radiation (UV) or to an Electron Beam (EB). The same types of materials and principles have been applied to what is called 100% solids coating."
+  },
+  {
+    "name": "RAG",
+    "description": "Formerly the principal raw material used in the making process; often meaning cotton rags. Rag content describes the amount of cotton fiber relative to the total amount of material used in the pulp. \"Rag content\" is not widely used (or is a misnomer) today as more and more high quality paper is made not from rag but from linters."
+  },
+  {
+    "name": "RAG CONTENT PAPER",
+    "description": "See cotton fiber paper."
+  },
+  {
+    "name": "RAGGED",
+    "description": "Can be \"ragged left\" or \"ragged right\"; line and type that has been \"justified\" to the right or left only, with the opposite side being left uneven or \"ragged.\""
+  },
+  {
+    "name": "RATTLE",
+    "description": "The crisp, crackling sound produced by shaking or crumpling a sheet of paper to indicate its rigidity or stiffness."
+  },
+  {
+    "name": "RAW STOCK",
+    "description": "The paper to which coating is applied."
+  },
+  {
+    "name": "REAM",
+    "description": "500 sheets of paper. Sheet count of paper (500 sheets for most fine papers); see basis weight."
+  },
+  {
+    "name": "REAM WEIGHT",
+    "description": "The weight of one ream of paper, either actual or nominal. The amount that one ream of a particular paper weighs."
+  },
+  {
+    "name": "RECESSED PRINTING",
+    "description": "See gravure printing and engraving."
+  },
+  {
+    "name": "RECLAIMED FIBER",
+    "description": "Recovered fiber in a pure or usable form obtained from refuse matter."
+  },
+  {
+    "name": "RECOVERY SYSTEM",
+    "description": "System in a pulp mill where black liquor is burned and inorganic chemicals are recovered and circulated in the process."
+  },
+  {
+    "name": "RECYCLABLE SYMBOL",
+    "description": "Symbol used to indicate that the paper may be used in the recycling process."
+  },
+  {
+    "name": "RECYCLE",
+    "description": "To reuse, or to use over and over; see de-inking."
+  },
+  {
+    "name": "RECYCLED CONTENT PAPER",
+    "description": "A paper product containing some, but consisting of less than 100% recovered fibers."
+  },
+  {
+    "name": "RECYCLED FIBER",
+    "description": "Cellulose fiber reclaimed from waste material and reused, sometimes with a minor portion of virgin material, to produce new paper."
+  },
+  {
+    "name": "RECYCLED PAPER",
+    "description": "EPA defines this as paper including postconsumer and preconsumer wastes, which are made from at least 50% waste paper."
+  },
+  {
+    "name": "RECYCLED SYMBOL",
+    "description": "Symbol used to indicate that the paper is made from recycled fibers. The percentage of paper of which the fibrous composition contains recovered or recycled cellulose fibers (RCF)."
+  },
+  {
+    "name": "REDUCERS",
+    "description": "Materials that are added to inks to reduce either ink tack or viscosity."
+  },
+  {
+    "name": "REEL",
+    "description": "The untrimmed roll of paper that is wound on the full-width shaft at the paper machine dry end. A roll of paper."
+  },
+  {
+    "name": "REFERENCE BOOKS",
+    "description": "The category of books which are produced for reference such as encyclopedias, dictionaries, law books, etc."
+  },
+  {
+    "name": "REFINER MACHANICAL PULP (RMP)",
+    "description": "Pulp made by processing untreated wood chips in mechanical atmospheric refiners. mechanical pulp obtained by first chipping the wood, then separating the cellulose fibers by mechanical rotary refiners. See groundwood."
+  },
+  {
+    "name": "REFINING",
+    "description": "The process of increasing the surface area of cellulose fibers to multiply the number of contact points between them to facilitate their intertwining. Imparts such characteristics as increased capacity to absorb water and improved sheet formation. See cellulose fibers and furnish, the process of preparing cellulose fibers for the making of paper, by mechanical action, whereby the individual fibers are separated from each other, flattened, and roughened (see fibrillation) to various degrees, to obtain the desired final paper properties. The flattening action was earlier referred to as \"beating\" the fibers, and was accomplished in equipment called \"beaters,\" in a batch process. Today, most refining is continuous, by means of rotating, close clearance steel bars (plates); disk refiners are the more modern equipment, used today."
+  },
+  {
+    "name": "REFLECTANCE",
+    "description": "The percent of incident light reflected from an image area, where zero percent reflectance is black and 100 percent is white; see image density."
+  },
+  {
+    "name": "REFRACTIVE",
+    "description": "Ability to bend light from a straight course. Materials differ in refractivity, which is measured as \"refractive index.\" The refractive index of materials used in the furnish to make paper, will to a great extent determine the differences in opacity of various types of paper, at equivalent basis weights."
+  },
+  {
+    "name": "REGISTER",
+    "description": "The correct position of printing on paper and the correct position of each color in multi-color printing. 1) Paper: a type of bond paper for multi-ply form use; i.e. register bond. 2) Printing: when a design or form is printed in parts or steps, as in multiple colors, it is essential that all parts or inks down match exactly. When they do, they are \"in register\" or in registration; otherwise, they are \"out of register\"; see hairline and commercial register."
+  },
+  {
+    "name": "REGISTER MARKS",
+    "description": "Fine lines crossing at right angles and placed on original copy before color separation. Used for positioning images, registering colors, accurate cutting, etc."
+  },
+  {
+    "name": "RELATIVE HUMIDITY (RH)",
+    "description": "The amount of water vapor present in the air as compared to the maximum potential amount. Percent of moisture in the air, relative to the amount of moisture it can hold without precipitation, at any given temperature measured with a psychrometer; humidity or absolute humidity is a measure of the grains of moisture per unit volume of air."
+  },
+  {
+    "name": "RELEASE PAPER",
+    "description": "Papers designed to be stripped away or released from another surface."
+  },
+  {
+    "name": "RELIEF PRINTING",
+    "description": "See letterpress and flexographic printing."
+  },
+  {
+    "name": "REMAKE",
+    "description": "An order entered to supplement an item which was manufactured at insufficient quantity."
+  },
+  {
+    "name": "REPLACEMENT ORDER",
+    "description": "Order entered to replace paper shipped which has proven inferior or damaged."
+  },
+  {
+    "name": "REPROGRAPHY",
+    "description": "Copying and duplicating."
+  },
+  {
+    "name": "RESERVATION",
+    "description": "Systematic allocation of paper machine capacity by a manufacturer on a customer-by-customer basis according to historical buying patterns. This process typically enacted during tight market conditions, ensures the manufacturer will be able to keep integrity within the order scheduling process while providing regular product availability to standard customers."
+  },
+  {
+    "name": "RESIN",
+    "description": "The vegetable excretion or exudation that results in an amorphous, lustrous-appearing, solid organic substance that is soluble in organic solvents."
+  },
+  {
+    "name": "RETENTION",
+    "description": "The amount of a loading or additive added to the stock that is retained in the final sheet of paper."
+  },
+  {
+    "name": "RETENTION AIDS",
+    "description": "Materials added to the furnish of a paper machine, to help in keeping the fine particles of the furnish, with and in the formed wet mat of paper on the wire; this is to reduce losses and to retain the fines for the properties they can impart to the finished sheet of paper."
+  },
+  {
+    "name": "REVERSE EMBOSSING",
+    "description": "A printing defect in which the stresses created in the separation of the paper from the blanket stretches the paper and actually raises the printed surface in the image areas (and generally creates a depression on the back), sufficient to distort the sheet of paper and even prevent its laying flat."
+  },
+  {
+    "name": "REVERSE SEQUENCE",
+    "description": "In a multi-ply business form that is to be run once through the printing press or offset duplicator, the sequence (order) of the plies will normally be reversed by running once through the press. After printing, the desired sequence is the usable (crash or straight sequence. See crash sequence). Before printing the sequence is called \"reverse\" and is a \"mirror\" of the final desired sequence."
+  },
+  {
+    "name": "REWINDER",
+    "description": "A machine which takes rolls from the reel of the paper machine, the coater, or other winder, and slits and/or rewinds into smaller rolls."
+  },
+  {
+    "name": "RH",
+    "description": "See relative humidity."
+  },
+  {
+    "name": "RIDGE",
+    "description": "A ring around the circumference of a roll or an area in a skid of paper in the machine direction that is harder or higher than an adjacent area; also called hard spot."
+  },
+  {
+    "name": "RIGHT SIDE OF PAPER",
+    "description": "The felt side of a sheet. Also, the side on which the watermark, if any, may be read."
+  },
+  {
+    "name": "RMP",
+    "description": "See refiner mechanical pulp."
+  },
+  {
+    "name": "ROLL CROWN",
+    "description": "The surface curvature shape or diameter profile of wide width rolls under high pressure (pli) to compensate for deflection and obtain a level nip or pressure across the full width."
+  },
+  {
+    "name": "ROLL CURL",
+    "description": "Also called wrap curl. See simple curl."
+  },
+  {
+    "name": "ROLL STAND",
+    "description": "Frame and mechanism for supporting a roll of paper as it unwinds and feeds into a coater, printing press, or other converting operation."
+  },
+  {
+    "name": "ROPE",
+    "description": "Also called \"corrugation\"; bands of relatively uniform width which occur in the machine direction, around the roll of paper, with uniform diagonal marks present in the band. These bands result from wide areas in the cross direction, of caliper differences, resulting in a roll attempting to wind to two different diameters; if tightness of wind is great enough or the caliper differences are accentuated as in large roll diameters, the rope or corrugation can become \"set\" and be evidenced in the subsequent pile of sheet paper."
+  },
+  {
+    "name": "ROSETTE PATTERN",
+    "description": "When preparing color separations for printing, the screen angles are rotated for each process color ink. A symmetrical (but non-objectionable) \"rosette\" dot pattern can result, which the eye can merge into smooth color gradations. However, incorrect screening angles or the shifting of the paper during printing can result in objectionable patterns. See moir' patterns."
+  },
+  {
+    "name": "ROSIN",
+    "description": "Material made up of a suspension and used for internal sizing of paper and paperboard. A natural resin obtained from pine trees, and when suitably modified, is used as an internal sizing agent to impart waterproofness to paper; used in acid sizing of paper. See alum."
+  },
+  {
+    "name": "ROTARY PRESS",
+    "description": "A printing press that carries curved plates on a cylinder (or the plate is the surface of the cylinder), as opposed to an older style flatbed press, using flat plates and type. All elements of the press are cylindrical in shape."
+  },
+  {
+    "name": "ROTOGRAVURE",
+    "description": "Web gravure printing using rotary equipment. See gravure printing."
+  },
+  {
+    "name": "ROUGH FRONT BOOK",
+    "description": "A book with untrimmed pages along its front."
+  },
+  {
+    "name": "RUBINE",
+    "description": "A pigment somewhat redder than true magenta."
+  },
+  {
+    "name": "RUNNABILITY",
+    "description": "Paper properties that affect the ability of the paper to run on the printing press. Paper properties that effect the ability of the paper to run on coating, converting, or printing equipment."
+  },
+  {
+    "name": "RUNNING HEAD",
+    "description": "A title at the top of a page that appears on all pages of a book or chapter in a book."
+  },
+  {
+    "name": "SADDLE STITCHING/WIRE",
+    "description": "In binding, staples (formed from a continuous wire) driven through the back fold of a booklet, clinched in the middle, and enabling the booklet to open out flat. The same type of binding can be accomplished with a stapler, using pre-formed staples."
+  },
+  {
+    "name": "SAFETY PAPER",
+    "description": "Used mainly as bank checks and other legal documents. Safety paper is specially treated to prevent erasure, alteration or duplication of any writing or printing on its surface. A treated paper which when writing or printing on the paper is altered, the alteration attempt will leave a noticeable smudge, discoloration, or other evidence of change, this type of paper might be used for making checks or other documents to discourage such alterations."
+  },
+  {
+    "name": "SALES BOOK",
+    "description": "Set of forms bound into a book, usually for ease of writing."
+  },
+  {
+    "name": "SATIN FINISH",
+    "description": "A smooth, delicately embossed finished paper with sheen. Also called silk. A finish lacking gloss, generally intermediate to a matte finish and a dull finish. See gloss."
+  },
+  {
+    "name": "SAVE-ALL",
+    "description": "A device on the paper machine which screens paper fibers from water, to save pulp which might otherwise be lost to the sewer."
+  },
+  {
+    "name": "SCALE",
+    "description": "Foreign materials from the paper making or converting operations deposited on the web after it is formed, and can be starch or coating materials broken loose from the sheet, and redeposited. Scale in the printing operation can adhere to the blanket and transfer to the plate causing defects in the printed piece. The terms calendar scale and coating scale are often used in relation to this defect, implying where in the paper making process the scale was deposited on the sheet."
+  },
+  {
+    "name": "SCANNING",
+    "description": "In printing plate preparation, an electronic method, based on point by point scanning of color separations and tonal gradations under computer control."
+  },
+  {
+    "name": "SCORING",
+    "description": "To impress paper with a rule for the purpose of making folding easier. The process and the resulting line mechanically impressed into a heavy sheet of paper or board, to pre-stress the fold line and facilitate folding or improve the appearance of the fold. Most effectively done with the grain of the paper, and is absolutely necessary with heavier basis weight paper."
+  },
+  {
+    "name": "SCRAP IN ROLL",
+    "description": "Trim or scrap paper wound into the roll of paper. The scrap may or may not be protruding from the ends of the roll."
+  },
+  {
+    "name": "SCREEN ANGLES",
+    "description": "In color reproduction, the halftone screens are rotated with relation to one another, to avoid undesirable moir' patterns. The angles usually used are black 45 degrees, magenta 75 degrees, yellow 90 degrees, and cyan 105 degrees."
+  },
+  {
+    "name": "SCREEN PRINTING",
+    "description": "A form of porous printing. The process by which the image area is created by forcing ink through a \"screen\" or mesh, created by blocking off all areas in the \"screen\" where no image is to be formed; an example would be silk screen printing of T-shirts. Mimeograph printing is also another form of porous (screen) printing."
+  },
+  {
+    "name": "SCREEN RULINGS",
+    "description": "The number of lines or dots per inch on a halftone screen. See screens."
+  },
+  {
+    "name": "SCREENINGS",
+    "description": "Rejected materials, such as knots, shives and large bark particles, from the screening operations of pulp suspensions in a pulp mill."
+  },
+  {
+    "name": "SCREENS",
+    "description": "Halftone illustrations. The ruling (usually expressed as lines per inch, i.e., 120 lpi, 133 lpi, 150 lpi) used to determine the dots per unit area in developing tonal values in the printed piece. Up to the point of \"dot gain,\" the higher the screen, the finer the lines per inch, the greater the fineness of detail in the printed piece. See stochastic screening."
+  },
+  {
+    "name": "SCUFFING",
+    "description": "The disrupted appearance of an ink film as a result of abrasion to either the wet or dry ink film."
+  },
+  {
+    "name": "SCUMMING",
+    "description": "A term describing the condition resulting when any non-image area of the plate tends to take ink (any cause); when this starts to occur in offset lithography, it is said that the plate is \"catching up\"; can also be called toning."
+  },
+  {
+    "name": "SEAM MARK",
+    "description": "Is a defect in the web, normally running at approximate right angles to the machine direction and is seen as a light streak when viewed by transmitted light. Point of origin is usually an article of machine clothing, a wire or a felt, that is seamed. The distance from one defect to the other is a clue as to the origin of the mark."
+  },
+  {
+    "name": "SECONDARY FIBER",
+    "description": "Any type of paper and paperboard fiber obtained from wastepaper and other used reclaimable fiber sources. A term used for wastepaper. Recycled into the paper making process."
+  },
+  {
+    "name": "SECONDARY PULP",
+    "description": "Lower-quality pulp made from waste paper and not directly from wood."
+  },
+  {
+    "name": "SELF COVER",
+    "description": "Booklet cover that matches the inside pages. Carbonless paper, where the colorless dyes and color developers are contained in the sheet or in the coating on one side of the sheet, and color is developed in sitsu (not a transfer of chemicals as in a mated system), by the action of an impact or writing instrument to release the colorless dyes."
+  },
+  {
+    "name": "SEMI-CHEMICAL PULP",
+    "description": "A pulp produced by a mild chemical treatment followed by a mechanical defiberizing operation. A pulping process, not widely used in Fine Papers, that uses chemicals to assist a mechanical pulping process, and gives a pulp similar to chemical pulp."
+  },
+  {
+    "name": "SEPARATION",
+    "description": "The act of separating (dividing) the colors of an original into its component colors (yellow, magenta, cyan, black, and any spot colors); each record or negative is used for the production of a single color printing plate."
+  },
+  {
+    "name": "SEQUENCE",
+    "description": "See color sequence."
+  },
+  {
+    "name": "SET",
+    "description": "Inks are said to be \"set\" when the ink film on a printed piece is immobile, though not fully dry, and can be handled without smudging/smearing."
+  },
+  {
+    "name": "SEWED",
+    "description": "The actual sewing through all the pages of a book which is to be case bound."
+  },
+  {
+    "name": "SHADOW MARKS",
+    "description": "1) Also couch marks; defects which appear as a regular pattern, always when viewed by transmitted light and sometimes when viewed by direct light. Cause is usually some non-uniform water removal from the sheet of paper in the wet end of the paper machine, and takes the pattern of the equipment removing the water (such as a drilled hole suction couch roll). 2) Can also be intentional watermark patterning, using the dandy roll. See dandy roll."
+  },
+  {
+    "name": "SET-OFF",
+    "description": "Transferring or smearing of ink from freshly-printed sheets of paper to another surface (also called off-set). The transfer of ink from a printed sheet to another sheet in contact with it at the delivery end of a printing press and/ or during subsequent bindery operations."
+  },
+  {
+    "name": "SHEET",
+    "description": "Flat piece of any type of pulp, paper and paperboard that has a variety of characteristics, sizes and finishes."
+  },
+  {
+    "name": "SHEET FED",
+    "description": "Presses that print sheets instead of rolls. A printing process, where the paper is processed as sheets, as opposed to processing from a web (roll/ribbon). Ink-drying mechanisms can differ between the sheet-fed and web-fed offset lithography printing processes."
+  },
+  {
+    "name": "SHEFFIELD SMOOTHNESS",
+    "description": "The smoothness of paper as measured by the Sheffield paper smoothness gauge, expressed as the rate of airflow between the measuring surface and the paper surface under specified conditions."
+  },
+  {
+    "name": "SHIVES",
+    "description": "Uncooked wood particles which show up in the finished sheet; in groundwood pulps. bundles of fibers resulting from less than mechanical separation."
+  },
+  {
+    "name": "SHORT INK",
+    "description": "See length."
+  },
+  {
+    "name": "SHORT RUN",
+    "description": "A press run which will produce a small quantity of books."
+  },
+  {
+    "name": "SHOW-THROUGH",
+    "description": "Visibility of printing on the reverse side of the paper. Also called strikethrough; the undesirable condition where the printing on the reverse side can be seen through the sheet under normal lighting. See opacity."
+  },
+  {
+    "name": "SHRUNKEN EDGES",
+    "description": "See tight edges."
+  },
+  {
+    "name": "SIDE GUIDE",
+    "description": "A guide on sheet fed equipment to position the sheet sideways for the operation. On web fed equipment, this is called an edge guide."
+  },
+  {
+    "name": "SIGNATURE",
+    "description": "A section of a book, folded ready for binding with other sections. \"Sigs\" usually range from 16-32 pages but could be as low as 4 and as high as 64. A folded sheet of printed paper usually a section of a book or magazine (or newspaper), ordinarily obtained by the folding of a single sheet into 4, 8, 16, or more pages. The term signature can also be applied to a printed flat sheet that is to be later folded into a multi-page document."
+  },
+  {
+    "name": "SILK SCREEN PRINTING",
+    "description": "A form of porous printing. Originally, the porous material for making the screen was a silk fabric, thus the name. See screen printing."
+  },
+  {
+    "name": "SILIVICHEMICALS",
+    "description": "Chemical byproducts of the wood-pulping process and other chemicals derived from wood."
+  },
+  {
+    "name": "SIMPLE CURL",
+    "description": "1) structural curl is the bending of a sheet of paper around the grain direction. and is generally caused by differential moisture changes (cellulose fiber diameter changes) from one side of the sheet versus the other. 2) Wrap curl is the result of the sheet becoming \"set\" when wrapped around a core. It is always curl or bending perpendicular to the grain."
+  },
+  {
+    "name": "SIZE",
+    "description": "Non-fibrous materials used in papermaking to control the absorbency of paper. Rosin, starch, alum and gelatins are most commonly used. A water resisting material which is added to paper. See sizing."
+  },
+  {
+    "name": "SIZE PRESS",
+    "description": "Section of paper machine where surface treatments are applied to the sheet of paper to give it special qualities. Normally a pair of rolls toward the end of the dryer train between which the dry or partially dry web is passed, and into the nip of which a liquid, usually starch, is applied to impart strength to the sheet. The part of the paper machine that applies a surface size or treatment to the web of paper. See surface sizing."
+  },
+  {
+    "name": "SIZING",
+    "description": "The process by which gelatin rosin, starch or other synthetic substance is added to paper to provide resistance to the absorption of moisture or eliminating ink feathering and bleed through. Sizing added to the beater or vat of pulp is known as internal sizing. After a sheet is formed, it may be either surface sized (painted or brushed on the surface), or tub sized (immersed in a bath). A treatment to improve the resistance to a liquid (particularly water) or vapor; surface or internal sizing. Sizing or waterproofness is generally measured as the time required for a water-based fluid or ink to penetrate from one surface of paper to the other, through the sheet. See size press, acid sizing or alkaline sizing."
+  },
+  {
+    "name": "SKID",
+    "description": "A platform (usually 8 inches or more in height) which is supported by runners extending lengthwise of the skid. It is generally higher than a pallet and since it has no bottom platform, is not generally stacked. A skid is moved by means of a platform truck."
+  },
+  {
+    "name": "SKINNING",
+    "description": "The formation of a dried layer on the surface of a fluid such as an ink or coating (like a paint), after a period of standing."
+  },
+  {
+    "name": "SLACK SIZED",
+    "description": "Refers to paper which has very little or no sizing, to resist moisture penetration; opposite of hard sized."
+  },
+  {
+    "name": "SLICE",
+    "description": "The opening in the headbox of the paper machine, where the furnish is uniformly forced out onto the wire for the web of paper to be formed."
+  },
+  {
+    "name": "SLIME",
+    "description": "Bacterial micro-organisms growing in the wet end of the paper machine system, that if left uncontrolled, can break loose and become a part of the paper web-usually a \"slime\" hole results. Normally controlled by slimicides or biocides, added to the wet end of the paper machine."
+  },
+  {
+    "name": "SLIMICIDES",
+    "description": "See slime."
+  },
+  {
+    "name": "SLIP",
+    "description": "High concentration slurry (even semi- solid) of paper making or coating pigment in water."
+  },
+  {
+    "name": "SLIPPED ROLL",
+    "description": "An unevenly wound roll which is usually the result of loose winding; see telescoped roll."
+  },
+  {
+    "name": "SLITTER",
+    "description": "A sharp knife (generally a sharp disc) which cuts paper into predetermined widths; if not properly set or maintained can give a poor, non-uniform, or dusty cut."
+  },
+  {
+    "name": "SLITTER DUST",
+    "description": "The accumulation of dust, primarily filler, fibers, or coating thrown off during the slitting operation, and remaining on or in the roll."
+  },
+  {
+    "name": "SLITTING",
+    "description": "Cutting printed sheets or webs into two or more sections by means of cutting wheels on a press or folder."
+  },
+  {
+    "name": "SLURRING",
+    "description": "The smearing of type or illustrations commonly at the trailing edge of a sheet fed paper."
+  },
+  {
+    "name": "SLURRY",
+    "description": "A liquid mixture consisting of suspended fibers, fillers, coating pigments and other solid material in water or adhesive, used in papermaking process."
+  },
+  {
+    "name": "SLUSH",
+    "description": "Pulp stock-water suspension thin enough to flow or pump through a pipeline, usually running about 1% to 6% consistency. Pulp Cellulose fibers mixed with water so it can be pumped."
+  },
+  {
+    "name": "SMASHED BLANKET",
+    "description": "An area of a blanket that is no longer firm and resilient, and that gives a light impression in the center of a well-printed area. Usually caused by physical damage of the blanket at impression."
+  },
+  {
+    "name": "SMEAR",
+    "description": "The spreading of ink, usually due to abrasion or rubbing of freshly (not yet set) printed ink to adjacent areas of the paper surface."
+  },
+  {
+    "name": "SMOOTHNESS",
+    "description": "The evenness or levelness of a paper surface which is measurable with special testing equipment. The texture of the surface of paper; also called finish. Generally determined with an instrument which measures the flow of air along the surface of a paper sample under standardized loading and air pressure conditions, i.e., the greater or faster the flow/ escape of air, the less smooth the surface."
+  },
+  {
+    "name": "SMUDGE",
+    "description": "1) The transfer of ink, usually due to abrasion or rubbing of a printed ink film, to an adjacent sheet or area (see smear) of the paper; occasionally is referred to as carbonizing. 2) In carbonless paper, the premature development of color (intended for producing the image), usually due to abrasion or pressure, and the breakage of microcapsules."
+  },
+  {
+    "name": "SMYTHE SEWN",
+    "description": "The binding of books by sewing the signatures together. The strongest of all binding processes."
+  },
+  {
+    "name": "SNAP",
+    "description": "Abbreviation for \"Specifications for Non-heatset Advertising Printing\"; a color proofing system to assure press to press, and run to run color constancy."
+  },
+  {
+    "name": "SODA",
+    "description": "A process and the product resulting from the pulping of wood, using a sodium hydroxide (lye) solution, under conditions of high temperature and pressure; see kraft for the more widely used alkaline pulping process."
+  },
+  {
+    "name": "SOFT COVER",
+    "description": "A book cover made of a heavy weight paper and glued or \"perfect bound\" to the body of the book."
+  },
+  {
+    "name": "SOFTWOOD",
+    "description": "Wood obtained from evergreen, cone-bearing species of trees, such as pines, spruces and hemlocks. This imparts the strength properties to the paper. Source of \"longer\" cellulose fibers for paper making, as extracted from coniferous or cone bearing trees."
+  },
+  {
+    "name": "SOLID BOARD",
+    "description": "Single-ply paperboard made from the same stock throughout the entire sheet structure."
+  },
+  {
+    "name": "SOY OIL",
+    "description": "An agricultural product and renewable resource that is receiving increased usage in the manufacture of printing inks, as a replacement for a portion on the petrochemical based solvents and oils. Soy oils have many of the characteristics of petroleum based oils, but are not as easily evaporated as the lower molecular weight solvents, and are more compatible with water (with implications for fountain solution interactions)."
+  },
+  {
+    "name": "SPECIALTY PAPERS and BOARDS",
+    "description": "This is a term applied to such grades as off-machine coated, laminated, impregnated, etc., as distinguished from printings and writings and other grades that do not require further processing. Specialty papers and boards are often the raw materials used by other industries."
+  },
+  {
+    "name": "SPECTROPHOTOMETER",
+    "description": "An optical instrument to measure color or color differences from standard."
+  },
+  {
+    "name": "SPECTRUM",
+    "description": "The complete range of rainbow-like colors (continuous), generally in the visible range of wavelengths, from short/blue to long/red."
+  },
+  {
+    "name": "SPECULAR REFLECTION",
+    "description": "Light reflected from a surface at exactly the same angle as the incident angle of the light; as a mirror reflects an image."
+  },
+  {
+    "name": "SPENT LIQUOR",
+    "description": "Used cooking liquor on a chemical pulp mill that is separated from the pulp after the cooking process. It contains lignin, resins and other substances extracted from the material being cooked."
+  },
+  {
+    "name": "SPINE",
+    "description": "The back or bound edge of a book. See backbone."
+  },
+  {
+    "name": "SPLICE",
+    "description": "A joint made in a continuous sheet of paper with glue or adhesive tape when a break occurs in the web during winding or rewinding into a roll. Also called paster; the connection of a continuous web, such that later converting and printing operations can be performed satisfactorily. A splice is usually placed in the web during the winding process, when defective paper is removed or when material is added to complete a roll diameter or length. A web break, mis-register on the printing press, and damaged blankets due to excessive thickness are just three examples of a possible result of a \"poor\" splice. See butt splice."
+  },
+  {
+    "name": "SPOOL",
+    "description": "Continuous roll of paper or cardboard rolled around a mandrel."
+  },
+  {
+    "name": "SPOT CARBONIZING",
+    "description": "The printing with a hot melt composition (wax and pigment-origin ally carbon black) of only certain portions of the reverse side of the plies in a business form. Requires a special coated or uncoated paper, free of pin holes, that would allow unsatisfactory, unsightly points of carbonizing material to come through to the face (top side) of the sheet. The product resulting from carbonizing or spot carbonizing is also called a mechanical carbonless paper."
+  },
+  {
+    "name": "SPOT COLOR",
+    "description": "Premixed, semi or fully opaque printing inks used for exact color match, as in a corporate logo (Examples: Coca Cola red or John Deere green). Used in place of trying to match exact colors by the combination of 3 or 4 process colors. Can also add visual impact and reduce the process ink costs."
+  },
+  {
+    "name": "SQUIRT",
+    "description": "The high-pressure water jet used on the wet end of a paper machine to cut the wet web to the correct width. Also, one jet is adjusted to cut a leader sheet or tail on the wet web as it is fed from the wire to the wet presses, and expands the web width once it is fed through the machine."
+  },
+  {
+    "name": "STA",
+    "description": "Subject to Accumulation. Amount insufficient to meet minimum run requirements on paper machine."
+  },
+  {
+    "name": "STAGGERED WINDING",
+    "description": "See offset winding."
+  },
+  {
+    "name": "STANDARD CONDITIONS",
+    "description": "This is assumed to be 29.92 in. of mercury and 70 degrees Fahrenheit."
+  },
+  {
+    "name": "STAND ON END",
+    "description": "Term referring to loading rolls for shipment in a poker chip fashion."
+  },
+  {
+    "name": "STANDARD ILLUMINATION",
+    "description": "The perceived color of paper and the color of the printed piece are greatly influenced by the illuminating light. For all visual color matching, there is a suggested/ standard illuminating light."
+  },
+  {
+    "name": "STARCH",
+    "description": "Material made primarily from corn and potatoes that is used as a surface or internal additive to provide strength."
+  },
+  {
+    "name": "STARRED END (ROLL)",
+    "description": "Observed by the \"star\" pattern radiating from the core to the outer wraps of a roll, cause can be a soft end on the roll, tightly wound paper above paper that is loosely wound, or just from a severe impact."
+  },
+  {
+    "name": "START(S)",
+    "description": "In the collation of signatures for a book, magazine or other publication, individual signatures may vary in moisture content, and after trimming, upon coming to equilibrium, give an uneven appearance to the edge- of the printed matter. This is always after time. This nonuniform edge, with some signature or group of pages protruding more than an adjacent signature is called a start."
+  },
+  {
+    "name": "STIFFNESS",
+    "description": "A quality of paper alluding to its rigidity and resistance to bending and inflexibility. Property of paper to resist bending."
+  },
+  {
+    "name": "STOCHASTIC SCREENING",
+    "description": "Conventional-screening technique gives fixed spacing (screen ruling) and variable sized dots for tonal value printing. Stochastic screening can give tonal values with both variable dot size/area and/or variably spaced dots. This is achieved by electronic media (computers) using digital imaging and laser exposure to achieve renderings approaching continuous tonal value photography, and no dot pattern. With no dot pattern, this eliminates undesirable rosette and moir' effects."
+  },
+  {
+    "name": "STOCK",
+    "description": "This refers to the wet pulp before it is fed onto a papermaking machine, or during the papermaking processes before it becomes a sheet of paper; contains around 99% water and 1% fiber. In graphic arts, stock means paper."
+  },
+  {
+    "name": "STOCK PREPARATION",
+    "description": "The treatment and modification of fibers to make them suitable for papermaking including beating and refining and the blending of fibrous and nonfibrous materials in the desired proportions for the papermaking furnish."
+  },
+  {
+    "name": "STOCK SIZES",
+    "description": "Standard sizes of paper or board. Examples are 8 x 11, 8 x 14, 11 x 17 in cut sizes and 17 x 22, 23 x 35 and 25 x 38 etc. for parent sizes."
+  },
+  {
+    "name": "STONE PRINTING",
+    "description": "See offset lithography."
+  },
+  {
+    "name": "STRAIGHT SEQUENCE",
+    "description": "See crash sequence."
+  },
+  {
+    "name": "STREAM FEEDER",
+    "description": "A type of sheet feeding unit that allows several sheets of paper to lap each other to minimize the sudden acceleration or deceleration (start and stop) at the feed or delivery end of sheet fed equipment such as printing presses and sheeters."
+  },
+  {
+    "name": "STRENGTH",
+    "description": "The strength of a sheet of paper is dependent primarily upon the nature and amount M) of fiber used to make the paper; the test to measure strength is dependent upon the characteristic to be measured, and can include such properties or measurements as surface strength. burst, tear, tensile, or other."
+  },
+  {
+    "name": "STRETCH",
+    "description": "The give of a sheet of paper as it undergoes tensile pressure. Describes the \"give\" to a sheet of paper when it is subjected to tensile pull."
+  },
+  {
+    "name": "STRIKE-THROUGH",
+    "description": "See show-through."
+  },
+  {
+    "name": "STRIPPING",
+    "description": "1) In preparing lithographic plate making films, the placing of the negatives/ positives in the proper place on the page. 2) As a defect in lithographic printing, describes the condition when the ink rollers take water preferentially to the ink (the ink roller surface changes from oleophilic to hydrophilic). Usually occurs on metal ink rollers, but can occur in synthetic composition covered rollers."
+  },
+  {
+    "name": "STRUCTURAL CURL",
+    "description": "See simple curl."
+  },
+  {
+    "name": "STUCK WEB",
+    "description": "Occurs when water, adhesive, coating or some other tacky material gets in between layers or wraps of a roll, causing them to adhere to each other."
+  },
+  {
+    "name": "SUBSTANCE WEIGHT",
+    "description": "Synonymous with basis weight. Generally used with business papers measured on a 17\" x 22\" basic size."
+  },
+  {
+    "name": "SUBTRACTIVE PRIMARY COLORS",
+    "description": "See primary colors."
+  },
+  {
+    "name": "SULFATE",
+    "description": "An alkaline process of cooking wood. See kraft."
+  },
+  {
+    "name": "SULFATE PROCESS",
+    "description": "An alkaline pulp manufacturing process made by using wood chips cooked under pressure in a solution of sodium hydroxide and sodium sulfide. Also known as kraft process."
+  },
+  {
+    "name": "SULFATE PULP",
+    "description": "Paper pulp made from wood chips cooked under pressure in a solution of sodium hydroxide and sodium sulfide. Known as kraft."
+  },
+  {
+    "name": "SULFITE",
+    "description": "Sulfite pulp is produced from wood chips that are cooked in an acidic liquor containing a high percentage of free sulfur dioxide. A process and the product resulting from the pulping of wood using acid (as oppose to the pulping processes. See kraft and soda."
+  },
+  {
+    "name": "SULFITE PULP",
+    "description": "Paper pulp made from wood chips cooked in an acid liquor solution of calcium, sodium, magnesium, or ammonia sulfite."
+  },
+  {
+    "name": "SUPERCALENDER",
+    "description": "Auxiliary piece of equipment that gives paper a very smooth surface by passing it through a series of alternate metal and composition rolls, revolving with high speed and pressure. The calendering method using alternate steel/metal and resilient (filled) rolls, generally to obtain various levels of gloss. See calendaring."
+  },
+  {
+    "name": "SUPER FINE WRITING",
+    "description": "Writing paper with smooth finish and close formation, made of sulfite and cotton fiber pulps."
+  },
+  {
+    "name": "SURFACED (paper)",
+    "description": "Paper having undergone a coating process to one or both sides to improve the characteristics of its surface."
+  },
+  {
+    "name": "SURFACING SIZING",
+    "description": "The surface application of material (generally in papermaking, a starch solution) to change its resistance to fluids; a cotton shirt or blouse may be surface sized from the laundry, i.e., it may have a starch application to give it \"crispness\" and resistance to moisture."
+  },
+  {
+    "name": "SWEAT ROLLS",
+    "description": "See chill rolls."
+  },
+  {
+    "name": "SWOP",
+    "description": "An abbreviation for Specifications for Web Offset Publicationsa color proofing system to assure press to press and run to run color constancy."
+  },
+  {
+    "name": "SWORD (HYGROSCOPE)",
+    "description": "Sword shaped hygrometer that may be inserted into a pile of paper to determine its equilibrium moisture content, and for comparison with the surrounding air."
+  },
+  {
+    "name": "SYNTHETIC FIBERS",
+    "description": "Any petroleum-based waterproof papers with a high tensile strength."
+  },
+  {
+    "name": "TAB FORMS",
+    "description": "Continuous forms."
+  },
+  {
+    "name": "TABLET PAPERS",
+    "description": "A grade of paper used for the manufacture of tablets designed primarily for writing. A grade of paper (usually 16 pound on a 17\" x 22\"-500 basis) used for the manufacture of writing tablets."
+  },
+  {
+    "name": "TACK",
+    "description": "Sticky property of paper and paperboard adhesive and glue-coating materials. Refers to the internal \"stickiness\" (cohesion) of an ink; a measurement of the resistance to splitting of an ink film between two separating surfaces; tack is necessary in lithographic inks to insure adequate film splitting at the thin ink film thickness' necessary for this planographic process. High tack does stress the paper surface as the ink film is split from the blanket to the paper surface. If that film splitting stress is sufficient, the paper surface can be disrupted, with pick resulting. Tack is an ink characteristic that can be measured by instrumentation (such as with an inkometer); other ink fluid characteristics are described by viscosity and length."
+  },
+  {
+    "name": "TAG",
+    "description": "A strong, dense paper stock."
+  },
+  {
+    "name": "TAIL END HOOK/CURL",
+    "description": "Downward curl at the delivery end of a sheet fed offset press, and is a distortion created by the inked paper clinging to the blanket and the stresses of pulling the pa per away from the press blanket. It is noticeable only at the trailing edge of the sheet."
+  },
+  {
+    "name": "TALL OIL",
+    "description": "By-product made from the resins, fatty acids and soap removed during the evaporation of sulfate black liquor."
+  },
+  {
+    "name": "TAPPI",
+    "description": "Technical Association of the Pulp and Paper Industry, a professional organization having international membership among the paper allied industries, with the purpose of furthering scientific advancement, research and Technical needs, and establishing recognized standards (Tappi Standards) and testing procedures pertaining to the manufacture and use of pulp and paper. TAPPI standard conditions (see conditioning) refer to standard conditions of temperature and humidity for most paper tests."
+  },
+  {
+    "name": "TCF",
+    "description": "Total chlorine-free pulp bleached without compounds such as chlorine dioxide."
+  },
+  {
+    "name": "TEAR CROSS DIRECTIONAL",
+    "description": "The resistant property of a sheet of paper to tearing, usually measured by the force required to tear a strip under standard conditions."
+  },
+  {
+    "name": "TEAR INDEX",
+    "description": "The force required to tear a sheet of paper under standard conditions."
+  },
+  {
+    "name": "TEAR STRENGTH",
+    "description": "The resistant property of a sheet of paper to tearing, usually measured by the force required to tear a strip under standard conditions."
+  },
+  {
+    "name": "TEARING-STRENGTH TEST",
+    "description": "Strength test of paper designed to show how much force the paper will stand before it tears. A test which determines the tearing resistance of paper; Elmendorf was an original manufacturer of the test equipment, and thus became a generic name for the test."
+  },
+  {
+    "name": "TELESCOPED ROLL",
+    "description": "Progressive roll edge misalignment, concave on one side, and convex on the other; also called \"dished\" roll for the concave side."
+  },
+  {
+    "name": "TENDERED",
+    "description": "Transportation term referring to a shipment being turned over to a carrier for shipment and delivery."
+  },
+  {
+    "name": "TENSILE CROSS DIRECTIONAL",
+    "description": "Resistant property of a sheet to tensile stress. Paper possesses greater tensile strength in its grain direction."
+  },
+  {
+    "name": "TENSILE STRENGTH",
+    "description": "Resistant property of a sheet to stress under tension. Paper possesses greater tensile strength in its grain direction. Strength property, measured as the force required to \"pull\" a paper sheet of specified dimensions, to failure; can also be expressed as \"breaking length\"--usually meters of length required for a web to be hung and break as a result of its own weight (gravity)."
+  },
+  {
+    "name": "TEXT BOOK",
+    "description": "A book produced for educational purposes, i.e., elementary, high school, and college textbooks."
+  },
+  {
+    "name": "TEXT PAPER",
+    "description": "A high-quality printing paper with a medium, vellum-like finish. See book papers."
+  },
+  {
+    "name": "THERMAL AIRLAID",
+    "description": "an airlaid manufacturing using special bicomponent fibers as bond fiber to glue pulp together. The airlaid is then run through a dry oven to make the product bulkier and softer for use in hygiene or medical products."
+  },
+  {
+    "name": "THEMOGRAPHY",
+    "description": "Also known as \"raised printing\" or by the trade named unit \"Virkotype\"; this process is used in conjunction with a printing unit (letterpress or offset lithography) with slow drying inks. Immediately after printing, the paper is dusted with a powdered compound and the excess which does not adhere to the wet ink film is removed. The ink and powder are then fused and swollen above the level of the paper, by elevated temperature/ heaters. This imparts an embossed or engraved appearance and feel."
+  },
+  {
+    "name": "THERMOMECHANICAL PULP (TMP)",
+    "description": "A high yield pulp produced by a process in which wood chips are softened by steam under pressure prior to a refining stage. These pulps, like groundwood, contain lignin, which significantly reduces the high yield paper's color stability. They tend to fade yellow, and lose brightness when exposed to light and with aging. A pulping process, that involves the hot, pressurized refining of wood chips; using an elevated temperature to assist the mechanical pulping process."
+  },
+  {
+    "name": "THICKNESS",
+    "description": "Measurement of paper in thousandths of an inch. See caliper."
+  },
+  {
+    "name": "THIXOTROPIC",
+    "description": "The property of some inks and coatings of becoming more fluid (lower viscosity) when worked or stirred, and of setting to a less viscous or semi-solid state when at rest. See dilatant."
+  },
+  {
+    "name": "THREE-COLOR PROCESS",
+    "description": "The printing of a full color picture or drawing by the use of only three separate colors: yellow, magenta, and cyan. These are also known as process yellow, process red, and process blue. Also see four-color process."
+  },
+  {
+    "name": "THROW LENGTH",
+    "description": "In the forms printing business, line holes to guide a form on automated equipment, must line-up over a specified length of the continuous form, and from side to side. After printing, both side to side (mechanical condition of the roll-hard and soft edges), and from roll to roll for multi-part forms, alignment of holes is essential for proper subsequent handling and feeding."
+  },
+  {
+    "name": "TIGHT EDGES",
+    "description": "Also known as shrunken edges; these are the result of the sheet having lost moisture at the edges and shrunken to a smaller size. For this to happen, the sheets must be in a pile which prevents loss of moisture in the center of the sheet, which thus remains the same size. The sheets will usually be dished, with the corners raised. This is caused by a low relative humidity of the air to which the paper is exposed."
+  },
+  {
+    "name": "TITANIUM DIOXIDE",
+    "description": "A very bright filler pigment used for its efficiency in increasing paper brightness and opacity. Compared to other ingredients in paper, titanium dioxide is very expensive. Also written in the chemical symbols Ti02; a mineral pigment which can be used in the furnish on a paper machine or in paper coatings; is of small particle size and imparts the greatest opacifying and brightening properties of the pigments used in producing and coating paper."
+  },
+  {
+    "name": "TONAL VALUE",
+    "description": "Gradations of image density. Created: 1) In printing with a single color of ink, by separating the different tonal value areas into dots of varying size. This can create a full range of from less than 5% to 100% ink coverage of the paper area to be printed, depending upon the size of the dots of ink. See halftone. 2) In photography, on a continuous basis, based upon the chemistry and optics of the photographic process."
+  },
+  {
+    "name": "TONER",
+    "description": "The \"ink\" of electrostatic copying/printing, defining the image area; usually consists of a magnetic ingredient to be attracted to the charged area on the photoreceptor, a colorant material (black or other), and possibly an adhesive that can be melted (or \"fused\") to hold the composite \"ink\" on the surface of the paper being printed or receiving the copy."
+  },
+  {
+    "name": "TONING",
+    "description": "See scumming."
+  },
+  {
+    "name": "TOOTH",
+    "description": "A very slight surface texture of paper preferred for dry media such as charcoal and pastel. A term which implies a rough finish to the surface of a sheet of paper."
+  },
+  {
+    "name": "TOTAL OUTTHROWS",
+    "description": "As published by the Institute of Scrap Recycling Industries Inc., the term outthrows is defined as all papers that are so manufactured or treated or are in such a form as to be unsuitable for consumption as the grade specified."
+  },
+  {
+    "name": "TRACKING",
+    "description": "The carrying of wet ink from the printed paper, through the printing press. and depositing at least a portion of the ink on parts in the press, with some then being re- deposited (tracked) on subsequent paper being processed."
+  },
+  {
+    "name": "TRADE BOOK",
+    "description": "The segment of book publishing relating to the production of fiction, non-fiction, autobiography, memoirs, juvenile, and special interest books."
+  },
+  {
+    "name": "TRANSLUCENCY",
+    "description": "The ability to transmit light without being transparent. The property of transmitting light, without being transparent."
+  },
+  {
+    "name": "TRANSPARENCY",
+    "description": "Ability of paper to allow light rays to pass through so that objects behind it can be clearly seen."
+  },
+  {
+    "name": "TRANSPARENT INKS",
+    "description": "See process inks."
+  },
+  {
+    "name": "TRAPPING",
+    "description": "The term used to describe the acceptance of transfer of an ink by the surface being printed. Wet trapping refers to the acceptance of an ink film by a previously printed wet ink surface; dry trapping is of course the acceptance by the dry paper or printed ink film surface; see 1) color sequence and tack."
+  },
+  {
+    "name": "TREATED (paper)",
+    "description": "Paper treated mechanically in the paper machine to improve the smoothness and uniformity of the two sides: the paper is rubbed, smoothed and calendered."
+  },
+  {
+    "name": "TRIM",
+    "description": "The dimensions of the widest sheet of paper that can be made on a paper machine, excluding the edges that are normally cut off. 1) Indicates the maximum width of finished paper which can be made on a particular machine. 2) To remove from the edges of a sheet or roll, excess or unneeded paper. 3) The excess of paper allowed around a printed piece for bleed and/or handling and later trimming."
+  },
+  {
+    "name": "TRIM MARKS",
+    "description": "In printing, marks placed on the copy to indicate the edge of the page or sheet, and where to \"cut\" or trim."
+  },
+  {
+    "name": "TRIMMED SIZE",
+    "description": "The final size of a printed piece after all bleeds and folds have been cut off."
+  },
+  {
+    "name": "TUB SIZE",
+    "description": "In the days of paper making by hand, the sheet of paper was surface sized by dipping the sheet in a \"tub\" or vat of starch or glue solution. See surface sizing."
+  },
+  {
+    "name": "TUCKER BLADE",
+    "description": "See jaw fold(er)."
+  },
+  {
+    "name": "TUNNEL DRYER",
+    "description": "Also \"air dryer\"; a well-insulated tunnel or large box through which paper is passed for the purpose of drying the paper, coating on the paper, or printing on the paper."
+  },
+  {
+    "name": "TURN-UP",
+    "description": "The completion of a roll of paper from a paper machine or coater, and the starting of a new roll."
+  },
+  {
+    "name": "TURNING BARS",
+    "description": "Metal bars or rollers at a 45-degree angle from the running direction of the web handling equipment (printing press, coater, etc.). Used to turn the web at right angles when feeding from the side or when used in multiples, to actually turn the web over. Often the bars are filled with air and perforated to reduce friction of the web travel. Also called \"angle bars.\""
+  },
+  {
+    "name": "TURNOVER",
+    "description": "A slight tear in the edge of a web or sheet which is folded over during manufacture, converting, or printing; in a pile of paper is often called a \"dog ear\" from its appearance, when sticking out of the pile."
+  },
+  {
+    "name": "TWIN WIRE",
+    "description": "A Fourdrinier paper making machine with two wires (not necessarily twins of each other in size or length) instead of one, to dewater the furnish and produce a sheet with less two sidedness"
+  },
+  {
+    "name": "TWIN-WIRE FORMER",
+    "description": "A multi-ply paperboard machine with two wires, or fabrics, between which the sheet is formed."
+  },
+  {
+    "name": "TWO-SIDEDNESS",
+    "description": "The difference in appearance and printability between a piece of paper's top (felt) and wire sides. In paper, the property denoting differences in appearance, properties, and possibly printability between the top (felt) and bottom (wire) sides."
+  },
+  {
+    "name": "TYPE FACE",
+    "description": "A design of letters of the alphabet intended to be used in combination."
+  },
+  {
+    "name": "UCR",
+    "description": "Abbreviation for undercolor removal. Three-color process printing does not produce a good black. Adding black (four-color process) causes other problems, such as excess ink on the page (Note: it is always impossible to trap 400% ink). \"Undercolor removal\" is the additional work done in color separation to reduce the amounts of yellow, magenta, and cyan to compensate for the addition of black ink. See gcr."
+  },
+  {
+    "name": "ULTRA VIOLET RADIATION",
+    "description": "Also UV. See radiation curing (of inks)."
+  },
+  {
+    "name": "UNCALENDERED",
+    "description": "Papers that are not smoothed by going through the calendering process."
+  },
+  {
+    "name": "UNCOATED FREE SHEET",
+    "description": "An uncoated paper free of ground wood pulp."
+  },
+  {
+    "name": "UNDERRUN",
+    "description": "Production and delivery short of the quantity ordered. Trade customs allow for a certain tolerance for overruns and underruns. A quantity of paper made which is less than the quantity specified in the order. See overruns."
+  },
+  {
+    "name": "UNIT PERFECTING PRESS",
+    "description": "See blanket-to-blanket press; perfect/ perfecting press."
+  },
+  {
+    "name": "UNIT SET FORMS",
+    "description": "Generally a single form in a multi-ply business forms format. May be printed or converted by sheet or web printing methods. See continuous forms."
+  },
+  {
+    "name": "UNITIZED PRESS",
+    "description": "A press composed of a series of independent printing stations each station printing only one image on one side of the paper. The press may be either sheet or web fed in design. Most often found in the forms business."
+  },
+  {
+    "name": "UP",
+    "description": "A term used to describe how many similar sheets can be produced from a larger sheet; two up, four up, etc."
+  },
+  {
+    "name": "UV",
+    "description": "Abbreviation for ultra violet radiation. See radiation curing."
+  },
+  {
+    "name": "UV COATING",
+    "description": "A slick, glossy coating applied to the printed paper surface and dried on press with ultraviolet (UV) light. The slick surface of UV coating makes it popular for printing the covers of paperback novels."
+  },
+  {
+    "name": "UV INK",
+    "description": "Ink specially formulated to dry quickly with ultraviolet (UV) light while still on press. UV drying improves turnaround time because it eliminates waiting time for the first side to dry before printing the second side. See radiation curing; special inks composed of materials that set and dry by being exposed to ultraviolet radiation."
+  },
+  {
+    "name": "VARNISH",
+    "description": "1) An oil used as the vehicle. in printing inks which has been bodied by heat (or chemically), or by the addition of gums, resins, or other materials. 2) A thin coating as in (1), applied to a finished printed job for protection or appearance. Also, a \"lacquer\" or other \"overcoating\" material such as an acrylic type emulsion can be used for the same function of providing appearance or protection to the printed piece."
+  },
+  {
+    "name": "VARNISHING",
+    "description": "Applying varnish or lacquer on a material or a composite. As with the application of a film, varnishing aims to protect the printing and to increase the paper's glossiness, as well as improve its barrier properties."
+  },
+  {
+    "name": "VEHICLE",
+    "description": "The fluid or liquid portion of an ink or coating that serves as a carrier for the pigment, adhesives, resins, and additives of the coating or ink formulation, and determines the flow properties of the ink or coating; varnish or oil portion of printing inks."
+  },
+  {
+    "name": "VELLUM FINISH",
+    "description": "Smooth, dull finish applied to book and stationery paper surfaces to simulate sheets originally made from calf skin. Vellum is also used to designate heavy weight, translucent drawing of drafting papers. A full, toothy, relatively rough finish surface of uncoated text or book papers; generally intermediate in smoothness to an antique (very rough) finish and a regular or smooth finish."
+  },
+  {
+    "name": "VELOUR PAPER",
+    "description": "A term given to papers that are coated with an adhesive and then flock dusted."
+  },
+  {
+    "name": "VELOX",
+    "description": "Black and white paper print for proofing or display. Halftone possesses full contrast and shows what the copy will look like when reproduced. Also called stat. This is a name registered by Kodak, but much to Kodak's chagrin, the name is commonly used to describe any such material."
+  },
+  {
+    "name": "VIRGIN PULP",
+    "description": "A fiber derived from its original source and used for the first time in papermaking."
+  },
+  {
+    "name": "VISCOSITY",
+    "description": "The measure of the extent to which a fluid resists the force, that causes a fluid to flow. A broad term encompassing the properties of flow, as of an ink or coating - viscosity is measured on an instrument called a viscometer. Other ink characteristics would include \"tack\" and \"length.\""
+  },
+  {
+    "name": "VOC",
+    "description": "An abbreviation for \"volatile organic compounds.\" Since these are OSHA and EPA regulated type materials, they have become of concern in both inks (evaporative solvents that might be used in heat-set, web offset inks) and fountain solutions (alcohol). Alternative materials and processes are being examined for these products so necessary to printing."
+  },
+  {
+    "name": "VOID",
+    "description": "A white spot that appears in the solid or heavy area of type as a result of something lifting from the sheet surface."
+  },
+  {
+    "name": "WADDING",
+    "description": "Single or multi-ply, loosely matted fiber sheet made from chemical pulp. Used in packaging, thermal and acoustical applications and as a cushioning medium."
+  },
+  {
+    "name": "WAFFLING",
+    "description": "See fluting."
+  },
+  {
+    "name": "WATERLESS OFFSET PRINTING",
+    "description": "Refers to lithographic printing, where no fountain solution is used. The non-image areas of the plate are composed of a material that serves the same function as the fountain solution, and does not \"accept\" the lithographic ink."
+  },
+  {
+    "name": "WASTEPAPER",
+    "description": "All types of used paper that provides a source of fiber for the manufacture of some papers, paperboards and chipboards. As defined by the EPA, it includes all postconsumer recovered materials as well as the preconsumer wastes which are manufacturing wastes such as envelope clipping, bindery wastes, rejected and unused paper from obsolete inventories, and printed paper which has never reached the consumer. This excludes mill broke, forestry by-products and fibers recovered from mill waste paper."
+  },
+  {
+    "name": "WATER FOUNTAIN",
+    "description": "See fountain."
+  },
+  {
+    "name": "WATER JET",
+    "description": "See squirt."
+  },
+  {
+    "name": "WATERLEAF",
+    "description": "A paper with little or no sizing. Very absorbent."
+  },
+  {
+    "name": "WATERMARK",
+    "description": "The translucent design or name easily visible when a sheet is held to the light. A design is sewn onto the papermaking screen with raised wire. When the sheet is formed, the pulp settles in a thinner layer over the wire design. See dandy roll."
+  },
+  {
+    "name": "WATER RESISTANT",
+    "description": "Quality of a sheet of paper to resist penetration by water from one surface to the other."
+  },
+  {
+    "name": "WAVY EDGES",
+    "description": "A warping, wave-like effect in paper which is the result of the edges of the sheet having picked up moisture and expanded to a larger size. For this to occur, the sheets must be in a pile which prevents the center of the sheets from picking-up the same amount of moisture as the edges. This is caused by higher relative humidity of the air to which the paper is exposed. The waviness is usually more pronounced on the across grain edge (the edge perpendicular to the paper grain)."
+  },
+  {
+    "name": "WAX PICK",
+    "description": "A laboratory test, using a series of tack graded wax sticks (by Dennison) that when applied hot to a paper surface and lifted from the surface after cooling, provide an indication of surface strength. See picking. High wax pick numbers (over 10) are considered strong surfaces, and low numbers are weaker surfaces, on a scale of 2 to 25. Wax pick is used as a test on both coated and uncoated paper surfaces, but is considered a better measurement on uncoated paper."
+  },
+  {
+    "name": "WEATHER WRINKLES",
+    "description": "Also called moisture welts or expansion wrinkles; are narrow raised welts or soft wrinkles around the outer diameter of a roll of paper. The phenomena usually occurs when a roll of paper absorbs moisture from the surrounding atmosphere, with a resultant increase in the paper fiber diameters and in the dimensions of the sheet in the across grain direction. The extra dimensions (usually beginning 6 to 8 inches from the edge of the roll where there is room for the extra dimensions to expand outward) give these raised areas. Weather wrinkles usually do not go more than 2 or 3 wraps down into the roll."
+  },
+  {
+    "name": "WEB",
+    "description": "Continuous sheet of paper produced and rolled up at full width used in web or rotary printing. Paper in roll form in any converting operation i.e., Web Offset. The continuous ribbon of paper, in its full width, during any stage of its progress through the paper machine. A continuous ribbon of paper, as from an unwinding roll."
+  },
+  {
+    "name": "WEB BREAK",
+    "description": "A tear in a web roll during the printing process."
+  },
+  {
+    "name": "WEB OFFSET",
+    "description": "A lithographic printing press in which the paper is fed from a roll as a web (continuous ribbon), as opposed to sheets. Paper requirements and ink drying mechanisms may differ between the two offset printing processes."
+  },
+  {
+    "name": "WEB PRESS",
+    "description": "A printing press that prints on rolls of paper passed through the press in one continuous piece, as opposed to sheets of paper. A printing press that runs webs, regardless of printing method."
+  },
+  {
+    "name": "WEB TENSION",
+    "description": "The term given to the tension or pull exerted by the web press on the web roll. The amount of pull or tightness of pull applied to the paper in the direction of travel of a web."
+  },
+  {
+    "name": "WET END",
+    "description": "Section of the head end of a paper machine. At the wet end, stock is fed in and much of water is eliminated by drainage, suction and press rollers, leaving a web of paper, which then passes through the drying cylinders. The beginning of the paper machine, comprising the head box, wire, and wet presses; the first sections of the paper machine where the paper web is formed from water and the solid furnish components."
+  },
+  {
+    "name": "WET FELT",
+    "description": "Continuous fabric belts, used to support the wet paper web through the wet press section, and to carry away the water removed during the squeezing, \"wringer\" action of the wet press rolls. See felt."
+  },
+  {
+    "name": "WET MACHINE",
+    "description": "Paper machine consisting of a wire-covered cylinder rotating in a vat of pulpstock on which a mat of varying thickness is formed by drainage. These mats are removed either intermittently in thick sheets called laps or continuously."
+  },
+  {
+    "name": "WET PRESS",
+    "description": "The second section of the paper machine, where water is \"squeezed\" from the still very wet, still forming web of paper. If the press is two bare wringer rolls, it is called a smoothing or smoother press."
+  },
+  {
+    "name": "WET RUB",
+    "description": "Resistance of a wet paper surface to scuffing and linting; also a test for the moisture resistance of a paper surface."
+  },
+  {
+    "name": "WET STRENGTH",
+    "description": "Resistance of a paper sheet to pull or stress produced by applied tension after it has become saturated with liquids. Strength imparted by synthetic resins to paper, when that manufactured paper is subsequently exposed to extremes of water; paper is classified as wet strength if its ratio of wet to dry strength is 15% or more."
+  },
+  {
+    "name": "WET STRENGTH PAPER",
+    "description": "Paper where the fiber constitutes and/or the sheets are chemically treated to enhance their resistance to tearing, rupturing or disintegration after becoming saturated with liquids."
+  },
+  {
+    "name": "WET TENSILE STRENGTH",
+    "description": "Resistance of a paper sheet to pull or stress produced by applied tension after is has become saturated with liquids."
+  },
+  {
+    "name": "WET TRAPPING",
+    "description": "See trapping."
+  },
+  {
+    "name": "WHEAT PASTE",
+    "description": "A preferred archival adhesive for book arts."
+  },
+  {
+    "name": "WHITE LIGHT",
+    "description": "The combination of all of the wavelengths of visible light (colors of the rainbow). See 11) spectrum."
+  },
+  {
+    "name": "WHITENESS",
+    "description": "Paper is perceived to be white due to high clarity, elevated diffusion and minimum perception of hues. It is related to the color of the sheet and actually is the equal presence of all colors. The extent that paper diffusely reflects light, of all wavelengths through the visible spectrum."
+  },
+  {
+    "name": "WHITENING",
+    "description": "See milking."
+  },
+  {
+    "name": "WHITE PAPER",
+    "description": "Any paper made from a pulp stock whose natural color has been corrected by the addition of blue, yellow and red dyestuff. To a printer, this term refers to any paper that is devoid of any printing material. See fine paper."
+  },
+  {
+    "name": "WHITE WATER",
+    "description": "Paper mill waters which have a white, cloudy appearance due to a fine dispersion of fibers and other paper making ingredients, picked up when separated from the furnish on the paper machine, washers, etc."
+  },
+  {
+    "name": "WIND",
+    "description": "To separate sheets of paper, printed or unprinted, so that they will be ventilated by air. The purpose is to provide for easy separation in the next sheet feeding operation, or to allow volatile gases formed during drying of inks to escape and/or be replaced with fresh air; also called airing."
+  },
+  {
+    "name": "WIRE",
+    "description": "The continuous open mesh material (earlier, a bronze or copper woven wire screen), used on the paper machine to initiate the water removal process; the wire is the traveling surface and primary forming mechanism of the paper web. When the wire is made of synthetics/ plastics, it can also be called the fabric."
+  },
+  {
+    "name": "WIRE MARKS",
+    "description": "Small impressions produced on the bottom surface of a sheet of paper caused by the mesh of the wire screen on which the wet web is formed in the wet end of a paper machine. The impression left in the paper surface by the wire on the paper machine; if observable, is usually the pattern of the mesh or coarse weave of the wire."
+  },
+  {
+    "name": "WIRE SIDE",
+    "description": "The side of a sheet next to the wire in manufacturing; opposite from the felt or top side; usually not as smooth as the felt or top side. The bottom side of the web of paper, as it is produced on the paper machine; historically, has been the rougher of the two sides. See Fourdrinier."
+  },
+  {
+    "name": "WOOD FREE",
+    "description": "Paper made only from chemical pulp and free from wood-based impurities, such as lignin, which are present in mechanical pulp. Also known as free sheet."
+  },
+  {
+    "name": "WOOD PULP",
+    "description": "Pulp obtained from wood."
+  },
+  {
+    "name": "WORK AND ROLL",
+    "description": "See work and tumble."
+  },
+  {
+    "name": "WORK AND TUMBLE",
+    "description": "Turning the sheet end over end and reversing the gripper edge between printing passes. Also called work and roll; printing the second side of a sheet of paper by turning the sheet over from gripper or lead edge to back or trailing edge, using the same guide side."
+  },
+  {
+    "name": "WORK AND TURN",
+    "description": "Turning the sheet and reversing the guide edge between printing passes (left to right). Printing the second side of a sheet of paper by turning it over from left to right or right to left, using the same edge of the paper as the gripper or lead edge."
+  },
+  {
+    "name": "WOVE",
+    "description": "A paper finish with an even surface as distinct from the lined pattern of laid papers. Absence of a laid pattern."
+  },
+  {
+    "name": "WOVE FINISH",
+    "description": "Uncoated paper that has an even finish with a slight toothiness."
+  },
+  {
+    "name": "WOVE PAPER",
+    "description": "Papers which show no fine \"laid\" lines running through the sheet when held to the light."
+  },
+  {
+    "name": "WRAP CURL",
+    "description": "Also called roll curl. See simple curl."
+  },
+  {
+    "name": "WRINKLES",
+    "description": "Creases or folds in the sheet, usually running at slight angles to the machine direction. They result from excess localized paper being forced through a nip, and their appearance will generally aid in identifying where the defect is created in the paper making, converting, or printing process. When printing, the wrinkles will occur in a direction at an angle to the sheet or web travel."
+  },
+  {
+    "name": "WRITING PAPER",
+    "description": "Another name for bond paper."
+  },
+  {
+    "name": "XEROGRAPHIC PAPER",
+    "description": "Papers that reproduce well in copy machines and laser printers."
+  },
+  {
+    "name": "XEROGRAPHY",
+    "description": "Copying process that uses a selenium surface and electrostatic forces to form an image. See electrostatic copying/ printing."
+  },
+  {
+    "name": "XYLEM",
+    "description": "Part of a tree between the bark and the pith that forms the mechanical structure constituting the wood from which the fiber is obtained for use in pulp and papermaking."
+  },
+  {
+    "name": "YANKEE DRYER",
+    "description": "A steam-heated paper dryer consisting of a large revolving drum equipped with a felt to hold the sheet in contact with its highly polished surface. These are commonly used for drying tissue-type papers."
+  },
+  {
+    "name": "YELLOWING",
+    "description": "Copying process that uses a selenium surface and electrostatic forces to form an image."
+  },
+  {
+    "name": "YIELD",
+    "description": "The ratio for the amount of raw material entering a pulp and papermaking operation to the equivalent product output."
+  },
+  {
+    "name": "Z-DIRECTIONAL STRENGTH",
+    "description": "The strength of paper or board in the direction perpendicular to the plane of the sheet."
+  }
+]
