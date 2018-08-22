@@ -68,6 +68,14 @@ export const Navigation = [
             {
                 slug: '/thermal',
                 name: 'Thermal'
+            },
+            {
+                slug: '/sack-kraft',
+                name: 'Sack Kraft'
+            },
+            {
+                slug: '/speciality',
+                name: 'Speciality'
             }
         ]
     },
@@ -78,8 +86,12 @@ export const Navigation = [
         prefix: 'packaging',
         children: [
             {
-                slug: '/container-board',
-                name: 'Container Board'
+                slug: '/cake-boards',
+                name: 'Cake Boards'
+            },
+            {
+                slug: '/plastic-film',
+                name: 'Plastic Film'
             }
         ]
     },

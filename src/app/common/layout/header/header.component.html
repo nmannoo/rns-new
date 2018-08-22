@@ -53,14 +53,14 @@
                                 </a>
                             </ng-container>
                         </div>
-                        <div *ngIf="nav?.children.length > 5" class="d-flex flex-column px-3 float-left w-25">
+                        <div *ngIf="nav?.children.length > 3" class="d-flex flex-column px-3 float-left w-25">
                             <ng-container *ngFor="let subnav of nav?.children; index as in;">
                                 <a *ngIf="in + 1 > 3 && in + 1 <= 6" [routerLink]="nav.routeprefix + subnav.slug" class="dropdown-item">
                                     {{subnav.name}}
                                 </a>
                             </ng-container>
                         </div>
-                        <div *ngIf="nav?.children.length > 10" class="d-flex flex-column px-3 float-left w-25">
+                        <div *ngIf="nav?.children.length > 6" class="d-flex flex-column px-3 float-left w-25">
                             <ng-container *ngFor="let subnav of nav?.children; index as in;">
                                 <a *ngIf="in + 1 > 6 && in + 1 <= 9" [routerLink]="nav.routeprefix + subnav.slug" class="dropdown-item">
                                     {{subnav.name}}
