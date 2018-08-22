@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
   getPosts() {
-    this.content.fetchProducts().subscribe(data => {
+    this.content.fetchfProducts().subscribe(data => {
       this.posts = data;
     });
   }

@@ -10,6 +10,8 @@ export class SliderCardComponent implements OnInit {
   @Input() elId: string;
   // tslint:disable-next-line:no-input-rename
   @Input('post') slidePost: any;
+  // tslint:disable-next-line:no-input-rename
+  @Input('bg-post') slideBg: any;
 
   constructor() { }
 

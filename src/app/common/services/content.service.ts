@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
 import { Content } from '../classes/content';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -48,8 +49,22 @@ export class ContentService {
     return this.pageData;
   }
 
-  fetchProducts() {
-    this.productsCollection = this.afs.collection('products');
+  fetchfProducts() {
+    this.productsCollection = this.afs.collection('products', ref => {
+      let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+      query = query.where('featured', '==', true);
+      return query;
+    });
+    this.products = this.productsCollection.valueChanges();
+    return this.products;
+  }
+
+  fetchProdbyChild() {
+    this.productsCollection = this.afs.collection('products', ref => {
+      let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+      query = query.where('category', '==', `${this.child}`);
+      return query;
+    });
     this.products = this.productsCollection.valueChanges();
     return this.products;
   }

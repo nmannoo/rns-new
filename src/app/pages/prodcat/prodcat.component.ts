@@ -59,7 +59,7 @@ export class ProdcatComponent implements OnInit, OnDestroy {
 
   getProducts() {
     this.route.params.forEach((params: Params) => {
-      this.content.fetchProducts().subscribe(data => {
+      this.content.fetchProdbyChild().subscribe(data => {
         this.posts = data;
       });
     });
