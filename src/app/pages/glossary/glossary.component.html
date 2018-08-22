@@ -30,9 +30,11 @@
 </div>
 <div class="row pb-4">
   <div class="col-12">
-      <ng-container *ngFor="let gloss of glossary | filter: searchString: 'name'; index as i;">
-        <strong>{{gloss.name | uppercase}}</strong>
-        <p>{{gloss.description}}</p>
-      </ng-container>
+      <div [@flyIn]="searchString" class="position-relative">
+        <span *ngFor="let gloss of glossary | filter: searchString: 'name'; index as i;" class="d-block">
+          <strong>{{gloss.name | uppercase}}</strong>
+          <p>{{gloss.description}}</p>
+        </span>
+      </div>
   </div>
 </div>

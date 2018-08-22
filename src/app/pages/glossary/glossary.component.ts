@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { flyInAnimation } from '../../common/classes/animations';
+
 @Component({
   selector: 'app-glossary',
   templateUrl: './glossary.component.html',
-  styleUrls: ['./glossary.component.scss']
+  styleUrls: ['./glossary.component.scss'],
+  animations: [ flyInAnimation ]
 })
 export class GlossaryComponent implements OnInit {
   public glossary: any;

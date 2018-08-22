@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { fadeAnimation } from '../classes/router.animations';
+import { fadeAnimation } from '../classes/animations';
 
 @Component({
   selector: 'app-layout',
