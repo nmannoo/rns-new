@@ -24,9 +24,13 @@ export class SwipeDirective implements OnInit {
       const carousel = this.el;
       const hammer = new Hammer.Manager(carousel);
       const swipe = new Hammer.Swipe();
-      $(carousel).carousel({
-        pause: false
-      });
+      if (carousel.classList.contains('card-img-top')) {
+        $(carousel).carousel('pause');
+      } else {
+        $(carousel).carousel({
+          pause: false
+        });
+      }
       hammer.add(swipe);
       hammer.on('swipeleft', function() {
         $(carousel).carousel('next');

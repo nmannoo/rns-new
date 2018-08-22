@@ -9,6 +9,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -62,7 +64,8 @@ import { FilterPipe } from './common/pipes/filter.pipe';
     AngularFireModule.initializeApp(environment.firebase, 'rollnsheet'),
     AngularFirestoreModule.enablePersistence(),
     HttpClientModule,
-    NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig)
+    NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig),
+    LazyLoadImagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
