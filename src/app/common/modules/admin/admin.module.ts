@@ -19,6 +19,8 @@ import { AdminHeaderComponent } from '../../admin-layout/admin-header/admin-head
 import { AdminFooterComponent } from '../../admin-layout/admin-footer/admin-footer.component';
 import { ProductsComponent } from '../../../pages/admin/products/products.component';
 
+import { DialogModule } from '../dialog/dialog.module';
+
 
 const adminroutes: Routes = [
   {
@@ -47,7 +49,8 @@ const adminroutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
-    CdkTableModule
+    CdkTableModule,
+    DialogModule
   ],
   declarations: [
     AdminComponent,

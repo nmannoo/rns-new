@@ -27,12 +27,11 @@ import { SliderCardComponent } from './common/slider-card/slider-card.component'
 import { ProdcatComponent } from './pages/prodcat/prodcat.component';
 import { RegionalMarketComponent } from './pages/regional-market/regional-market.component';
 import { GlossaryComponent } from './pages/glossary/glossary.component';
-import { DialogComponent } from './common/dialog/dialog.component';
-import { DialogDirective } from './common/dialog/dialog.directive';
 import { SwipeDirective } from './common/directive/swipe.directive';
 import { DropdownDirective } from './common/directive/dropdown.directive';
 import { FilterPipe } from './common/pipes/filter.pipe';
 import { DropdownComponent } from './common/layout/header/dropdown/dropdown.component';
+import { DialogModule } from './common/modules/dialog/dialog.module';
 
 @NgModule({
   declarations: [
@@ -49,8 +48,6 @@ import { DropdownComponent } from './common/layout/header/dropdown/dropdown.comp
     ProdcatComponent,
     RegionalMarketComponent,
     GlossaryComponent,
-    DialogComponent,
-    DialogDirective,
     SwipeDirective,
     DropdownDirective,
     FilterPipe,
@@ -67,7 +64,8 @@ import { DropdownComponent } from './common/layout/header/dropdown/dropdown.comp
     AngularFirestoreModule.enablePersistence(),
     HttpClientModule,
     NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig),
-    LazyLoadImagesModule
+    LazyLoadImagesModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

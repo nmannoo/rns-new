@@ -12,6 +12,8 @@ export class ProductsComponent implements OnInit {
   dataSource$: any[];
   columns = productCol;
 
+  tempData: any;
+
   constructor(
     private content: ContentService
   ) { }
@@ -19,12 +21,16 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.content.fetchProds().subscribe(data => {
       this.dataSource$ = data;
-      console.log(data);
     });
   }
 
   update(value) {
     console.log(value.name);
+  }
+
+  switchData(value) {
+    this.tempData = value;
+    console.log(this.tempData);
   }
 
 }

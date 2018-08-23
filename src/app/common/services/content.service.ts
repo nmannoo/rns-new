@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
 import { Content } from '../classes/content';
@@ -37,6 +37,8 @@ export class ContentService {
       });
   }
 
+  // Content
+
   fetchContent() {
     this.pageContent = this.afs.collection('pages').doc(`${this.child}`);
     this.pageData = this.pageContent.snapshotChanges().pipe(
@@ -48,6 +50,8 @@ export class ContentService {
     );
     return this.pageData;
   }
+
+  // Get Product Data
 
   fetchfProducts() {
     this.productsCollection = this.afs.collection('products', ref => {
@@ -74,4 +78,17 @@ export class ContentService {
     this.products = this.productsCollection.valueChanges();
     return this.products;
   }
+
+  // Update Product Data
+
+  update(info) {
+    const promise = from(this.afs.collection('products').doc(info.name).update({
+      blocktitle: info.blocktitle,
+      category: info.category,
+      fullname: info.fullname,
+      name: info.name
+    }));
+    return promise;
+  }
+
 }

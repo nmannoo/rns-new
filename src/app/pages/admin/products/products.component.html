@@ -5,7 +5,7 @@
         <input type="text" name="search" id="search" class="form-control form-control-sm">
       </div>
       <div class="card-body p-0">
-        <table cdk-table [dataSource]="dataSource$" class="table table-bordered table-hover table-dark">
+        <table cdk-table [dataSource]="dataSource$" class="table table-bordered table-hover">
           <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
           <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
 
@@ -13,18 +13,22 @@
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Full Name</th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.fullname}}</td>
           </ng-container>
+
           <ng-container cdkColumnDef="name">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Permalink</th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
           </ng-container>
+
           <ng-container cdkColumnDef="blocktitle">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Block Title</th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.blocktitle}}</td>
           </ng-container>
+
           <ng-container cdkColumnDef="category">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Category</th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category}}</td>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category || '-'}}</td>
           </ng-container>
+
           <ng-container cdkColumnDef="featured">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Featured</th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
@@ -32,10 +36,22 @@
               <ng-template #notfeatured>No</ng-template>
             </td>
           </ng-container>
+
           <ng-container cdkColumnDef="edit">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;"></th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
-              <button (click)="update(row)">Edit</button>
+            <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
+              <button (click)="switchData(row)" dialog="{{row.name}}">Edit</button>
+              <app-dialog (onAccept)="update(row)" [dialogID]="row.name" [title]="'Edit Entry: ' + row.fullname" accept="Save" cancel="Cancel">
+                <div class="form-group">
+                  <input type="text" name="fullname" id="fullname">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="blocktitle" id="blocktitle">
+                </div>
+              </app-dialog>
             </td>
           </ng-container>
         </table>
