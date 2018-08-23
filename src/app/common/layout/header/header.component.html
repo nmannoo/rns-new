@@ -1,18 +1,15 @@
-
 <div id="heading">
-    
     <header id="contact-info" class="row d-lg-flex pt-0">
-
-        <div role="progressbar" class="mdc-linear-progress mb-1">
-            <div class="mdc-linear-progress__buffering-dots"></div>
-            <div class="mdc-linear-progress__buffer"></div>
-            <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
-                <span class="mdc-linear-progress__bar-inner"></span>
-            </div>
-            <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
-                <span class="mdc-linear-progress__bar-inner"></span>
-            </div>
+      <div role="progressbar" class="mdc-linear-progress mb-1">
+        <div class="mdc-linear-progress__buffering-dots"></div>
+        <div class="mdc-linear-progress__buffer"></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
         </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+      </div>
 
       <div class="d-none d-md-block col-md-4 text-center">
           <i class="material-icons mr-2">location_on</i> <span class="d-none d-lg-inline"><strong>Address:</strong>&nbsp;Ave. des Kerries, </span>Morc. Raffray, Le Hochet
@@ -27,7 +24,7 @@
           <i class="material-icons mr-2">phone</i> <strong>Contact us on:</strong> + 230 249 3003
       </div>
     </header>
-    
+
     <header id="mainhead" class="row">
       <div class="col d-flex flex-column flex-sm-row flex-xs-row">
           <div class="mx-xs-auto mx-sm-auto mx-md-auto flex-fill flex-lg-grow-0 h-100">
@@ -78,7 +75,7 @@
           </nav>
           <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1">
               <div id="search" class="input-group mb-4 d-flex h-100" style="align-items: center">
-                  <input type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2">
+                  <input (keydown)="searchAuto($event)" type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2">
                   <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="button" id="button-addon2">
                           <i class="material-icons">search</i>
@@ -105,7 +102,7 @@
                     <a (click)="closeDrawer()" [routerLink]="(nav.slug && !nav.children) ? '/' + nav.slug : null" [routerLinkActive]="!nav?.children ? 'mdc-list-item--activated': 'drop'" [routerLinkActiveOptions]="{exact: true}" class="mdc-list-item">{{nav.name}}</a>
                 </ng-container>
                 <ng-container *ngIf="nav?.children">
-                    
+
                     <h5 class="mdc-list-group__subheader">{{nav.name}}</h5>
                     <ng-container *ngFor="let subnav of nav.children">
                         <a [routerLink]="nav.routeprefix + subnav.slug" class="mdc-list-item">{{subnav.name}}</a>

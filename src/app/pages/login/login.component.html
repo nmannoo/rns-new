@@ -1,3 +1,48 @@
-<p>
-  login works!
-</p>
+<div id="login-wrapper" class="container-fluid w-100 h-100 rns-bg">
+  <main class="row h-100">
+    <div [@fadeIn]="trigger" class="position-relative w-100 h-100">
+      <div class="card login-card d-block">
+        <form (ngSubmit)="loginUser()" [formGroup]="loginForm" id="loginForm" class="card-body" autocomplete="off">
+          <span id="logo" class="d-block p-2 form-group">
+            <img src="assets/images/rollnsheet.svg" alt="Roll n Sheet Logo" class="img-fluid">
+          </span>
+          <div class="form-group my-1 mdc-text-field w-100">
+            <input formControlName="username" type="text" id="username" class="mdc-text-field__input h-auto" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$">
+            <label class="mdc-floating-label" for="my-text-field">Username</label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+          <ng-container *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)">
+            <p *ngIf="f.username.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+              Username is a required field.
+            </p>
+            <p *ngIf="f.username.errors.pattern" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+              Username should be in email format.
+            </p>
+          </ng-container>
+          <div class="form-group my-1 mdc-text-field w-100">
+            <input formControlName="password" type="password" id="password" class="mdc-text-field__input h-auto" required>
+            <label class="mdc-floating-label" for="my-text-field">Password</label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+          <ng-container *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
+            <p *ngIf="f.password.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
+              Password is a required field.
+            </p>
+          </ng-container>
+          <div class="form-group my-3">
+            <button class="btn mdc-button mdc-button--raised w-100 mb-2" [disabled]="!loginForm.valid ? 'true': null">
+              Login
+            </button>
+            <a href="#">
+              <small class="mt-2">
+                Forgot Password?
+              </small>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</div>
+

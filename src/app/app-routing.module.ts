@@ -55,6 +55,13 @@ const routes: Routes = [
     ]
   },
   {
+    path: '',
+    loadChildren: './common/modules/admin/admin.module#AdminModule',
+    data: {
+      state: 'admin'
+    }
+  },
+  {
     path: '*',
     redirectTo: ''
   }

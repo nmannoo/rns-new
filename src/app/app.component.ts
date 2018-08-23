@@ -1,8 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 import { PlatformService } from './common/services/platform.service';
-import { CookieService } from './common/services/cookie.service';
 import { MetadataService } from './common/services/metadata.service';
 import { SeoService } from './common/services/seo.service';
 
@@ -15,13 +14,12 @@ import { environment } from '../environments/environment';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'Roll n Sheet Ltd';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private cookie: CookieService,
     private platform: PlatformService,
     private seo: SeoService,
     private meta: MetadataService
@@ -31,14 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.scrollTop();
-    this.cookie.subscribe();
-    this.initSkype();
     this.initGAnalytics();
     this.sendPageView();
-  }
-
-  ngOnDestroy() {
-    this.cookie.unsubscribe();
   }
 
   scrollTop() {
@@ -78,20 +70,6 @@ export class AppComponent implements OnInit, OnDestroy {
           }
         }
       });
-    }
-  }
-
-  initSkype() {
-    if (this.platform.platformCheck) {
-      const scriptID = 'skype';
-      if (document.getElementById(scriptID)) {
-        return;
-      }
-
-      const s = document.createElement('script') as any;
-      s.type = 'text/javascript';
-      s.src = 'https://swc.cdn.skype.com/sdk/v1/sdk.min.js';
-      return document.getElementsByTagName('head')[0].appendChild(s);
     }
   }
 

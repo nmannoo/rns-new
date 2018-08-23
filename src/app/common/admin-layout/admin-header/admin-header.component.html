@@ -1,0 +1,32 @@
+<div id="heading">
+    <header id="adminhead" class="row">
+      <div class="col d-flex flex-column flex-sm-row flex-xs-row">
+          <div class="mx-xs-auto mx-sm-auto mx-md-auto flex-fill flex-lg-grow-0 h-100">
+              <a routerLink="/" class="mx-auto mx-sm-auto mx-md-auto float-lg-left" id="logo">
+                  <img src="assets/images/rollnsheet_white.svg" alt="Roll n Sheet Logo">
+              </a>
+          </div>
+          <nav class="adminmenu d-none d-md-none d-lg-flex flex-lg-grow-1">
+              <ul>
+                <ng-container *ngFor="let nav of nav; index as i;">
+                  <li [class.dropdown]="nav?.children">
+                    <a [routerLink]="(nav.slug && !nav.children) ? nav.slug : null" [routerLinkActive]="!nav?.children ? 'active': 'drop'" [routerLinkActiveOptions]="{exact: true}" class="menu-item" role="button">
+                      {{nav.name}}
+                    </a>
+                  </li>
+                </ng-container>
+              </ul>
+          </nav>
+          <nav class="adminmenu d-none d-md-none d-lg-flex flex-lg-shrink-2 float-right">
+            <ul>
+              <li>
+                <a class="current">Welcome {{currentUser}}</a>
+              </li>
+              <li>
+                <a class="logout">Logout</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+</div>

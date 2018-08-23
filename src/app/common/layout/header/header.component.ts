@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
-import { filter } from 'rxjs/operators';
-
 import { MDCTemporaryDrawer, MDCTemporaryDrawerFoundation } from '@material/drawer';
-
 import { MDCList } from '@material/list';
 import { MDCRipple } from '@material/ripple';
 import { MDCLinearProgress, MDCLinearProgressFoundation } from '@material/linear-progress';
@@ -12,7 +9,11 @@ import { MDCLinearProgress, MDCLinearProgressFoundation } from '@material/linear
 import { Navigation } from '../../classes/navigation';
 
 import { PlatformService } from '../../services/platform.service';
+import { SearchService } from '../../services/search.service';
 import { LoadingService } from '../../services/loading.service';
+
+import { Observable, Subject, of, combineLatest } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -24,9 +25,19 @@ export class HeaderComponent implements OnInit {
   public child;
   public nav = Navigation;
 
+  private startAt = new Subject();
+  private endAt = new Subject();
+
+  // tslint:disable-next-line:no-inferrable-types
+  private lastKeypress: number = 0;
+
+  private startObs = this.startAt.asObservable();
+  private endObs = this.endAt.asObservable();
+
   constructor(
     private platform: PlatformService,
     private loading: LoadingService,
+    private search: SearchService,
     private route: ActivatedRoute,
     private router: Router
   ) {
@@ -88,6 +99,21 @@ export class HeaderComponent implements OnInit {
         this.loading.startLoading(mdcLinearBar);
       });
     }
+  }
+
+  searchAuto($event: any) {
+    if ($event.timeStamp - this.lastKeypress > 200) {
+      const q = $event.target.value;
+      this.startAt.next(q);
+      this.endAt.next(q + '\uf8ff');
+
+      combineLatest(this.startObs, this.endObs).subscribe((value) => {
+        this.search.searchQuery(value[0], value[1]).subscribe(data => {
+          console.log(data);
+        });
+      });
+    }
+    this.lastKeypress = $event.timeStamp;
   }
 
 }

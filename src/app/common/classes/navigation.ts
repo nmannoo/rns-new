@@ -100,3 +100,10 @@ export const Navigation = [
         name: 'Contact',
     },
 ];
+
+export const AdminNavigation = [
+  {
+    slug: '/admin',
+    name: 'Home'
+  }
+];
