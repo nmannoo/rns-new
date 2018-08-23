@@ -1,0 +1,45 @@
+<div class="row py-3">
+  <div class="col-12">
+    <div class="card w-100">
+      <div class="card-header">
+        <input type="text" name="search" id="search" class="form-control form-control-sm">
+      </div>
+      <div class="card-body p-0">
+        <table cdk-table [dataSource]="dataSource$" class="table table-bordered table-hover table-dark">
+          <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
+          <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
+
+          <ng-container cdkColumnDef="fullname">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Full Name</th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.fullname}}</td>
+          </ng-container>
+          <ng-container cdkColumnDef="name">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Permalink</th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
+          </ng-container>
+          <ng-container cdkColumnDef="blocktitle">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Block Title</th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.blocktitle}}</td>
+          </ng-container>
+          <ng-container cdkColumnDef="category">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Category</th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category}}</td>
+          </ng-container>
+          <ng-container cdkColumnDef="featured">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Featured</th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
+              <ng-container *ngIf="row?.f_images; else notfeatured">Yes</ng-container>
+              <ng-template #notfeatured>No</ng-template>
+            </td>
+          </ng-container>
+          <ng-container cdkColumnDef="edit">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;"></th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
+              <button (click)="update(row)">Edit</button>
+            </td>
+          </ng-container>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

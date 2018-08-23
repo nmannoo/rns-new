@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     this.trigger = true;
   }
 
-  get f() {
+  get f(): any {
     return this.loginForm.controls;
   }
 

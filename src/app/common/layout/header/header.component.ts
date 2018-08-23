@@ -23,7 +23,7 @@ import { filter } from 'rxjs/operators';
 export class HeaderComponent implements OnInit {
   public parent;
   public child;
-  public nav = Navigation;
+  public nav: any = Navigation;
 
   private startAt = new Subject();
   private endAt = new Subject();

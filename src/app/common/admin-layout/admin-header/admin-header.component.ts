@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./admin-header.component.scss']
 })
 export class AdminHeaderComponent implements OnInit {
-  public nav = AdminNavigation;
+  public nav: any = AdminNavigation;
   public currentUser: string;
 
   constructor(
@@ -27,7 +27,7 @@ export class AdminHeaderComponent implements OnInit {
   logOut() {
     this.auth.logout().subscribe(
       (data) => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       },
       (err) => {
         alert(err.message);

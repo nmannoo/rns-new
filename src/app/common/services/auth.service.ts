@@ -33,6 +33,11 @@ export class AuthService {
       .signOut());
   }
 
+  forgotPassword(email: string) {
+    return from(this.afAuth.auth
+      .sendPasswordResetEmail(email));
+  }
+
   get currentUser() {
     for (let i = 0; i < this.userlist.length; i++) {
       if (this.afAuth.auth.currentUser.email === this.userlist[i].email) {

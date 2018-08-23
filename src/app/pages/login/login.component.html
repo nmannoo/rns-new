@@ -1,11 +1,14 @@
 <div id="login-wrapper" class="container-fluid w-100 h-100 rns-bg">
   <main class="row h-100">
-    <div [@fadeIn]="trigger" class="position-relative w-100 h-100">
+    <div [@fadeIn]="'in'" class="position-relative w-100 h-100">
       <div class="card login-card d-block">
         <form (ngSubmit)="loginUser()" [formGroup]="loginForm" id="loginForm" class="card-body" autocomplete="off">
           <span id="logo" class="d-block p-2 form-group">
             <img src="assets/images/rollnsheet.svg" alt="Roll n Sheet Logo" class="img-fluid">
           </span>
+          <div *ngIf="error" class="alert alert-danger" style="font-size: 13px;">
+            {{error}}
+          </div>
           <div class="form-group my-1 mdc-text-field w-100">
             <input formControlName="username" type="text" id="username" class="mdc-text-field__input h-auto" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$">
             <label class="mdc-floating-label" for="my-text-field">Username</label>

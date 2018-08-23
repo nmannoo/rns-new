@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
     this.materialise();
   }
 
-  get f() {
+  get f(): any {
     return this.contactForm.controls;
   }
 

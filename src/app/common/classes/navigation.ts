@@ -105,5 +105,9 @@ export const AdminNavigation = [
   {
     slug: '/admin',
     name: 'Home'
+  },
+  {
+    slug: '/admin/products',
+    name: 'Products'
   }
 ];

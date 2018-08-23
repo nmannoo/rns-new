@@ -10,6 +10,20 @@ import { GlossaryComponent } from './pages/glossary/glossary.component';
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: './common/modules/login/login.module#LoginModule',
+    data: {
+      state: 'login'
+    }
+  },
+  {
+    path: 'admin',
+    loadChildren: './common/modules/admin/admin.module#AdminModule',
+    data: {
+      state: 'admin'
+    }
+  },
+  {
     path: '',
     component: LayoutComponent,
     children: [
@@ -53,13 +67,6 @@ const routes: Routes = [
         }
       },
     ]
-  },
-  {
-    path: '',
-    loadChildren: './common/modules/admin/admin.module#AdminModule',
-    data: {
-      state: 'admin'
-    }
   },
   {
     path: '*',

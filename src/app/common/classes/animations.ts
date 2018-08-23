@@ -43,14 +43,13 @@ trigger('flyIn', [
 
 export const flyfadeIn =
 trigger('fadeIn', [
-  transition('* <=> *', [
-    query(':enter', [
-      style({ opacity: 0 }),
-      animate('0.2s', style({ opacity: 1 }))
-    ], { optional: true }),
-    query(':leave', [
-      style({ opacity: 0 }),
-      animate('0.2s', style({ opacity: 1 }))
-    ], { optional: true })
+  state('in', style({opacity: 1, transform: 'translateY(0)'})),
+  transition('void => *', [
+    style({opacity: 0, transform: 'translateY(-20%)'}),
+    animate('.5s ease-in-out')
+  ]),
+  transition('* => void', [
+    animate('.5s ease-in-out', style({opacity: 0, transform: 'translateY(20%)'}))
   ])
 ]);
+

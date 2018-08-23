@@ -68,4 +68,10 @@ export class ContentService {
     this.products = this.productsCollection.valueChanges();
     return this.products;
   }
+
+  fetchProds() {
+    this.productsCollection = this.afs.collection('products');
+    this.products = this.productsCollection.valueChanges();
+    return this.products;
+  }
 }
