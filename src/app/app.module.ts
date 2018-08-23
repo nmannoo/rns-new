@@ -32,6 +32,7 @@ import { DialogDirective } from './common/dialog/dialog.directive';
 import { SwipeDirective } from './common/directive/swipe.directive';
 import { DropdownDirective } from './common/directive/dropdown.directive';
 import { FilterPipe } from './common/pipes/filter.pipe';
+import { DropdownComponent } from './common/layout/header/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FilterPipe } from './common/pipes/filter.pipe';
     DialogDirective,
     SwipeDirective,
     DropdownDirective,
-    FilterPipe
+    FilterPipe,
+    DropdownComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-rns' }),
