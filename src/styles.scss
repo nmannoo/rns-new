@@ -22,6 +22,10 @@ $mdc-theme-secondary: #d20c1d;
     font-size: 14.5px;
 }
 
+*:active, *:focus, *:hover {
+  outline: none !important;
+}
+
 a {
     color: inherit;
 }

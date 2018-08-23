@@ -19,7 +19,8 @@ import { LoginGuard } from '../../guard/login.guard';
 const loginroutes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [LoginGuard]
   }
 ];
 

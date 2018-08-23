@@ -23,6 +23,14 @@ export class AuthService {
     this.user = afAuth.authState;
   }
 
+  get loginCheck(): boolean {
+    if (this.afAuth.auth.currentUser) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   login(info) {
     return from(this.afAuth.auth
       .signInWithEmailAndPassword(info.username, info.password));
