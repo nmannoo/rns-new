@@ -79,15 +79,26 @@ export class ContentService {
     return this.products;
   }
 
+  // Add Product Data
+
+  addProduct(info) {
+    const promise = from(this.afs.collection('products').doc(`${info.name}`).set(info));
+    return promise;
+  }
+
   // Update Product Data
 
-  update(info) {
-    const promise = from(this.afs.collection('products').doc(info.name).update({
-      blocktitle: info.blocktitle,
-      category: info.category,
-      fullname: info.fullname,
-      name: info.name
-    }));
+  updateProduct(info) {
+    delete info.image;
+    delete info.f_image;
+    const promise = from(this.afs.collection('products').doc(info.name).update(info));
+    return promise;
+  }
+
+  // Delete Product Data
+
+  deleteProduct(info) {
+    const promise = from(this.afs.collection('products').doc(info.name).delete());
     return promise;
   }
 

@@ -18,9 +18,9 @@ export class DialogDirective implements OnInit {
 
   ngOnInit() {
     if (this.platform.platformCheck) {
-      const dialog = document.querySelector(`.mdc-dialog`);
-      const mdcDialog = MDCDialog.attachTo(dialog);
       this.el.addEventListener('click', e => {
+        const dialog = document.querySelector(`#${this.dialog}`);
+        const mdcDialog = MDCDialog.attachTo(dialog);
         mdcDialog.show();
       });
     }

@@ -1,5 +1,5 @@
 <div class="card" [lazy-load-images]="{ rootMargin: '50px' }">
-    <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
+    <div id="{{elId}}" class="carousel slide card-img-top" swipe>
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >
               <img class="d-block w-100" [attr.data-src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">

@@ -28,7 +28,7 @@ export class SwipeDirective implements OnInit {
         $(carousel).carousel('pause');
       } else {
         $(carousel).carousel({
-          pause: false
+          pause: 'hover'
         });
       }
       hammer.add(swipe);
