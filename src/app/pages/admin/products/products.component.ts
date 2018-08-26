@@ -56,7 +56,16 @@ export class ProductsComponent implements OnInit {
     this.content.fetchProds().subscribe(data => {
       this.dataSource$ = data;
     });
+    this.materialButtons();
+  }
 
+  materialButtons() {
+    if (this.platform.platformCheck) {
+      const buttons = document.querySelectorAll('.mdc-button');
+      for (let i = 0; i < buttons.length; i++) {
+        MDCRipple.attachTo(buttons[i]);
+      }
+    }
   }
 
   materialise(form) {
@@ -70,8 +79,6 @@ export class ProductsComponent implements OnInit {
       for (let i = 0; i < editValidation.length; i++) {
           MDCTextFieldHelperText.attachTo(editValidation[i]);
       }
-
-      const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
     }
   }
 

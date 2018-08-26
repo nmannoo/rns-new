@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="card w-100">
       <div class="card-header">
-        <button (click)="newData()" dialog="newproduct">
+        <button class="mdc-button" (click)="newData()" dialog="newproduct">
           Add New Product
         </button>
         <app-dialog (onAccept)="add()" dialogID="newproduct" [title]="'Add New Product'" accept="Save" cancel="Cancel">
@@ -94,8 +94,8 @@
           <ng-container cdkColumnDef="edit">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;"></th>
             <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
-              <button (click)="switchData(row, i)" dialog="{{row.name}}">Edit</button>
-              <button (click)="delete(row)">Delete</button>
+              <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name}}">Edit</button>
+              <button (click)="delete(row)" class="mdc-button">Delete</button>
               <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.name}}" [title]="'Edit Product: ' + row.fullname" accept="Save" cancel="Cancel">
                 <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
                   <div class="col-6">
