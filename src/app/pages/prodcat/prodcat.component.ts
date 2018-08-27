@@ -20,6 +20,8 @@ export class ProdcatComponent implements OnInit, OnDestroy {
   // Subscriptions
   private slidesData: Subscription;
 
+  showSpinner = true;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -61,6 +63,7 @@ export class ProdcatComponent implements OnInit, OnDestroy {
     this.route.params.forEach((params: Params) => {
       this.content.fetchProdbyChild().subscribe(data => {
         this.posts = data;
+        this.showSpinner = false;
       });
     });
   }

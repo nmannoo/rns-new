@@ -9,8 +9,6 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
-import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
-
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +30,7 @@ import { DropdownDirective } from './common/directive/dropdown.directive';
 import { FilterPipe } from './common/pipes/filter.pipe';
 import { DropdownComponent } from './common/layout/header/dropdown/dropdown.component';
 import { DialogModule } from './common/modules/dialog/dialog.module';
+import { LoadingModule } from './common/modules/loading/loading.module';
 
 @NgModule({
   declarations: [
@@ -64,8 +63,8 @@ import { DialogModule } from './common/modules/dialog/dialog.module';
     AngularFirestoreModule.enablePersistence(),
     HttpClientModule,
     NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig),
-    LazyLoadImagesModule,
-    DialogModule
+    DialogModule,
+    LoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

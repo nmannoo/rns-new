@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="card w-100">
       <div class="card-header">
-        <button class="mdc-button" (click)="newData()" dialog="newproduct">
+        <button class="mdc-button mdc-button--raised" (click)="newData()" dialog="newproduct">
           Add New Product
         </button>
         <app-dialog (onAccept)="add()" dialogID="newproduct" [title]="'Add New Product'" accept="Save" cancel="Cancel">
@@ -42,6 +42,19 @@
                   <label class="mdc-floating-label" for="my-text-field">Block Title</label>
                   <div class="mdc-line-ripple"></div>
                 </div>
+
+                <div class="form-group my-2 w-100">
+                  <div class="mdc-switch">
+                    <div class="mdc-switch__track"></div>
+                    <div class="mdc-switch__thumb-underlay">
+                      <div class="mdc-switch__thumb">
+                          <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
+                      </div>
+                    </div>
+                  </div>
+                  <label for="featured-switch" class="ml-2">Featured ?</label>
+                </div>
+
                 <div class="form-group my-2 mdc-text-field w-100">
                   <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
                   <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>
@@ -59,7 +72,7 @@
           </app-dialog>
       </div>
       <div class="card-body p-0">
-        <table cdk-table [dataSource]="dataSource$" class="table table-hover">
+        <table cdk-table [dataSource]="dataSource$" class="table table-hover table-prods">
           <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
           <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
 
@@ -86,7 +99,7 @@
           <ng-container cdkColumnDef="featured">
             <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Featured</th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
-              <ng-container *ngIf="row?.f_images?.length > 0; else notfeatured">Yes</ng-container>
+              <ng-container *ngIf="row?.featured; else notfeatured">Yes</ng-container>
               <ng-template #notfeatured>No</ng-template>
             </td>
           </ng-container>
@@ -133,6 +146,19 @@
                       <label class="mdc-floating-label" for="my-text-field">Block Title</label>
                       <div class="mdc-line-ripple"></div>
                     </div>
+
+                    <div class="form-group my-2 w-100">
+                      <div class="mdc-switch">
+                        <div class="mdc-switch__track"></div>
+                        <div class="mdc-switch__thumb-underlay">
+                          <div class="mdc-switch__thumb">
+                              <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
+                          </div>
+                        </div>
+                      </div>
+                      <label for="featured-switch" class="ml-2">Featured ?</label>
+                    </div>
+
                     <div class="form-group my-2 mdc-text-field w-100">
                       <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
                       <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>

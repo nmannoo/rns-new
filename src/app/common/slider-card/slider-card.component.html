@@ -1,8 +1,8 @@
-<div class="card" [lazy-load-images]="{ rootMargin: '50px' }">
+<div class="card">
     <div id="{{elId}}" class="carousel slide card-img-top" swipe>
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >
-              <img class="d-block w-100" [attr.data-src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">
+              <img class="d-block w-100" [src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">
             </div>
         </div>
         <a *ngIf="slidePost?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">
@@ -15,6 +15,6 @@
         </a>
     </div>
     <div *ngIf="slideBg" class="card-body p-0">
-        <img class="img-fluid w-100" [attr.data-src]="'assets/images/products/' + slideBg + '-bg.png'">
+        <img class="img-fluid w-100" [src]="'assets/images/products/' + slideBg + '-bg.png'">
     </div>
 </div>

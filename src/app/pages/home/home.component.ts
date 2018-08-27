@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   // test data
   public posts: any;
 
+  showSpinner = true;
+
   constructor(private slider: SliderService, private content: ContentService) { }
 
   ngOnInit() {
@@ -30,6 +32,7 @@ export class HomeComponent implements OnInit {
   getPosts() {
     this.content.fetchfProducts().subscribe(data => {
       this.posts = data;
+      this.showSpinner = false;
     });
   }
 

@@ -18,17 +18,19 @@
   </div>
   <div class="col-12 col-lg-6"></div>
   <div class="col-12">
-      <h1 class="rns-headband text-white">Featured Products</h1>
+      <h2 class="rns-heading-blue text-left my-4">Featured Products</h2>
   </div>
 </div>
 
+<loading *ngIf="showSpinner"></loading>
+
 <ng-container *ngFor="let post of posts; index as i;">
     <ng-container *ngIf="post.blocktitle !== posts[i+1]?.blocktitle">
-        <div class="row py-2">
+        <!-- <div class="row py-2">
             <div class="col-12">
                 <h2 class="rns-heading-blue text-center mb-2">{{post.blocktitle}}</h2>
             </div>
-        </div>
+        </div> -->
         <div class="row py-2">
             <ng-container *ngFor="let post2 of posts; index as j;">
                 <ng-container *ngIf="post.blocktitle === post2.blocktitle">

@@ -4,6 +4,7 @@ import { FormBuilder, Validators, FormArray } from '@angular/forms';
 import { MDCTextField } from '@material/textfield';
 import { MDCTextFieldHelperText } from '@material/textfield/helper-text';
 import { MDCRipple } from '@material/ripple';
+import { MDCSwitch } from '@material/switch';
 
 import { ContentService } from '../../../common/services/content.service';
 import { PlatformService } from '../../../common/services/platform.service';
@@ -32,7 +33,8 @@ export class ProductsComponent implements OnInit {
     images: this.fb.array([]),
     image: [''],
     f_images: this.fb.array([]),
-    f_image: ['']
+    f_image: [''],
+    featured: [false]
   });
 
   public addForm = this.fb.group({
@@ -43,7 +45,8 @@ export class ProductsComponent implements OnInit {
     images: this.fb.array([]),
     image: [''],
     f_images: this.fb.array([]),
-    f_image: ['']
+    f_image: [''],
+    featured: [false]
   });
 
   constructor(
@@ -78,6 +81,11 @@ export class ProductsComponent implements OnInit {
       const editValidation = editForm.getElementsByClassName('mdc-text-field-helper-text');
       for (let i = 0; i < editValidation.length; i++) {
           MDCTextFieldHelperText.attachTo(editValidation[i]);
+      }
+
+      const editSwitch = editForm.getElementsByClassName('mdc-switch');
+      for (let i = 0; i < editSwitch.length; i++) {
+        MDCSwitch.attachTo(editSwitch[i]);
       }
     }
   }
@@ -145,11 +153,12 @@ export class ProductsComponent implements OnInit {
       blocktitle: value.blocktitle,
       fullname: value.fullname,
       name: value.name,
-      category: value.category,
+      category: value.category ? value.category : '',
       images: [],
       image: '',
       f_images: [],
-      f_image: ''
+      f_image: '',
+      featured: value.featured ? value.featured : false
     });
     this.images = value.images || [];
     this.f_images = value.f_images || [];
