@@ -8,6 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 import { environment } from '../environments/environment';
 
@@ -64,7 +65,10 @@ import { LoadingModule } from './common/modules/loading/loading.module';
     HttpClientModule,
     NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig),
     DialogModule,
-    LoadingModule
+    LoadingModule,
+    NgxCaptchaModule.forRoot({
+      reCaptcha2SiteKey: environment.reCAPTCHA.siteKey
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

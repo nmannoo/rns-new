@@ -9,6 +9,8 @@ import { PlatformService } from '../../common/services/platform.service';
 import { ContactService } from '../../common/services/contact.service';
 import { ContactForm } from '../../common/classes/forms';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -16,6 +18,8 @@ import { ContactForm } from '../../common/classes/forms';
 })
 export class ContactComponent implements OnInit {
   public response: any;
+
+  public siteKey = environment.reCAPTCHA.siteKey;
 
   public contactForm = this.fb.group({
     name: ['', Validators.required],
@@ -25,7 +29,13 @@ export class ContactComponent implements OnInit {
     ]],
     subject: ['', Validators.required],
     message: ['', Validators.required],
+    recaptcha: ['', Validators.required]
   });
+
+  public theme: 'light' | 'dark' = 'light';
+  public size: 'compact' | 'normal' = 'normal';
+  public lang = 'en';
+  public type: 'image' | 'audio' = 'image';
 
   constructor(
     private platform: PlatformService,
@@ -73,6 +83,10 @@ export class ContactComponent implements OnInit {
         }
       );
     }
+  }
+
+  handleSuccess(captchaResponse: string) {
+    console.log(`Resolved captcha with response ${captchaResponse}:`);
   }
 
 }

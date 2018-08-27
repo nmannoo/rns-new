@@ -10,7 +10,8 @@ export const productCol = [
 export const sliderCol = [
   'pagename',
   'slug',
-  'slides'
+  'slides',
+  'edit'
 ];
 
 export const pageCol = [

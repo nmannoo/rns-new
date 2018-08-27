@@ -3,23 +3,28 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from
 
 import { AuthService } from '../services/auth.service';
 
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginGuard implements CanActivate {
+  private state = new BehaviorSubject<boolean>(true);
+
   constructor(
     private auth: AuthService,
     private router: Router
   ) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-    if (this.auth.loginCheck) {
-      this.router.navigate(['/admin']);
-      return false;
-    } else {
-      return true;
-    }
+    this.auth.user.subscribe(data => {
+      if (data) {
+        this.state.next(false);
+        this.router.navigate(['/admin']);
+      } else {
+        this.state.next(true);
+      }
+    });
+    return this.state.value;
   }
 }

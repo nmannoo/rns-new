@@ -31,6 +31,9 @@ export const environment = {
       message: 'This website uses cookies to ensure you get the best experience on our website.',
       dismiss: 'Got it!'
     }
+  },
+  reCAPTCHA: {
+    siteKey: '6LfewmwUAAAAADfCuS1MzYnP0MSfMgxKfBT2d3D9'
   }
 };
 

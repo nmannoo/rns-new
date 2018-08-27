@@ -15,7 +15,7 @@
         </div>
         <div class="mdc-notched-outline__idle"></div>
       </div>
-      <ng-container *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)">
+      <ng-container *ngIf="f.name.invalid && (f.name.dirty && f.name.touched)">
         <p *ngIf="f.name.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
           Name is a required field.
         </p>
@@ -31,7 +31,7 @@
         </div>
         <div class="mdc-notched-outline__idle"></div>
       </div>
-      <ng-container *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+      <ng-container *ngIf="f.email.invalid && (f.email.dirty && f.email.touched)">
         <p *ngIf="f.email.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
           Email is a required field.
         </p>
@@ -49,7 +49,7 @@
         </div>
         <div class="mdc-notched-outline__idle"></div>
       </div>
-      <ng-container *ngIf="f.subject.invalid && (f.subject.dirty || f.subject.touched)">
+      <ng-container *ngIf="f.subject.invalid && (f.subject.dirty && f.subject.touched)">
         <p *ngIf="f.subject.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
           Subject is a required field.
         </p>
@@ -58,11 +58,14 @@
         <textarea formControlName="message" name="message" id="message" class="mdc-text-field__input h-auto" autocomplete="off" required></textarea>
         <label for="subject" class="mdc-floating-label">Your message</label>
       </div>
-      <ng-container *ngIf="f.message.invalid && (f.message.dirty || f.message.touched)">
+      <ng-container *ngIf="f.message.invalid && (f.message.dirty && f.message.touched)">
         <p *ngIf="f.message.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
           Message is a required field.
         </p>
       </ng-container>
+      <div class="form-group w-100 mt-3">
+        <ngx-recaptcha2 [size]="size" [hl]="lang" [theme]="theme" [type]="type" (success)="handleSuccess($event)" formControlName="recaptcha"></ngx-recaptcha2>
+      </div>
       <div class="form-group mt-4">
         <button mdc-button raised="true" type="submit" class="mdc-button mdc-button--raised parrot-button" [disabled]="!contactForm.valid ? 'true': null">
           Send
