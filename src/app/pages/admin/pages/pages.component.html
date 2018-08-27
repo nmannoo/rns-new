@@ -1,0 +1,111 @@
+<div class="row py-3">
+  <div class="col-12">
+    <div class="card w-100">
+      <div class="card-header">
+        <button class="mdc-button mdc-button--raised" (click)="newData()" dialog="newpage">
+          Add New Page
+        </button>
+        <app-dialog (onAccept)="add()" dialogID="newpage" [title]="'Add New Page'" accept="Save" cancel="Cancel">
+            <form [formGroup]="addForm" class="row" autocomplete="off" id="addForm">
+              <div class="col-12">
+                <div class="form-group my-2 mdc-text-field w-100">
+                  <input formControlName="id" type="text" id="id" class="mdc-text-field__input h-auto">
+                  <label class="mdc-floating-label" for="my-text-field">ID (Slug)</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+                <div class="form-group my-2 mdc-text-field w-100">
+                  <input formControlName="title" type="text" id="title" class="mdc-text-field__input h-auto">
+                  <label class="mdc-floating-label" for="my-text-field">Title</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+                <div class="form-group my-2 mdc-text-field mdc-text-field--textarea w-100">
+                  <textarea formControlName="description" id="description" class="mdc-text-field__input h-auto" rows="8" cols="40"></textarea>
+                  <label class="mdc-floating-label" for="my-text-field">Description</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+                <div class="form-group my-2 mdc-text-field w-100">
+                  <input formControlName="keywords" type="text" id="keywords" class="mdc-text-field__input h-auto">
+                  <label class="mdc-floating-label" for="my-text-field">Keywords</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+              </div>
+            </form>
+          </app-dialog>
+      </div>
+      <div class="card-body p-0">
+        <table cdk-table [dataSource]="dataSource$" class="table table-hover table-prods">
+          <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
+          <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
+
+          <ng-container cdkColumnDef="slug">
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="slug">
+              ID (Slug)
+              <i *ngIf="sortKey === 'slug'" class="material-icons">arrow_drop_up</i>
+            </th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.id}}</td>
+          </ng-container>
+
+          <ng-container cdkColumnDef="title">
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="title">
+              Title
+              <i *ngIf="sortKey === 'title'" class="material-icons">arrow_drop_up</i>
+            </th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.title}}</td>
+          </ng-container>
+
+          <ng-container cdkColumnDef="description">
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 300px;" data-name="description">
+              Description
+              <i *ngIf="sortKey === 'description'" class="material-icons">arrow_drop_up</i>
+            </th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.description || '-'}}</td>
+          </ng-container>
+
+          <ng-container cdkColumnDef="keywords">
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 300px;" data-name="keywords">
+              Keywords
+              <i *ngIf="sortKey === 'keywords'" class="material-icons">arrow_drop_up</i>
+            </th>
+            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.keywords || '-'}}</td>
+          </ng-container>
+
+          <ng-container cdkColumnDef="edit">
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;"></th>
+            <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
+              <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.id}}">Edit</button>
+              <button (click)="delete(row)" class="mdc-button">Delete</button>
+              <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.id}}" [title]="'Edit Page: ' + row.title" accept="Save" cancel="Cancel">
+                <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
+                  <div class="col-12">
+                    <div class="form-group my-2 mdc-text-field w-100">
+                      <input formControlName="id" type="text" id="slug" class="mdc-text-field__input h-auto">
+                      <label class="mdc-floating-label" for="my-text-field">ID (Slug)</label>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+                    <div class="form-group my-2 mdc-text-field w-100">
+                      <input formControlName="title" type="text" id="title" class="mdc-text-field__input h-auto">
+                      <label class="mdc-floating-label" for="my-text-field">Title</label>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+
+                    <div class="form-group my-2 mdc-text-field mdc-text-field--textarea w-100">
+                      <textarea formControlName="description" id="description" class="mdc-text-field__input h-auto" rows="8" cols="40"></textarea>
+                      <label class="mdc-floating-label" for="my-text-field">Description</label>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+                    <div class="form-group my-2 mdc-text-field w-100">
+                      <input formControlName="keywords" type="text" id="keywords" class="mdc-text-field__input h-auto">
+                      <label class="mdc-floating-label" for="my-text-field">Keywords</label>
+                      <div class="mdc-line-ripple"></div>
+                    </div>
+
+                  </div>
+                </form>
+              </app-dialog>
+            </td>
+          </ng-container>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

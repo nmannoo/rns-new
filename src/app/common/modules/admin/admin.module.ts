@@ -18,8 +18,11 @@ import { AdminLayoutComponent } from '../../admin-layout/admin-layout.component'
 import { AdminHeaderComponent } from '../../admin-layout/admin-header/admin-header.component';
 import { AdminFooterComponent } from '../../admin-layout/admin-footer/admin-footer.component';
 import { ProductsComponent } from '../../../pages/admin/products/products.component';
+import { PagesComponent } from '../../../pages/admin/pages/pages.component';
+import { SlidersComponent } from '../../../pages/admin/sliders/sliders.component';
 
 import { DialogModule } from '../dialog/dialog.module';
+import { SortPipe } from '../../pipes/sort.pipe';
 
 
 const adminroutes: Routes = [
@@ -34,6 +37,14 @@ const adminroutes: Routes = [
       {
         path: 'products',
         component: ProductsComponent
+      },
+      {
+        path: 'pages',
+        component: PagesComponent
+      },
+      {
+        path: 'sliders',
+        component: SlidersComponent
       }
     ],
     canActivate: [AuthGuard]
@@ -57,7 +68,10 @@ const adminroutes: Routes = [
     AdminLayoutComponent,
     AdminHeaderComponent,
     AdminFooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    SortPipe,
+    PagesComponent,
+    SlidersComponent
   ],
   providers: [
     AuthService,

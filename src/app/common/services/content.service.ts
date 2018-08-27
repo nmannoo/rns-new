@@ -13,8 +13,10 @@ import * as firebase from 'firebase';
   providedIn: 'root'
 })
 export class ContentService {
+  pageCollection: AngularFirestoreCollection<Content[]>;
   pageContent: AngularFirestoreDocument<Content>;
   pageData: Observable<Content>;
+  pageArrData: Observable<Content[]>;
 
   productsCollection: AngularFirestoreCollection<any[]>;
   products: Observable<any[]>;
@@ -49,6 +51,41 @@ export class ContentService {
       })
     );
     return this.pageData;
+  }
+
+  fetchAllContent() {
+    this.pageCollection = this.afs.collection('pages');
+    this.pageArrData = this.pageCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
+      })
+    );
+    return this.pageArrData;
+  }
+
+  // Add New Content
+
+  addPage(info) {
+    const promise = from(this.afs.collection('pages').doc(`${info.id}`).set(info));
+    return promise;
+  }
+
+  // Update Content
+
+  updatePage(info) {
+    const promise = from(this.afs.collection('pages').doc(info.id).update(info));
+    return promise;
+  }
+
+  // Delete Content
+
+  deletePage(info) {
+    const promise = from(this.afs.collection('pages').doc(info.id).delete());
+    return promise;
   }
 
   // Get Product Data

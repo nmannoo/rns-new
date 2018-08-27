@@ -8,51 +8,36 @@ import { MDCSwitch } from '@material/switch';
 
 import { ContentService } from '../../../common/services/content.service';
 import { PlatformService } from '../../../common/services/platform.service';
-import { productCol } from '../../../common/classes/admin.table';
+import { pageCol } from '../../../common/classes/admin.table';
 
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-pages',
+  templateUrl: './pages.component.html',
+  styleUrls: ['./pages.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class PagesComponent implements OnInit {
   dataSource$ = new BehaviorSubject<any[]>([]);
   rawData: any[];
-  columns = productCol;
-
-  images = [];
-  f_images = [];
+  columns = pageCol;
 
   tempData: any;
   clicked = 0;
   sortKey: string;
 
-  public editForm = this.fb.group({
-    fullname: [''],
-    name: [''],
-    category: [''],
-    blocktitle: [''],
-    images: this.fb.array([]),
-    image: [''],
-    f_images: this.fb.array([]),
-    f_image: [''],
-    featured: [false],
-    background: [false]
+  public addForm = this.fb.group({
+    id: [''],
+    title: [''],
+    description: [''],
+    keywords: ['']
   });
 
-  public addForm = this.fb.group({
-    fullname: [''],
-    name: [''],
-    category: [''],
-    blocktitle: [''],
-    images: this.fb.array([]),
-    image: [''],
-    f_images: this.fb.array([]),
-    f_image: [''],
-    featured: [false],
-    background: [false]
+  public editForm = this.fb.group({
+    id: [''],
+    title: [''],
+    description: [''],
+    keywords: ['']
   });
 
   constructor(
@@ -62,12 +47,14 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.content.fetchProds().subscribe(data => {
+    this.content.fetchAllContent().subscribe(data => {
       this.dataSource$.next(data);
       this.rawData = data;
     });
     this.materialButtons();
   }
+
+  // Material Design
 
   materialButtons() {
     if (this.platform.platformCheck) {
@@ -97,9 +84,43 @@ export class ProductsComponent implements OnInit {
     }
   }
 
+  // Add New Content
+
+  newData() {
+    this.materialise('addForm');
+  }
+
+  add() {
+    this.content.addPage(this.addForm.value).subscribe(
+      (data) => {
+        console.log('Successful');
+      },
+      (err) => {
+        console.log('Something wrong has occured: ' + err.message);
+      },
+      () => {
+        this.addForm.reset();
+      }
+    );
+  }
+
+  // Edit Content
+
+  cancelEdit() {
+    this.editForm.reset();
+  }
+
+  switchData(value, index) {
+    this.editForm.setValue({
+      id: value.id,
+      title: value.title,
+      description: value.description ? value.description : '',
+      keywords: value.keywords ? value.keywords : ''
+    });
+    this.materialise(`editForm${index}`);
+  }
+
   update() {
-    this.editForm.setControl('images', this.fb.array(this.images || []));
-    this.editForm.setControl('f_images', this.fb.array(this.f_images || []));
     this.content.updateProduct(this.editForm.value).subscribe(
       (data) => {
         console.log('Successful');
@@ -109,32 +130,14 @@ export class ProductsComponent implements OnInit {
       },
       () => {
         this.editForm.reset();
-        this.images = [];
-        this.f_images = [];
       }
     );
   }
 
-  add() {
-    this.addForm.setControl('images', this.fb.array(this.images || []));
-    this.addForm.setControl('f_images', this.fb.array(this.f_images || []));
-    this.content.addProduct(this.addForm.value).subscribe(
-      (data) => {
-        console.log('Successful');
-      },
-      (err) => {
-        console.log('Something wrong has occured: ' + err.message);
-      },
-      () => {
-        this.addForm.reset();
-        this.images = [];
-        this.f_images = [];
-      }
-    );
-  }
+  // Delete Content
 
   delete(info) {
-    this.content.deleteProduct(info).subscribe(
+    this.content.deletePage(info).subscribe(
       (data) => {
         //
       },
@@ -147,64 +150,7 @@ export class ProductsComponent implements OnInit {
     );
   }
 
-  cancelEdit() {
-    this.images = [];
-    this.f_images = [];
-    this.editForm.reset();
-  }
-
-  switchData(value, index) {
-    this.editForm.controls.images = this.fb.array([]);
-    this.editForm.controls.f_images = this.fb.array([]);
-    this.editForm.setValue({
-      blocktitle: value.blocktitle,
-      fullname: value.fullname,
-      name: value.name,
-      category: value.category ? value.category : '',
-      images: [],
-      image: '',
-      f_images: [],
-      f_image: '',
-      featured: value.featured ? value.featured : false,
-      background: value.background ? value.background : false
-    });
-    this.images = value.images || [];
-    this.f_images = value.f_images || [];
-    this.materialise(`editForm${index}`);
-  }
-
-  get addImages(): FormArray {
-    return this.addForm.get('images') as FormArray;
-  }
-
-  get editImages(): FormArray {
-    return this.editForm.get('images') as FormArray;
-  }
-
-  get addfImages(): FormArray {
-    return this.addForm.get('f_images') as FormArray;
-  }
-
-  get editfImages(): FormArray {
-    return this.editForm.get('f_images') as FormArray;
-  }
-
-  removeFromArr(value, index) {
-    const arr = <any[]>value;
-    arr.splice(index, 1);
-  }
-
-  addToArr(el: any, value) {
-    el.preventDefault();
-    if (el.keyCode === 13) {
-      value.push(el.target.value);
-      console.log(value);
-    }
-  }
-
-  newData() {
-    this.materialise('addForm');
-  }
+  // Sort
 
   sortData(event, sortDirection: string) {
     const sortKey = event.target.getAttribute('data-name');

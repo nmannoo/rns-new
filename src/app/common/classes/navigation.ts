@@ -107,7 +107,15 @@ export const AdminNavigation = [
     name: 'Home'
   },
   {
+    slug: '/admin/pages',
+    name: 'Pages'
+  },
+  {
     slug: '/admin/products',
     name: 'Products'
-  }
+  },
+  {
+    slug: '/admin/sliders',
+    name: 'Sliders'
+  },
 ];

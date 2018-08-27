@@ -18,6 +18,19 @@
                   <label class="mdc-floating-label" for="my-text-field">Permalink</label>
                   <div class="mdc-line-ripple"></div>
                 </div>
+
+                <div class="form-group my-2 w-100">
+                  <div class="mdc-switch">
+                    <div class="mdc-switch__track"></div>
+                    <div class="mdc-switch__thumb-underlay">
+                      <div class="mdc-switch__thumb">
+                          <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
+                      </div>
+                    </div>
+                  </div>
+                  <label for="background-switch" class="ml-2">Background ?</label>
+                </div>
+
                 <div class="form-group my-2 mdc-text-field w-100">
                   <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
                   <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
@@ -77,27 +90,41 @@
           <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
 
           <ng-container cdkColumnDef="fullname">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Full Name</th>
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="fullname">
+              Full Name
+              <i *ngIf="sortKey === 'fullname'" class="material-icons">arrow_drop_up</i>
+            </th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.fullname}}</td>
           </ng-container>
 
           <ng-container cdkColumnDef="name">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Permalink</th>
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="name">
+              Permalink
+              <i *ngIf="sortKey === 'name'" class="material-icons">arrow_drop_up</i>
+            </th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
           </ng-container>
 
           <ng-container cdkColumnDef="blocktitle">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Block Title</th>
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="blocktitle">
+              Block Title
+              <i *ngIf="sortKey === 'blocktitle'" class="material-icons">arrow_drop_up</i>
+            </th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.blocktitle}}</td>
           </ng-container>
 
           <ng-container cdkColumnDef="category">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Category</th>
+            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="category">
+              Category
+              <i *ngIf="sortKey === 'category'" class="material-icons">arrow_drop_up</i>
+            </th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category || '-'}}</td>
           </ng-container>
 
           <ng-container cdkColumnDef="featured">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">Featured</th>
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">
+              Featured
+            </th>
             <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
               <ng-container *ngIf="row?.featured; else notfeatured">Yes</ng-container>
               <ng-template #notfeatured>No</ng-template>
@@ -105,7 +132,7 @@
           </ng-container>
 
           <ng-container cdkColumnDef="edit">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;"></th>
+            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 155px;"></th>
             <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
               <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name}}">Edit</button>
               <button (click)="delete(row)" class="mdc-button">Delete</button>
@@ -122,6 +149,19 @@
                       <label class="mdc-floating-label" for="my-text-field">Permalink</label>
                       <div class="mdc-line-ripple"></div>
                     </div>
+
+                    <div class="form-group my-2 w-100">
+                      <div class="mdc-switch">
+                        <div class="mdc-switch__track"></div>
+                        <div class="mdc-switch__thumb-underlay">
+                          <div class="mdc-switch__thumb">
+                              <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
+                          </div>
+                        </div>
+                      </div>
+                      <label for="background-switch" class="ml-2">Background ?</label>
+                    </div>
+
                     <div class="form-group my-2 mdc-text-field w-100">
                       <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
                       <label class="mdc-floating-label" for="my-text-field">Add New Image</label>

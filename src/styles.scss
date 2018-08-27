@@ -512,3 +512,11 @@ footer#mainfoot #copyright div {
 table.table-prods tbody tr td {
   vertical-align: middle !important;
 }
+
+table.table-prods thead tr th:hover {
+  cursor: pointer;
+}
+
+table.table-prods thead tr th i.material-icons {
+  line-height: 18px !important;
+}

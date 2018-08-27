@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
+    this.loading = !this.loading;
     this.auth.login(this.loginForm.value).subscribe(
       (data) => {
         this.router.navigate(['/admin']);
@@ -73,6 +74,7 @@ export class LoginComponent implements OnInit {
         console.log('Something went wrong: ', err.message);
         this.error = err.message;
         this.loginForm.reset();
+        this.loading = !this.loading;
       }
     );
   }
