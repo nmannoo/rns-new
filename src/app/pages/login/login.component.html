@@ -14,7 +14,7 @@
             <label class="mdc-floating-label" for="my-text-field">Username</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <ng-container *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)">
+          <ng-container *ngIf="f.username.invalid && (f.username.dirty && f.username.touched)">
             <p *ngIf="f.username.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
               Username is a required field.
             </p>
@@ -27,7 +27,7 @@
             <label class="mdc-floating-label" for="my-text-field">Password</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <ng-container *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
+          <ng-container *ngIf="f.password.invalid && (f.password.dirty && f.password.touched)">
             <p *ngIf="f.password.errors.required" class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg" aria-hidden="true">
               Password is a required field.
             </p>
