@@ -59,6 +59,8 @@ app.set('views', join(DIST_FOLDER, APP_NAME));
 // Static Assets
 app.use('/', express.static(join(DIST_FOLDER, APP_NAME), { dotfiles: 'allow' }));
 app.use('/assets/images', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'images'), { index: false }));
+app.use('/assets/icons', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'icons'), { index: false }));
+app.use('/assets/data', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'data'), { index: false }));
 
 // Router Configs
 app.post('/email', bodyParser.json(), (req, res) => {
@@ -69,15 +71,15 @@ app.post('/email', bodyParser.json(), (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'marketing@rollnsheet.mu',
-            pass: 'marketing123*'
+            user: 'n.mannoo@rollnsheet.mu',
+            pass: 'nicolas123*'
         },
         tls: {rejectUnauthorized: false}
     });
 
     const mailOptions = {
         from: '"' + body.name + '"' + ' <' + body.email + '>',
-        to: 'marketing@rollnsheet.mu',
+        to: 'n.mannoo@rollnsheet.mu',
         subject: body.subject,
         text: body.message
     };
