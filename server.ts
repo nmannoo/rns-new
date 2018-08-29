@@ -6,6 +6,7 @@ const cors = require('cors');
 const compression = require('compression');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const upload = require('express-fileupload');
 
 // DOM libs required for Firebase
 (global as any).WebSocket = require('ws');
@@ -34,6 +35,7 @@ const app = express();
 app.use(compression());
 app.use(cors({credentials: true, origin: true}));
 app.enable('trust proxy');
+app.use(upload());
 
 // Set the engine
 app.engine(
@@ -101,6 +103,12 @@ app.post('/email', bodyParser.json(), (req, res) => {
             };
             res.send(response);
         });
+});
+
+app.post('/upload', (req, res) => {
+  if (req.files) {
+    console.log(req.files);
+  }
 });
 
 // Point all routes to Universal
