@@ -74,8 +74,8 @@ export const Navigation = [
                 name: 'Sack Kraft'
             },
             {
-                slug: '/speciality',
-                name: 'Speciality'
+                slug: '/specialty',
+                name: 'Specialty'
             }
         ]
     },
