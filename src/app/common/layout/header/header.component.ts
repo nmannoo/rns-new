@@ -34,6 +34,8 @@ export class HeaderComponent implements OnInit {
   private startObs = this.startAt.asObservable();
   private endObs = this.endAt.asObservable();
 
+  public searchResults = [];
+
   constructor(
     private platform: PlatformService,
     private loading: LoadingService,
@@ -103,15 +105,19 @@ export class HeaderComponent implements OnInit {
 
   searchAuto($event: any) {
     if ($event.timeStamp - this.lastKeypress > 200) {
-      const q = $event.target.value;
-      this.startAt.next(q);
-      this.endAt.next(q + '\uf8ff');
+      if ($event.target.value) {
+        const q = $event.target.value;
+        this.startAt.next(q);
+        this.endAt.next(q + '\uf8ff');
 
-      combineLatest(this.startObs, this.endObs).subscribe((value) => {
-        this.search.searchQuery(value[0], value[1]).subscribe(data => {
-          console.log(data);
+        combineLatest(this.startObs, this.endObs).subscribe((value) => {
+          this.search.searchQuery(value[0], value[1]).subscribe(data => {
+            this.searchResults = data;
+          });
         });
-      });
+      } else {
+        this.searchResults = [];
+      }
     }
     this.lastKeypress = $event.timeStamp;
   }

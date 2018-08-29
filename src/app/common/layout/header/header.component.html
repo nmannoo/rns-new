@@ -73,7 +73,7 @@
                 </ng-container>
               </ul>
           </nav>
-          <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1">
+          <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
               <div id="search" class="input-group mb-4 d-flex h-100" style="align-items: center">
                   <input (keydown)="searchAuto($event)" type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2">
                   <div class="input-group-append">
@@ -81,6 +81,13 @@
                           <i class="material-icons">search</i>
                       </button>
                   </div>
+              </div>
+              <div *ngIf="searchResults?.length > 0" id="search-dropdown" class="position-absolute">
+                <ul>
+                  <ng-container *ngFor="let res of searchResults; index as i;">
+                    <li><a href="#">{{res.name}}</a></li>
+                  </ng-container>
+                </ul>
               </div>
           </div>
       </div>

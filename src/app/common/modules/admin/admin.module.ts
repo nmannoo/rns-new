@@ -5,15 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkTableModule } from '@angular/cdk/table';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-
-import { environment } from '../../../../environments/environment';
-
 import { AdminComponent } from '../../../pages/admin/admin.component';
-import { AuthService } from '../../services/auth.service';
-import { AuthGuard } from '../../guard/auth.guard';
 import { AdminLayoutComponent } from '../../admin-layout/admin-layout.component';
 import { AdminHeaderComponent } from '../../admin-layout/admin-header/admin-header.component';
 import { AdminFooterComponent } from '../../admin-layout/admin-footer/admin-footer.component';
@@ -23,6 +15,9 @@ import { SlidersComponent } from '../../../pages/admin/sliders/sliders.component
 
 import { DialogModule } from '../dialog/dialog.module';
 import { SortPipe } from '../../pipes/sort.pipe';
+import { LoadingModule } from '../loading/loading.module';
+import { FirecoreModule } from '../firecore/firecore.module';
+import { AuthGuard } from '../../guard/auth.guard';
 
 
 const adminroutes: Routes = [
@@ -57,11 +52,10 @@ const adminroutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(adminroutes),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence(),
-    AngularFireAuthModule,
+    FirecoreModule,
     CdkTableModule,
-    DialogModule
+    DialogModule,
+    LoadingModule
   ],
   declarations: [
     AdminComponent,
@@ -74,7 +68,6 @@ const adminroutes: Routes = [
     SlidersComponent
   ],
   providers: [
-    AuthService,
     AuthGuard
   ]
 })

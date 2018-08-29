@@ -249,6 +249,38 @@ button.rns-menu-button:active, button.rns-menu-button:focus {
     border: none;
 }
 
+#search-dropdown {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  z-index: 2;
+  top: 56px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#search-dropdown ul {
+  list-style: none;
+  padding: 0px;
+  margin: 10px 0;
+}
+
+#search-dropdown ul li {
+
+}
+
+#search-dropdown ul li a {
+  display: block;
+  padding: 10px 20px;
+}
+
+#search-dropdown ul li a:hover {
+  color: #ffffff;
+  background-color: $mdc-theme-primary;
+}
+
+
 /* Navigation */
 
 nav.adminmenu ul {
@@ -422,7 +454,7 @@ footer#mainfoot #copyright div {
 .bubble .lwc-button-icon {
     width: 25px !important;
     padding: 13px !important;
-    animation: bounce 10s forwards infinite ease-in-out;
+    animation: bounce 8s forwards infinite ease-in-out;
 }
 
 .page-item.active .page-link {
@@ -499,7 +531,7 @@ footer#mainfoot #copyright div {
 
 .tag:hover {
   background-color: crimson;
-  color: white;
+  color: white !important;
   cursor: pointer;
 }
 

@@ -1,223 +1,227 @@
-<div class="row py-3">
-  <div class="col-12">
-    <div class="card w-100">
-      <div class="card-header">
-        <button class="mdc-button mdc-button--raised" (click)="newData()" dialog="newproduct">
-          Add New Product
-        </button>
-        <app-dialog (onAccept)="add()" dialogID="newproduct" [title]="'Add New Product'" accept="Save" cancel="Cancel">
-            <form [formGroup]="addForm" class="row" autocomplete="off" id="addForm">
-              <div class="col-6">
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Full Name</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Permalink</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
+<loading *ngIf="showSpinner"></loading>
 
-                <div class="form-group my-2 w-100">
-                  <div class="mdc-switch">
-                    <div class="mdc-switch__track"></div>
-                    <div class="mdc-switch__thumb-underlay">
-                      <div class="mdc-switch__thumb">
-                          <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
-                      </div>
-                    </div>
+<ng-container *ngIf="!showSpinner">
+  <div class="row py-3">
+    <div class="col-12">
+      <div class="card w-100">
+        <div class="card-header">
+          <button class="mdc-button mdc-button--raised" (click)="newData()" dialog="newproduct">
+            Add New Product
+          </button>
+          <app-dialog (onAccept)="add()" dialogID="newproduct" [title]="'Add New Product'" accept="Save" cancel="Cancel">
+              <form [formGroup]="addForm" class="row" autocomplete="off" id="addForm">
+                <div class="col-6">
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Full Name</label>
+                    <div class="mdc-line-ripple"></div>
                   </div>
-                  <label for="background-switch" class="ml-2">Background ?</label>
-                </div>
-
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
-                <div formArrayName="images" class="form-group mt-2">
-                  <ul class="tags" aria-orientation="horizontal">
-                    <li *ngFor="let img of images; index as i;">
-                      <a (click)="removeFromArr(images, i)" class="tag">{{img}}</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Category Name</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Block Title</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
-
-                <div class="form-group my-2 w-100">
-                  <div class="mdc-switch">
-                    <div class="mdc-switch__track"></div>
-                    <div class="mdc-switch__thumb-underlay">
-                      <div class="mdc-switch__thumb">
-                          <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
-                      </div>
-                    </div>
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Permalink</label>
+                    <div class="mdc-line-ripple"></div>
                   </div>
-                  <label for="featured-switch" class="ml-2">Featured ?</label>
-                </div>
 
-                <div class="form-group my-2 mdc-text-field w-100">
-                  <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
-                  <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>
-                  <div class="mdc-line-ripple"></div>
-                </div>
-                <div formArrayName="f_images" class="form-group mt-2">
-                  <ul class="tags" aria-orientation="horizontal">
-                    <li *ngFor="let img of f_images; index as i;">
-                      <a (click)="removeFromArr(f_images, i)" class="tag">{{img}}</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </form>
-          </app-dialog>
-      </div>
-      <div class="card-body p-0">
-        <table cdk-table [dataSource]="dataSource$" class="table table-hover table-prods">
-          <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
-          <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
-
-          <ng-container cdkColumnDef="fullname">
-            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="fullname">
-              Full Name
-              <i *ngIf="sortKey === 'fullname'" class="material-icons">arrow_drop_up</i>
-            </th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.fullname}}</td>
-          </ng-container>
-
-          <ng-container cdkColumnDef="name">
-            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="name">
-              Permalink
-              <i *ngIf="sortKey === 'name'" class="material-icons">arrow_drop_up</i>
-            </th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
-          </ng-container>
-
-          <ng-container cdkColumnDef="blocktitle">
-            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="blocktitle">
-              Block Title
-              <i *ngIf="sortKey === 'blocktitle'" class="material-icons">arrow_drop_up</i>
-            </th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.blocktitle}}</td>
-          </ng-container>
-
-          <ng-container cdkColumnDef="category">
-            <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="category">
-              Category
-              <i *ngIf="sortKey === 'category'" class="material-icons">arrow_drop_up</i>
-            </th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category || '-'}}</td>
-          </ng-container>
-
-          <ng-container cdkColumnDef="featured">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">
-              Featured
-            </th>
-            <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
-              <ng-container *ngIf="row?.featured; else notfeatured">Yes</ng-container>
-              <ng-template #notfeatured>No</ng-template>
-            </td>
-          </ng-container>
-
-          <ng-container cdkColumnDef="edit">
-            <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 155px;"></th>
-            <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
-              <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name}}">Edit</button>
-              <button (click)="delete(row)" class="mdc-button">Delete</button>
-              <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.name}}" [title]="'Edit Product: ' + row.fullname" accept="Save" cancel="Cancel">
-                <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
-                  <div class="col-6">
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Full Name</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Permalink</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
-
-                    <div class="form-group my-2 w-100">
-                      <div class="mdc-switch">
-                        <div class="mdc-switch__track"></div>
-                        <div class="mdc-switch__thumb-underlay">
-                          <div class="mdc-switch__thumb">
-                              <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
-                          </div>
+                  <div class="form-group my-2 w-100">
+                    <div class="mdc-switch">
+                      <div class="mdc-switch__track"></div>
+                      <div class="mdc-switch__thumb-underlay">
+                        <div class="mdc-switch__thumb">
+                            <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
                         </div>
                       </div>
-                      <label for="background-switch" class="ml-2">Background ?</label>
                     </div>
-
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div formArrayName="images" class="form-group mt-2">
-                      <ul class="tags" aria-orientation="horizontal">
-                        <li *ngFor="let img of images; index as in">
-                          <a (click)="removeFromArr(images, in)" class="tag">{{img}}</a>
-                        </li>
-                      </ul>
-                    </div>
+                    <label for="background-switch" class="ml-2">Background ?</label>
                   </div>
-                  <div class="col-6">
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Category Name</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Block Title</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
 
-                    <div class="form-group my-2 w-100">
-                      <div class="mdc-switch">
-                        <div class="mdc-switch__track"></div>
-                        <div class="mdc-switch__thumb-underlay">
-                          <div class="mdc-switch__thumb">
-                              <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
-                          </div>
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <div formArrayName="images" class="form-group mt-2">
+                    <ul class="tags" aria-orientation="horizontal">
+                      <li *ngFor="let img of images; index as i;">
+                        <a (click)="removeFromArr(images, i)" class="tag">{{img}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Category Name</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Block Title</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+
+                  <div class="form-group my-2 w-100">
+                    <div class="mdc-switch">
+                      <div class="mdc-switch__track"></div>
+                      <div class="mdc-switch__thumb-underlay">
+                        <div class="mdc-switch__thumb">
+                            <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
                         </div>
                       </div>
-                      <label for="featured-switch" class="ml-2">Featured ?</label>
                     </div>
-
-                    <div class="form-group my-2 mdc-text-field w-100">
-                      <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
-                      <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>
-                      <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div formArrayName="f_images" class="form-group mt-2">
-                      <ul class="tags" aria-orientation="horizontal">
-                        <li *ngFor="let img of f_images; index as in">
-                          <a (click)="removeFromArr(f_images, in)" class="tag">{{img}}</a>
-                        </li>
-                      </ul>
-                    </div>
+                    <label for="featured-switch" class="ml-2">Featured ?</label>
                   </div>
-                </form>
-              </app-dialog>
-            </td>
-          </ng-container>
-        </table>
+
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <div formArrayName="f_images" class="form-group mt-2">
+                    <ul class="tags" aria-orientation="horizontal">
+                      <li *ngFor="let img of f_images; index as i;">
+                        <a (click)="removeFromArr(f_images, i)" class="tag">{{img}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </app-dialog>
+        </div>
+        <div class="card-body p-0">
+          <table cdk-table [dataSource]="dataSource$" class="table table-hover table-prods">
+            <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
+            <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
+
+            <ng-container cdkColumnDef="fullname">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="fullname">
+                Full Name
+                <i *ngIf="sortKey === 'fullname'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row?.fullname}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="name">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="name">
+                Permalink
+                <i *ngIf="sortKey === 'name'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="blocktitle">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="blocktitle">
+                Block Title
+                <i *ngIf="sortKey === 'blocktitle'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.blocktitle}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="category">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="category">
+                Category
+                <i *ngIf="sortKey === 'category'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.category || '-'}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="featured">
+              <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;">
+                Featured
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">
+                <ng-container *ngIf="row?.featured; else notfeatured">Yes</ng-container>
+                <ng-template #notfeatured>No</ng-template>
+              </td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="edit">
+              <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 155px;"></th>
+              <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
+                <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name}}">Edit</button>
+                <button (click)="delete(row)" class="mdc-button">Delete</button>
+                <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.name}}" [title]="'Edit Product: ' + row.fullname" accept="Save" cancel="Cancel">
+                  <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
+                    <div class="col-6">
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Full Name</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Permalink</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+
+                      <div class="form-group my-2 w-100">
+                        <div class="mdc-switch">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                                <input formControlName="background" type="checkbox" id="background-switch" class="mdc-switch__native-control" role="switch">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="background-switch" class="ml-2">Background ?</label>
+                      </div>
+
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div formArrayName="images" class="form-group mt-2">
+                        <ul class="tags" aria-orientation="horizontal">
+                          <li *ngFor="let img of images; index as in">
+                            <a (click)="removeFromArr(images, in)" class="tag">{{img}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Category Name</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Block Title</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+
+                      <div class="form-group my-2 w-100">
+                        <div class="mdc-switch">
+                          <div class="mdc-switch__track"></div>
+                          <div class="mdc-switch__thumb-underlay">
+                            <div class="mdc-switch__thumb">
+                                <input formControlName="featured" type="checkbox" id="featured-switch" class="mdc-switch__native-control" role="switch">
+                            </div>
+                          </div>
+                        </div>
+                        <label for="featured-switch" class="ml-2">Featured ?</label>
+                      </div>
+
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input (keyup)="addToArr($event, f_images)" formControlName="f_image" type="text" id="f_image" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Add New Featured Image</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div formArrayName="f_images" class="form-group mt-2">
+                        <ul class="tags" aria-orientation="horizontal">
+                          <li *ngFor="let img of f_images; index as in">
+                            <a (click)="removeFromArr(f_images, in)" class="tag">{{img}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </form>
+                </app-dialog>
+              </td>
+            </ng-container>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>

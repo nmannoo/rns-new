@@ -6,7 +6,7 @@ import { MDCTextFieldHelperText } from '@material/textfield/helper-text';
 import { MDCRipple } from '@material/ripple';
 import { MDCSwitch } from '@material/switch';
 
-import { ContentService } from '../../../common/services/content.service';
+import { SliderService } from '../../../common/services/slider.service';
 import { PlatformService } from '../../../common/services/platform.service';
 import { sliderCol } from '../../../common/classes/admin.table';
 
@@ -26,30 +26,34 @@ export class SlidersComponent implements OnInit {
   clicked = 0;
   sortKey: string;
 
+  images = [];
+  showSpinner = true;
+
   public addForm = this.fb.group({
-    id: [''],
-    title: [''],
-    description: [''],
-    keywords: ['']
+    pagename: [''],
+    name: [''],
+    image: [''],
+    slides: this.fb.array([])
   });
 
   public editForm = this.fb.group({
-    id: [''],
-    title: [''],
-    description: [''],
-    keywords: ['']
+    pagename: [''],
+    name: [''],
+    image: [''],
+    slides: this.fb.array([])
   });
 
   constructor(
-    private content: ContentService,
+    private slider: SliderService,
     private platform: PlatformService,
     private fb: FormBuilder
   ) { }
 
   ngOnInit() {
-    this.content.fetchAllContent().subscribe(data => {
+    this.slider.fetchAllSliders().subscribe(data => {
       this.dataSource$.next(data);
       this.rawData = data;
+      this.showSpinner = false;
     });
     this.materialButtons();
   }
@@ -91,7 +95,8 @@ export class SlidersComponent implements OnInit {
   }
 
   add() {
-    this.content.addPage(this.addForm.value).subscribe(
+    this.addForm.setControl('slides', this.fb.array(this.images || []));
+    this.slider.addSlider(this.addForm.value).subscribe(
       (data) => {
         console.log('Successful');
       },
@@ -100,6 +105,7 @@ export class SlidersComponent implements OnInit {
       },
       () => {
         this.addForm.reset();
+        this.images = [];
       }
     );
   }
@@ -107,21 +113,25 @@ export class SlidersComponent implements OnInit {
   // Edit Content
 
   cancelEdit() {
+    this.images = [];
     this.editForm.reset();
   }
 
   switchData(value, index) {
+    this.editForm.controls.slides = this.fb.array([]);
     this.editForm.setValue({
-      id: value.id,
-      title: value.title,
-      description: value.description ? value.description : '',
-      keywords: value.keywords ? value.keywords : ''
+      pagename: value.pagename ? value.pagename : value.id,
+      name: value.id,
+      image: '',
+      slides: []
     });
+    this.images = value.slides || [];
     this.materialise(`editForm${index}`);
   }
 
   update() {
-    this.content.updateProduct(this.editForm.value).subscribe(
+    this.editForm.setControl('slides', this.fb.array(this.images || []));
+    this.slider.updateSlider(this.editForm.value).subscribe(
       (data) => {
         console.log('Successful');
       },
@@ -130,6 +140,7 @@ export class SlidersComponent implements OnInit {
       },
       () => {
         this.editForm.reset();
+        this.images = [];
       }
     );
   }
@@ -137,7 +148,7 @@ export class SlidersComponent implements OnInit {
   // Delete Content
 
   delete(info) {
-    this.content.deletePage(info).subscribe(
+    this.slider.deleteSlider(info).subscribe(
       (data) => {
         //
       },
@@ -171,6 +182,21 @@ export class SlidersComponent implements OnInit {
       this.dataSource$.next(this.rawData);
       this.clicked = 0;
       this.sortKey = '';
+    }
+  }
+
+  // Array Control
+
+  removeFromArr(value, index) {
+    const arr = <any[]>value;
+    arr.splice(index, 1);
+  }
+
+  addToArr(el: any, value) {
+    el.preventDefault();
+    if (el.keyCode === 13) {
+      value.push(el.target.value);
+      console.log(value);
     }
   }
 

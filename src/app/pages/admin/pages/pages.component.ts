@@ -26,6 +26,8 @@ export class PagesComponent implements OnInit {
   clicked = 0;
   sortKey: string;
 
+  showSpinner = true;
+
   public addForm = this.fb.group({
     id: [''],
     title: [''],
@@ -50,6 +52,7 @@ export class PagesComponent implements OnInit {
     this.content.fetchAllContent().subscribe(data => {
       this.dataSource$.next(data);
       this.rawData = data;
+      this.showSpinner = false;
     });
     this.materialButtons();
   }
@@ -121,7 +124,7 @@ export class PagesComponent implements OnInit {
   }
 
   update() {
-    this.content.updateProduct(this.editForm.value).subscribe(
+    this.content.updatePage(this.editForm.value).subscribe(
       (data) => {
         console.log('Successful');
       },

@@ -71,15 +71,15 @@ app.post('/email', bodyParser.json(), (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'n.mannoo@rollnsheet.mu',
-            pass: 'nicolas123*'
+            user: 'marketing@rollnsheet.mu',
+            pass: 'marketing123*'
         },
         tls: {rejectUnauthorized: false}
     });
 
     const mailOptions = {
         from: '"' + body.name + '"' + ' <' + body.email + '>',
-        to: 'n.mannoo@rollnsheet.mu',
+        to: 'marketing@rollnsheet.mu',
         subject: body.subject,
         text: body.message
     };

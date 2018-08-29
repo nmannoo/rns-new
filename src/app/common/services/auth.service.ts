@@ -16,11 +16,16 @@ export class AuthService {
   state: boolean;
   loggedInUser: any;
   userlist = Users;
+  authState: any = null;
 
   constructor(
     private afAuth: AngularFireAuth
   ) {
     this.user = afAuth.authState;
+  }
+
+  get authenticated(): boolean {
+    return this.authState !== null;
   }
 
   get loginCheck(): boolean {
@@ -52,5 +57,9 @@ export class AuthService {
         return this.userlist[i].username;
       }
     }
+  }
+
+  get auth() {
+    return this.afAuth.auth.currentUser;
   }
 }

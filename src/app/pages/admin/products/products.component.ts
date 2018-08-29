@@ -29,6 +29,8 @@ export class ProductsComponent implements OnInit {
   clicked = 0;
   sortKey: string;
 
+  showSpinner = true;
+
   public editForm = this.fb.group({
     fullname: [''],
     name: [''],
@@ -65,6 +67,7 @@ export class ProductsComponent implements OnInit {
     this.content.fetchProds().subscribe(data => {
       this.dataSource$.next(data);
       this.rawData = data;
+      this.showSpinner = false;
     });
     this.materialButtons();
   }

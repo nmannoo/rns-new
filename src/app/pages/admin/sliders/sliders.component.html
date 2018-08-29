@@ -1,3 +1,118 @@
-<p>
-  sliders works!
-</p>
+<loading *ngIf="showSpinner"></loading>
+
+<ng-container *ngIf="!showSpinner">
+  <div class="row py-3">
+    <div class="col-12">
+      <div class="card w-100">
+        <div class="card-header">
+          <button class="mdc-button mdc-button--raised" (click)="newData()" dialog="newslider">
+            Add New Slider
+          </button>
+          <app-dialog (onAccept)="add()" dialogID="newslider" [title]="'Add New Slider'" accept="Save" cancel="Cancel">
+              <form [formGroup]="addForm" class="row" autocomplete="off" id="addForm">
+                <div class="col-12">
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="pagename" type="text" id="pagename" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Page Name</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Name</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <div formArrayName="slides" class="form-group mt-2">
+                    <ul class="tags" aria-orientation="horizontal">
+                      <li *ngFor="let img of images; index as i;">
+                        <a (click)="removeFromArr(images, i)" class="tag">{{img}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </app-dialog>
+        </div>
+        <div class="card-body p-0">
+          <table cdk-table [dataSource]="dataSource$" class="table table-prods">
+            <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
+            <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
+
+            <ng-container cdkColumnDef="pagename">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="pagename">
+                Page Name
+                <i *ngIf="sortKey === 'pagename'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.pagename || row.id}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="slug">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="slug">
+                Slug
+                <i *ngIf="sortKey === 'slug'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.id}}</td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="slides">
+              <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 500px;" data-name="slides">
+                Slides
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 12px;">
+                <ul class="tags" aria-orientation="horizontal">
+                  <li *ngFor="let img of row.slides; index as i;">
+                    <a class="tag mb-0" style="font-size: 12px;">{{img}}</a>
+                  </li>
+                </ul>
+              </td>
+            </ng-container>
+
+            <ng-container cdkColumnDef="edit">
+              <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 155px;"></th>
+              <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
+                <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.id}}">Edit</button>
+                <button (click)="delete(row)" class="mdc-button">Delete</button>
+                <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.id}}" [title]="'Edit Product: ' + row.pagename" accept="Save" cancel="Cancel">
+                  <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
+                    <div class="col-12">
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="pagename" type="text" id="pagename" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Page Name</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Name</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div formArrayName="slides" class="form-group mt-2">
+                        <ul class="tags" aria-orientation="horizontal">
+                          <li *ngFor="let img of images; index as in">
+                            <a (click)="removeFromArr(images, in)" class="tag">{{img}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </form>
+                </app-dialog>
+              </td>
+            </ng-container>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

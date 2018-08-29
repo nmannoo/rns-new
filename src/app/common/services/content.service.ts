@@ -3,6 +3,8 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
+import { AuthService } from '../services/auth.service';
+
 import { Observable, from } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
@@ -24,7 +26,7 @@ export class ContentService {
   parent: string;
   child: string;
 
-  constructor(private afs: AngularFirestore, private route: ActivatedRoute, private router: Router) {
+  constructor(private afs: AngularFirestore, private auth: AuthService, private route: ActivatedRoute, private router: Router) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event) => {
@@ -77,7 +79,7 @@ export class ContentService {
   // Update Content
 
   updatePage(info) {
-    const promise = from(this.afs.collection('pages').doc(info.id).update(info));
+    const promise = from(this.afs.collection('pages').doc(`${info.id}`).update(info));
     return promise;
   }
 
@@ -138,5 +140,6 @@ export class ContentService {
     const promise = from(this.afs.collection('products').doc(info.name).delete());
     return promise;
   }
+
 
 }
