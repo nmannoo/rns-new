@@ -1,5 +1,5 @@
 <div class="card">
-    <div id="{{elId}}" class="carousel slide card-img-top" data-interval="false" swipe>
+    <div id="{{elId}}" class="carousel slide card-img-top" swipe>
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >
               <img class="d-block w-100" [src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">

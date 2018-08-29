@@ -107,7 +107,16 @@ app.post('/email', bodyParser.json(), (req, res) => {
 
 app.post('/upload', (req, res) => {
   if (req.files) {
-    console.log(req.files);
+    const file = req.files.file,
+          filename = file.name;
+    file.mv(join(DIST_FOLDER, APP_NAME, 'assets', 'images', 'sliders', filename), function(err) {
+      if (err) {
+        console.log(err);
+        res.send('An error occured');
+      } else {
+        res.status(200).send('Done');
+      }
+    });
   }
 });
 

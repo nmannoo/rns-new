@@ -22,13 +22,10 @@ export class AdminComponent implements OnInit {
     console.log(elem.files[0]);
     this.http.post('/upload', formData).subscribe(
       (data) => {
-        console.log('Yes');
+        console.log(data);
       },
       (err) => {
         console.log(err);
-      },
-      () => {
-        console.log('Completed');
       }
     );
   }
