@@ -25,7 +25,7 @@ export class SwipeDirective implements OnInit {
       const hammer = new Hammer.Manager(carousel);
       const swipe = new Hammer.Swipe();
       if (carousel.classList.contains('card-img-top')) {
-        $(carousel).carousel('pause');
+
       } else {
         $(carousel).carousel({
           pause: 'hover'

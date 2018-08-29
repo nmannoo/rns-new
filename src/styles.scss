@@ -15,6 +15,7 @@ $mdc-theme-secondary: #d20c1d;
 @import "@material/dialog/mdc-dialog";
 @import "@material/switch/mdc-switch";
 
+
 /* Global Styles */
 
 * {
@@ -94,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 30px 0;
     font-size: 2rem;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .rns-banner {
@@ -182,7 +183,7 @@ header#mainhead {
 }
 
 header#mainhead #logo {
-    width: 250px;
+    width: 230px;
     padding: 15px;
     display: block;
 }
@@ -267,7 +268,7 @@ button.rns-menu-button:active, button.rns-menu-button:focus {
 }
 
 #search-dropdown ul li {
-
+  //
 }
 
 #search-dropdown ul li a {
@@ -424,7 +425,7 @@ nav#mainmenu ul li.dropdown.show {
     opacity: 0;
 }
 
-.carousel-controls:hover {
+.carousel:hover .carousel-controls {
     opacity: 1;
 }
 
