@@ -55,6 +55,7 @@ export class ProdcatComponent implements OnInit, OnDestroy {
     this.route.params.forEach((params: Params) => {
       this.slidesData = this.slider.fetchSlider(params['child']).subscribe(data => {
         this.sliderdata = data;
+        console.log(this.sliderdata);
       });
     });
   }

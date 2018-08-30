@@ -14,6 +14,7 @@ $mdc-theme-secondary: #d20c1d;
 @import "@material/linear-progress/mdc-linear-progress";
 @import "@material/dialog/mdc-dialog";
 @import "@material/switch/mdc-switch";
+@import "@material/snackbar/mdc-snackbar";
 
 
 /* Global Styles */
@@ -89,8 +90,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rns-headband {
-    background: url('assets/images/banner.jpg');
+    background: url('assets/images/banner3.png');
     background-size: cover;
+    background-position: center center;
     padding: 30px;
     text-align: center;
     margin: 30px 0;
@@ -552,4 +554,12 @@ table.table-prods thead tr th:hover {
 
 table.table-prods thead tr th i.material-icons {
   line-height: 18px !important;
+}
+
+.mdc-snackbar__text {
+  color: cyan;
+}
+
+.mdc-snackbar__action-button {
+  color: #fff;
 }

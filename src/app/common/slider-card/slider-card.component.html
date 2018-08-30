@@ -1,10 +1,19 @@
 <div class="card">
     <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
+      <ng-container *ngIf="slidePost.length > 0; else default;">
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >
               <img class="d-block w-100" [src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">
             </div>
         </div>
+      </ng-container>
+      <ng-template #default>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" [src]="'assets/images/products/ph_7x4.png'" alt="test">
+          </div>
+        </div>
+      </ng-template>
         <a *ngIf="slidePost?.length > 1" class="carousel-controls carousel-control-prev" href="#{{elId}}" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -14,7 +23,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div *ngIf="slideBg.background" class="card-body p-0">
-        <img class="img-fluid w-100" [src]="'assets/images/products/' + slideBg.name + '-bg.png'">
+    <div *ngIf="slideBg?.background" class="card-body p-0">
+        <img class="img-fluid w-100" [src]="'assets/images/products/' + slideBg?.name + '-bg.png'">
     </div>
 </div>

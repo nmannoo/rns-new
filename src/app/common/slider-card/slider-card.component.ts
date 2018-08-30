@@ -11,7 +11,7 @@ export class SliderCardComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('post') slidePost: any;
   // tslint:disable-next-line:no-input-rename
-  @Input('bg-post') slideBg: any;
+  @Input('bg-post') slideBg?: any;
 
   constructor() { }
 

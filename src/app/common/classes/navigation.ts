@@ -37,6 +37,18 @@ export const Navigation = [
                 slug: '/tissue',
                 name: 'Tissue',
             },
+            {
+                slug: '/thermal-ncr',
+                name: 'Thermal/NCR'
+            },
+            {
+                slug: '/sack-kraft',
+                name: 'Sack Kraft'
+            },
+            {
+                slug: '/specialty',
+                name: 'Specialty'
+            }
         ]
     },
     {
@@ -65,18 +77,7 @@ export const Navigation = [
                 slug: '/envelopes',
                 name: 'Envelopes'
             },
-            {
-                slug: '/thermal',
-                name: 'Thermal'
-            },
-            {
-                slug: '/sack-kraft',
-                name: 'Sack Kraft'
-            },
-            {
-                slug: '/specialty',
-                name: 'Specialty'
-            }
+
         ]
     },
     {
@@ -92,7 +93,11 @@ export const Navigation = [
             {
                 slug: '/plastic-film',
                 name: 'Plastic Film'
-            }
+            },
+            {
+              slug: '/thermal',
+              name: 'Thermal'
+            },
         ]
     },
     {

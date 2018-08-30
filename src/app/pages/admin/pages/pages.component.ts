@@ -8,6 +8,7 @@ import { MDCSwitch } from '@material/switch';
 
 import { ContentService } from '../../../common/services/content.service';
 import { PlatformService } from '../../../common/services/platform.service';
+import { SnackbarService } from '../../../common/services/snackbar.service';
 import { pageCol } from '../../../common/classes/admin.table';
 
 import { BehaviorSubject } from 'rxjs';
@@ -45,7 +46,8 @@ export class PagesComponent implements OnInit {
   constructor(
     private content: ContentService,
     private platform: PlatformService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private snackbar: SnackbarService
   ) { }
 
   ngOnInit() {
@@ -96,10 +98,16 @@ export class PagesComponent implements OnInit {
   add() {
     this.content.addPage(this.addForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.addForm.value.title}: Add Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.addForm.value.title}: Add Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.addForm.reset();
@@ -126,10 +134,16 @@ export class PagesComponent implements OnInit {
   update() {
     this.content.updatePage(this.editForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.editForm.value.title}: Edit Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.editForm.value.title}: Edit Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.editForm.reset();
@@ -142,10 +156,16 @@ export class PagesComponent implements OnInit {
   delete(info) {
     this.content.deletePage(info).subscribe(
       (data) => {
-        //
+        this.snackbar.trigger({
+          message: `${info.title}: Delete Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('An error occured: ' + err);
+        this.snackbar.trigger({
+          message: `${info.title}: Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         console.log('Successful');

@@ -11,6 +11,7 @@ import { PlatformService } from '../../../common/services/platform.service';
 import { sliderCol } from '../../../common/classes/admin.table';
 
 import { BehaviorSubject } from 'rxjs';
+import { SnackbarService } from '../../../common/services/snackbar.service';
 
 @Component({
   selector: 'app-sliders',
@@ -46,7 +47,8 @@ export class SlidersComponent implements OnInit {
   constructor(
     private slider: SliderService,
     private platform: PlatformService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private snackbar: SnackbarService
   ) { }
 
   ngOnInit() {
@@ -98,10 +100,16 @@ export class SlidersComponent implements OnInit {
     this.addForm.setControl('slides', this.fb.array(this.images || []));
     this.slider.addSlider(this.addForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.addForm.value.pagename}: Add Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.addForm.value.pagename}: Add Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.addForm.reset();
@@ -133,10 +141,16 @@ export class SlidersComponent implements OnInit {
     this.editForm.setControl('slides', this.fb.array(this.images || []));
     this.slider.updateSlider(this.editForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.editForm.value.pagename}: Edit Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.editForm.value.pagename}: Edit Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.editForm.reset();
@@ -150,13 +164,19 @@ export class SlidersComponent implements OnInit {
   delete(info) {
     this.slider.deleteSlider(info).subscribe(
       (data) => {
-        //
+        this.snackbar.trigger({
+          message: `${info.pagename}: Delete Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('An error occured: ' + err);
+        this.snackbar.trigger({
+          message: `${info.pagename}: Delete Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
-        console.log('Successful');
+        //
       }
     );
   }

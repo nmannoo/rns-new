@@ -11,6 +11,7 @@ import { PlatformService } from '../../../common/services/platform.service';
 import { productCol } from '../../../common/classes/admin.table';
 
 import { BehaviorSubject } from 'rxjs';
+import { SnackbarService } from '../../../common/services/snackbar.service';
 
 @Component({
   selector: 'app-products',
@@ -60,7 +61,8 @@ export class ProductsComponent implements OnInit {
   constructor(
     private content: ContentService,
     private platform: PlatformService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private snackbar: SnackbarService
   ) { }
 
   ngOnInit() {
@@ -105,10 +107,16 @@ export class ProductsComponent implements OnInit {
     this.editForm.setControl('f_images', this.fb.array(this.f_images || []));
     this.content.updateProduct(this.editForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.editForm.value.fullname}: Edit Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.editForm.value.fullname}: Edit Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.editForm.reset();
@@ -123,10 +131,16 @@ export class ProductsComponent implements OnInit {
     this.addForm.setControl('f_images', this.fb.array(this.f_images || []));
     this.content.addProduct(this.addForm.value).subscribe(
       (data) => {
-        console.log('Successful');
+        this.snackbar.trigger({
+          message: `${this.addForm.value.fullname}: Add Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('Something wrong has occured: ' + err.message);
+        this.snackbar.trigger({
+          message: `${this.addForm.value.fullname}: Add Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         this.addForm.reset();
@@ -139,10 +153,16 @@ export class ProductsComponent implements OnInit {
   delete(info) {
     this.content.deleteProduct(info).subscribe(
       (data) => {
-        //
+        this.snackbar.trigger({
+          message: `${info.fullname}: Delete Successful`,
+          action: 'Close'
+        });
       },
       (err) => {
-        console.log('An error occured: ' + err);
+        this.snackbar.trigger({
+          message: `${info.fullname}: Delete Error: ${err.message}`,
+          action: 'Close'
+        });
       },
       () => {
         console.log('Successful');

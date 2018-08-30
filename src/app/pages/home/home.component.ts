@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
   getPosts() {
     this.content.fetchfProducts().subscribe(data => {
       this.posts = data;
+      console.log(this.posts);
       this.showSpinner = false;
     });
   }

@@ -96,6 +96,7 @@ export class ContentService {
     this.productsCollection = this.afs.collection('products', ref => {
       let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
       query = query.where('featured', '==', true);
+      query = query.orderBy('blocktitle');
       return query;
     });
     this.products = this.productsCollection.valueChanges();
@@ -113,7 +114,11 @@ export class ContentService {
   }
 
   fetchProds() {
-    this.productsCollection = this.afs.collection('products');
+    this.productsCollection = this.afs.collection('products', ref => {
+      let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+      query = query.orderBy('blocktitle').orderBy('category');
+      return query;
+    });
     this.products = this.productsCollection.valueChanges();
     return this.products;
   }

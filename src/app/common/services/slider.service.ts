@@ -83,7 +83,7 @@ export class SliderService {
   // Delete Slider
 
   deleteSlider(info) {
-    const promise = from(this.afs.collection('sliders').doc(info.name).delete());
+    const promise = from(this.afs.collection('sliders').doc(info.id).delete());
     return promise;
   }
 }

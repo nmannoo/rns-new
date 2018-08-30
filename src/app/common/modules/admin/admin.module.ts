@@ -17,7 +17,9 @@ import { DialogModule } from '../dialog/dialog.module';
 import { SortPipe } from '../../pipes/sort.pipe';
 import { LoadingModule } from '../loading/loading.module';
 import { FirecoreModule } from '../firecore/firecore.module';
+
 import { AuthGuard } from '../../guard/auth.guard';
+import { SnackbarModule } from '../snackbar/snackbar.module';
 
 
 const adminroutes: Routes = [
@@ -55,7 +57,8 @@ const adminroutes: Routes = [
     FirecoreModule,
     CdkTableModule,
     DialogModule,
-    LoadingModule
+    LoadingModule,
+    SnackbarModule
   ],
   declarations: [
     AdminComponent,
