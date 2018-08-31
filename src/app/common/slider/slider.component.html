@@ -1,6 +1,6 @@
 <section id="mainslider" class="row mt-3">
     <div class="col">
-        <div id="{{elementId}}-slider" class="carousel slide" data-ride="carousel" swipe>
+        <div id="{{elementId}}-slider" class="carousel slide carousel-fade" data-ride="carousel" swipe>
             <div class="carousel-inner">
               <ng-container *ngIf="data?.slides; else default">
                 <ng-container *ngFor="let data of data?.slides; index as i;">

@@ -1,4 +1,7 @@
-<app-slider elementId="home" [data]="sliderdata"></app-slider>
+<loading *ngIf="showSpinner2"></loading>
+<ng-container *ngIf="!showSpinner2">
+    <app-slider elementId="home" [data]="sliderdata"></app-slider>
+</ng-container>
 <div class="row pt-4">
   <div class="col-12">
     <h1 class="rns-heading text-left mb-4">

@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   public posts: any;
 
   showSpinner = true;
+  showSpinner2 = true;
 
   constructor(private slider: SliderService, private content: ContentService) { }
 
@@ -26,13 +27,13 @@ export class HomeComponent implements OnInit {
   getSlider(value) {
     this.slider.fetchSlider(value).subscribe(data => {
       this.sliderdata = data;
+      this.showSpinner2 = false;
     });
   }
 
   getPosts() {
     this.content.fetchfProducts().subscribe(data => {
       this.posts = data;
-      console.log(this.posts);
       this.showSpinner = false;
     });
   }

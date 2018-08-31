@@ -15,12 +15,11 @@ export class SnackbarService {
     if (this.platform.platformCheck) {
       const el = document.querySelector('.mdc-snackbar');
       const snackbar = new MDCSnackbar(el);
-      console.log(el);
       const snackData = {
         message: data.message,
         actionText: data.action,
         actionHandler: function() {
-          console.log(data.message);
+          // console.log(data.message);
         }
       };
 
