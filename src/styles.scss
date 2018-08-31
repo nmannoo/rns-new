@@ -563,3 +563,22 @@ table.table-prods thead tr th i.material-icons {
 .mdc-snackbar__action-button {
   color: #fff;
 }
+
+
+.carousel-control-next, .carousel-control-prev {
+  width: 7%;
+}
+
+.carousel-hover:hover {
+  cursor: pointer;
+}
+
+/* Breakpoints */
+
+@media (max-width: 576px) {
+  .rns-headband {
+    background: url('assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+}

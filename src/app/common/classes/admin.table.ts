@@ -8,8 +8,8 @@ export const productCol = [
 ];
 
 export const sliderCol = [
+  'id',
   'pagename',
-  'slug',
   'slides',
   'edit'
 ];

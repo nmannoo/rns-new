@@ -13,25 +13,25 @@
                 <div class="col-12">
                   <div class="form-group my-2 mdc-text-field w-100">
                     <input formControlName="pagename" type="text" id="pagename" class="mdc-text-field__input h-auto">
-                    <label class="mdc-floating-label" for="my-text-field">Page Name</label>
+                    <label class="mdc-floating-label" for="pagename">Page Name</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
 
                   <div class="form-group my-2 mdc-text-field w-100">
                     <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
-                    <label class="mdc-floating-label" for="my-text-field">Name</label>
+                    <label class="mdc-floating-label" for="name">Name</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
 
                   <div class="form-group my-2 mdc-text-field w-100">
                     <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
-                    <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                    <label class="mdc-floating-label" for="image">Add New Image (e.g. name-of-category/name-of-section/name-of-file)</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
                   <div formArrayName="slides" class="form-group mt-2">
                     <ul class="tags" aria-orientation="horizontal">
                       <li *ngFor="let img of images; index as i;">
-                        <a (click)="removeFromArr(images, i)" class="tag">{{img}}</a>
+                        <a (click)="removeFromArr(images, i)" class="tag">{{img.name}}</a>
                       </li>
                     </ul>
                   </div>
@@ -52,10 +52,10 @@
               <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.pagename || row.id}}</td>
             </ng-container>
 
-            <ng-container cdkColumnDef="slug">
-              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="slug">
-                Slug
-                <i *ngIf="sortKey === 'slug'" class="material-icons">arrow_drop_up</i>
+            <ng-container cdkColumnDef="id">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="id">
+                ID
+                <i *ngIf="sortKey === 'id'" class="material-icons">arrow_drop_up</i>
               </th>
               <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.id}}</td>
             </ng-container>
@@ -67,7 +67,7 @@
               <td cdk-cell *cdkCellDef="let row" style="font-size: 12px;">
                 <ul class="tags" aria-orientation="horizontal">
                   <li *ngFor="let img of row.slides; index as i;">
-                    <a class="tag mb-0" style="font-size: 12px;">{{img}}</a>
+                    <a class="tag mb-0" style="font-size: 12px;">{{img.name}}</a>
                   </li>
                 </ul>
               </td>
@@ -83,25 +83,25 @@
                     <div class="col-12">
                       <div class="form-group my-2 mdc-text-field w-100">
                         <input formControlName="pagename" type="text" id="pagename" class="mdc-text-field__input h-auto">
-                        <label class="mdc-floating-label" for="my-text-field">Page Name</label>
+                        <label class="mdc-floating-label" for="pagename">Page Name</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
 
                       <div class="form-group my-2 mdc-text-field w-100">
                         <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
-                        <label class="mdc-floating-label" for="my-text-field">Name</label>
+                        <label class="mdc-floating-label" for="name">Name</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
 
                       <div class="form-group my-2 mdc-text-field w-100">
                         <input (keyup)="addToArr($event, images)" formControlName="image" type="text" id="image" class="mdc-text-field__input h-auto">
-                        <label class="mdc-floating-label" for="my-text-field">Add New Image</label>
+                        <label class="mdc-floating-label" for="image">Add New Image (e.g. name-of-category/name-of-section/name-of-file)</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
                       <div formArrayName="slides" class="form-group mt-2">
                         <ul class="tags" aria-orientation="horizontal">
                           <li *ngFor="let img of images; index as in">
-                            <a (click)="removeFromArr(images, in)" class="tag">{{img}}</a>
+                            <a (click)="removeFromArr(images, in)" class="tag">{{img.name}}</a>
                           </li>
                         </ul>
                       </div>

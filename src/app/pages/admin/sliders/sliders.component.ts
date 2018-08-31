@@ -215,7 +215,12 @@ export class SlidersComponent implements OnInit {
   addToArr(el: any, value) {
     el.preventDefault();
     if (el.keyCode === 13) {
-      value.push(el.target.value);
+      const val = (el.target.value).split('/');
+      value.push({
+        category: val[0],
+        slug: val[1],
+        name: val[2]
+      });
       console.log(value);
     }
   }
