@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.updateMetadata();
     this.scrollTop();
     this.initGAnalytics();
     this.sendPageView();
@@ -86,15 +87,16 @@ export class AppComponent implements OnInit {
       mergeMap((route) => route.data)
     ).subscribe((event) => {
       if (event.state !== undefined) {
-        this.seo.getPage(event.state).subscribe(pages => {
-          if (pages) {
-            this.meta.generateTags({
-              title: this.title + ' | ' + pages.title,
-              description: pages.description,
-              keywords: pages.keywords
-            });
-          }
-        });
+        // this.seo.getPage(event.state).subscribe(pages => {
+        //   if (pages) {
+        //     this.meta.generateTags({
+        //       title: this.title + ' | ' + pages.title,
+        //       description: pages.description,
+        //       keywords: pages.keywords
+        //     });
+        //   }
+        // });
+        this.seo.ssrFirestoreDoc(`pages/${event.state}`).subscribe();
       } else {
         this.router.events.pipe(
           filter(evt => evt instanceof NavigationEnd)
@@ -103,15 +105,17 @@ export class AppComponent implements OnInit {
           // tslint:disable-next-line:curly
           while (r.firstChild) r = r.firstChild;
           r.params.subscribe(params => {
-            this.seo.getPage(params['child']).subscribe(data => {
-              if (data) {
-                this.meta.generateTags({
-                  title: this.title + ' | ' + data.title,
-                  description: data.description,
-                  keywords: data.keywords
-                });
-              }
-            });
+            const child = params['child'];
+            // this.seo.getPage(params['child']).subscribe(data => {
+            //   if (data) {
+            //     this.meta.generateTags({
+            //       title: this.title + ' | ' + data.title,
+            //       description: data.description,
+            //       keywords: data.keywords
+            //     });
+            //   }
+            // });
+            this.seo.ssrFirestoreDoc(`pages/${child}`).subscribe();
           });
         });
       }

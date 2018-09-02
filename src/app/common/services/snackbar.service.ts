@@ -19,7 +19,7 @@ export class SnackbarService {
         message: data.message,
         actionText: data.action,
         actionHandler: function() {
-          // console.log(data.message);
+          // do nothing
         }
       };
 

@@ -18,6 +18,8 @@ export class SeoService {
   pagesCollection: AngularFirestoreCollection<any>;
   pageDoc: AngularFirestoreDocument<any>;
 
+  private title = 'Roll n Sheet Ltd';
+
   constructor(
     private afs: AngularFirestore,
     private state: TransferState,
@@ -35,12 +37,14 @@ export class SeoService {
       return this.afs.doc<any>(path).valueChanges()
         .pipe(
           tap(page => {
-            this.state.set(PAGE_KEY, page);
-            this.meta.generateTags({
-              title: page.title,
-              description: page.description,
-              keywords: page.keywords
-            });
+            if (page) {
+              this.state.set(PAGE_KEY, page);
+              this.meta.generateTags({
+                title: this.title + ' | ' + page.title,
+                description: page.description,
+                keywords: page.keywords
+              });
+            }
           }),
           startWith(exists)
         );

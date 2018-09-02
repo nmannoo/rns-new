@@ -126,7 +126,10 @@ export class ContentService {
   // Add Product Data
 
   addProduct(info) {
-    const promise = from(this.afs.collection('products').doc(`${info.name}`).set(info));
+    const data = info;
+    delete data.image;
+    delete data.f_image;
+    const promise = from(this.afs.collection('products').doc(`${info.name}`).set(data));
     return promise;
   }
 

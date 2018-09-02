@@ -22,7 +22,9 @@ export class SwipeDirective implements OnInit {
       const Hammer = require('hammerjs');
 
       const carousel = this.el;
-      const hammer = new Hammer.Manager(carousel);
+      const hammer = new Hammer.Manager(carousel, {
+        // touchAction: 'auto'
+      });
       const swipe = new Hammer.Swipe();
       $(carousel).carousel({
         pause: false
