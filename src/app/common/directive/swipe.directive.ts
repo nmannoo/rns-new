@@ -17,25 +17,32 @@ export class SwipeDirective implements OnInit {
 
   ngOnInit() {
     if (this.platform.platformCheck) {
+      // imports
       const $ = require('jquery');
       require('bootstrap');
       const Hammer = require('hammerjs');
 
+      // instantiate Hammer behaviors on carousel
       const carousel = this.el;
       const hammer = new Hammer.Manager(carousel, {
-        // touchAction: 'auto'
+        recognizers: [
+          [ Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL } ],
+        ]
       });
-      const swipe = new Hammer.Swipe();
+
+      // disable pause on hover carousel
       $(carousel).carousel({
         pause: false
       });
-      hammer.add(swipe);
+
+      // behavior functions on swipe
       hammer.on('swipeleft', function() {
         $(carousel).carousel('next');
       });
       hammer.on('swiperight', function() {
         $(carousel).carousel('prev');
       });
+
     }
   }
 }

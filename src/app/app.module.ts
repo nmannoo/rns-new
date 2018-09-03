@@ -30,6 +30,7 @@ import { DropdownComponent } from './common/layout/header/dropdown/dropdown.comp
 import { DialogModule } from './common/modules/dialog/dialog.module';
 import { LoadingModule } from './common/modules/loading/loading.module';
 import { FirecoreModule } from './common/modules/firecore/firecore.module';
+import { LinkmapComponent } from './common/linkmap/linkmap.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FirecoreModule } from './common/modules/firecore/firecore.module';
     SwipeDirective,
     DropdownDirective,
     FilterPipe,
-    DropdownComponent
+    DropdownComponent,
+    LinkmapComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-rns' }),

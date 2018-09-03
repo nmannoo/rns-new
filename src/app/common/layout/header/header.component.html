@@ -109,11 +109,12 @@
                     <a (click)="closeDrawer()" [routerLink]="(nav.slug && !nav.children) ? '/' + nav.slug : null" [routerLinkActive]="!nav?.children ? 'mdc-list-item--activated': 'drop'" [routerLinkActiveOptions]="{exact: true}" class="mdc-list-item">{{nav.name}}</a>
                 </ng-container>
                 <ng-container *ngIf="nav?.children">
-
                     <h5 class="mdc-list-group__subheader">{{nav.name}}</h5>
-                    <ng-container *ngFor="let subnav of nav.children">
-                        <a [routerLink]="nav.routeprefix + subnav.slug" class="mdc-list-item">{{subnav.name}}</a>
-                    </ng-container>
+                    <ul class="pl-3" style="list-style: none;">
+                      <li *ngFor="let subnav of nav.children">
+                        <a (click)="closeDrawer()" [routerLink]="nav.routeprefix + subnav.slug" class="mdc-list-item">{{subnav.name}}</a>
+                      </li>
+                    </ul>
                 </ng-container>
                 <hr class="mdc-list-divider">
             </ng-container>

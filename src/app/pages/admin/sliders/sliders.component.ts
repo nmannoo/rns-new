@@ -221,7 +221,6 @@ export class SlidersComponent implements OnInit {
         slug: val[1],
         name: val[2]
       });
-      console.log(value);
     }
   }
 

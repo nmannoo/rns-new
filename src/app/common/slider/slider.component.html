@@ -1,7 +1,7 @@
 <section id="mainslider" class="row mt-3">
     <div class="col">
         <div id="{{elementId}}-slider" class="carousel slide carousel-fade" data-ride="carousel" swipe>
-            <div class="carousel-inner">
+            <div class="carousel-inner" style="border-radius: 5px;">
               <ng-container *ngIf="data?.slides; else default">
                 <ng-container *ngFor="let data of data?.slides; index as i;">
                     <div [routerLink]="['/' + data.category + '/' + data.slug]" class="carousel-item carousel-hover" [class.active]="i === 0">

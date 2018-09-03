@@ -269,10 +269,6 @@ button.rns-menu-button:active, button.rns-menu-button:focus {
   margin: 10px 0;
 }
 
-#search-dropdown ul li {
-  //
-}
-
 #search-dropdown ul li a {
   display: block;
   padding: 10px 20px;
@@ -577,8 +573,43 @@ table.table-prods thead tr th i.material-icons {
 
 @media (max-width: 576px) {
   .rns-headband {
-    background: url('assets/images/banner.jpg');
     background-size: cover;
-    background-position: center center;
+    background-repeat: none;
+    background-position: left;
   }
+}
+
+/* Mapael Map */
+
+#map {
+  background-color: $mdc-theme-primary;
+  // background-image: url('/assets/images/banner.jpg');
+  // background-size: cover;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#map .map {
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+#map .mapTooltip {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.70;
+  filter: alpha(opacity=70);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  max-width: 200px;
+  display: none;
+  color: #343434;
+}
+
+text tspan {
+  font-size: 7px !important;
 }

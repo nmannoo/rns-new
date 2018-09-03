@@ -15,13 +15,13 @@
     </p>
   </div>
   <div class="d-none d-md-block col-12 col-lg-6">
-    <img class="img-fluid" src="/assets/images/intro/intro-home.jpg" alt="Intro Home">
+    <img width="90%" class="d-block mx-auto img-fluid" src="/assets/images/intro/intro-home.jpg" alt="Intro Home">
   </div>
 
 
 
   <div class="d-none d-md-block col-12 col-lg-6">
-    <img class="img-fluid" src="/assets/images/intro/intro-home-3.jpg" alt="Intro Home">
+    <img width="75%" class="d-block mx-auto img-fluid" src="/assets/images/intro/intro-home.png" alt="Intro Home">
   </div>
   <div class="col-12 col-lg-6 d-flex align-items-lg-center">
     <p class="rns-body-text-lg text-justify">
@@ -36,7 +36,7 @@
     </p>
   </div>
   <div class="d-none d-md-block col-12 col-lg-6">
-    <img class="img-fluid" src="/assets/images/intro/intro-home-2.jpg" alt="Intro Home">
+    <img width="80%" class="d-block mx-auto img-fluid" src="/assets/images/intro/intro-home-3.png" alt="Intro Home">
   </div>
 
   <div class="col-12">
@@ -48,10 +48,10 @@
 
 <ng-container *ngFor="let post of posts; index as i;">
     <ng-container *ngIf="post.blocktitle !== posts[i+1]?.blocktitle">
-        <div class="row py-2">
+        <div class="row">
             <ng-container *ngFor="let post2 of posts; index as j;">
                 <ng-container *ngIf="post.blocktitle === post2.blocktitle">
-                    <div class="col-12 col-sm-6 mb-2 half-gutter">
+                    <div class="col-12 col-sm-6 mb-3 half-gutter">
                         <app-slider-card [elId]="post2.name" [post]="post2.f_images"></app-slider-card>
                     </div>
                 </ng-container>
