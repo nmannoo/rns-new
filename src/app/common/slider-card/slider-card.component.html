@@ -1,9 +1,9 @@
 <div class="card">
     <div id="{{elId}}" class="carousel slide carousel-fade card-img-top" data-ride="carousel" swipe>
       <ng-container *ngIf="slidePost.length > 0; else default;">
-        <div class="carousel-inner">
+        <div class="carousel-inner" lazy-load-images>
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >
-              <img class="d-block w-100" [src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">
+              <img class="d-block w-100" [attr.data-src]="'assets/images/products/' + slide + '.png'" alt="{{slide}}">
             </div>
         </div>
       </ng-container>
@@ -23,7 +23,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div *ngIf="slideBg?.background" class="card-body p-0">
-        <img class="img-fluid w-100" [src]="'assets/images/products/' + slideBg?.name + '-bg.png'">
+    <div *ngIf="slideBg?.background" class="card-body p-0" lazy-load-images>
+        <img class="img-fluid w-100" [attr.data-src]="'assets/images/products/' + slideBg?.name + '-bg.png'">
     </div>
 </div>

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
 import { environment } from '../environments/environment';
 
@@ -67,7 +68,8 @@ import { LinkmapComponent } from './common/linkmap/linkmap.component';
     LoadingModule,
     NgxCaptchaModule.forRoot({
       reCaptcha2SiteKey: environment.reCAPTCHA.siteKey
-    })
+    }),
+    LazyLoadImagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
