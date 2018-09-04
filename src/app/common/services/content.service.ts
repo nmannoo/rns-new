@@ -107,6 +107,7 @@ export class ContentService {
     this.productsCollection = this.afs.collection('products', ref => {
       let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
       query = query.where('category', '==', `${this.child}`);
+      query = query.orderBy('order');
       return query;
     });
     this.products = this.productsCollection.valueChanges();

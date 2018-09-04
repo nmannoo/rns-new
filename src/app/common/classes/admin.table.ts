@@ -3,6 +3,7 @@ export const productCol = [
   'name',
   'category',
   'featured',
+  'order',
   'blocktitle',
   'edit'
 ];

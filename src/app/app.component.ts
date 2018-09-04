@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 import { PlatformService } from './common/services/platform.service';
-import { MetadataService } from './common/services/metadata.service';
 import { SeoService } from './common/services/seo.service';
 
 import { filter, map, mergeMap } from 'rxjs/operators';
@@ -22,7 +21,6 @@ export class AppComponent implements OnInit {
     private router: Router,
     private platform: PlatformService,
     private seo: SeoService,
-    private meta: MetadataService
   ) {
 
   }
@@ -87,15 +85,6 @@ export class AppComponent implements OnInit {
       mergeMap((route) => route.data)
     ).subscribe((event) => {
       if (event.state !== undefined) {
-        // this.seo.getPage(event.state).subscribe(pages => {
-        //   if (pages) {
-        //     this.meta.generateTags({
-        //       title: this.title + ' | ' + pages.title,
-        //       description: pages.description,
-        //       keywords: pages.keywords
-        //     });
-        //   }
-        // });
         this.seo.ssrFirestoreDoc(`pages/${event.state}`).subscribe();
       } else {
         this.router.events.pipe(
@@ -106,15 +95,6 @@ export class AppComponent implements OnInit {
           while (r.firstChild) r = r.firstChild;
           r.params.subscribe(params => {
             const child = params['child'];
-            // this.seo.getPage(params['child']).subscribe(data => {
-            //   if (data) {
-            //     this.meta.generateTags({
-            //       title: this.title + ' | ' + data.title,
-            //       description: data.description,
-            //       keywords: data.keywords
-            //     });
-            //   }
-            // });
             this.seo.ssrFirestoreDoc(`pages/${child}`).subscribe();
           });
         });

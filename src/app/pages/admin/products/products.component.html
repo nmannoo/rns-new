@@ -12,12 +12,12 @@
               <form [formGroup]="addForm" class="row" autocomplete="off" id="addForm">
                 <div class="col-6">
                   <div class="form-group my-2 mdc-text-field w-100">
-                    <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
+                    <input formControlName="fullname" type="text" id="fullname" class="mdc-text-field__input h-auto">
                     <label class="mdc-floating-label" for="my-text-field">Full Name</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
                   <div class="form-group my-2 mdc-text-field w-100">
-                    <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
+                    <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
                     <label class="mdc-floating-label" for="my-text-field">Permalink</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
@@ -49,13 +49,18 @@
                 </div>
                 <div class="col-6">
                   <div class="form-group my-2 mdc-text-field w-100">
-                    <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
+                    <input formControlName="category" type="text" id="category" class="mdc-text-field__input h-auto">
                     <label class="mdc-floating-label" for="my-text-field">Category Name</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
                   <div class="form-group my-2 mdc-text-field w-100">
-                    <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
+                    <input formControlName="blocktitle" type="text" id="blocktitle" class="mdc-text-field__input h-auto">
                     <label class="mdc-floating-label" for="my-text-field">Block Title</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
+                  <div class="form-group my-2 mdc-text-field w-100">
+                    <input formControlName="order" type="text" id="order" class="mdc-text-field__input h-auto">
+                    <label class="mdc-floating-label" for="my-text-field">Order</label>
                     <div class="mdc-line-ripple"></div>
                   </div>
 
@@ -108,6 +113,14 @@
               <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.name}}</td>
             </ng-container>
 
+            <ng-container cdkColumnDef="order">
+              <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="order">
+                Order
+                <i *ngIf="sortKey === 'order'" class="material-icons">arrow_drop_up</i>
+              </th>
+              <td cdk-cell *cdkCellDef="let row" style="font-size: 13px;">{{row.order || '-'}}</td>
+            </ng-container>
+
             <ng-container cdkColumnDef="blocktitle">
               <th (click)="sortData($event, 'asc')" cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold;" data-name="blocktitle">
                 Block Title
@@ -143,12 +156,12 @@
                   <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
                     <div class="col-6">
                       <div class="form-group my-2 mdc-text-field w-100">
-                        <input formControlName="fullname" type="fullname" id="fullname" class="mdc-text-field__input h-auto">
+                        <input formControlName="fullname" type="text" id="fullname" class="mdc-text-field__input h-auto">
                         <label class="mdc-floating-label" for="my-text-field">Full Name</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
                       <div class="form-group my-2 mdc-text-field w-100">
-                        <input formControlName="name" type="name" id="name" class="mdc-text-field__input h-auto">
+                        <input formControlName="name" type="text" id="name" class="mdc-text-field__input h-auto">
                         <label class="mdc-floating-label" for="my-text-field">Permalink</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
@@ -180,12 +193,17 @@
                     </div>
                     <div class="col-6">
                       <div class="form-group my-2 mdc-text-field w-100">
-                        <input formControlName="category" type="category" id="category" class="mdc-text-field__input h-auto">
+                        <input formControlName="category" type="text" id="category" class="mdc-text-field__input h-auto">
                         <label class="mdc-floating-label" for="my-text-field">Category Name</label>
                         <div class="mdc-line-ripple"></div>
                       </div>
                       <div class="form-group my-2 mdc-text-field w-100">
-                        <input formControlName="blocktitle" type="blocktitle" id="blocktitle" class="mdc-text-field__input h-auto">
+                        <input formControlName="order" type="text" id="order" class="mdc-text-field__input h-auto">
+                        <label class="mdc-floating-label" for="my-text-field">Order</label>
+                        <div class="mdc-line-ripple"></div>
+                      </div>
+                      <div class="form-group my-2 mdc-text-field w-100">
+                        <input formControlName="blocktitle" type="text" id="blocktitle" class="mdc-text-field__input h-auto">
                         <label class="mdc-floating-label" for="my-text-field">Block Title</label>
                         <div class="mdc-line-ripple"></div>
                       </div>

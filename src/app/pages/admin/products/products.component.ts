@@ -42,7 +42,8 @@ export class ProductsComponent implements OnInit {
     f_images: this.fb.array([]),
     f_image: [''],
     featured: [false],
-    background: [false]
+    background: [false],
+    order: [0]
   });
 
   public addForm = this.fb.group({
@@ -55,7 +56,8 @@ export class ProductsComponent implements OnInit {
     f_images: this.fb.array([]),
     f_image: [''],
     featured: [false],
-    background: [false]
+    background: [false],
+    order: [0]
   });
 
   constructor(
@@ -189,7 +191,8 @@ export class ProductsComponent implements OnInit {
       f_images: [],
       f_image: '',
       featured: value.featured ? value.featured : false,
-      background: value.background ? value.background : false
+      background: value.background ? value.background : false,
+      order: value.order ? value.order : 0
     });
     this.images = value.images || [];
     this.f_images = value.f_images || [];

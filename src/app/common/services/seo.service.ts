@@ -34,7 +34,7 @@ export class SeoService {
 
   ssrFirestoreDoc(path: string) {
     const exists = this.state.get(PAGE_KEY, {} as any);
-      return this.afs.doc<any>(path).valueChanges()
+    this.pagesData = this.afs.doc<any>(path).valueChanges()
         .pipe(
           tap(page => {
             if (page) {
@@ -48,5 +48,6 @@ export class SeoService {
           }),
           startWith(exists)
         );
+    return this.pagesData;
   }
 }
