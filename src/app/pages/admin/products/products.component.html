@@ -150,9 +150,9 @@
             <ng-container cdkColumnDef="edit">
               <th cdk-header-cell *cdkHeaderCellDef style="font-size: 13px; font-weight: bold; width: 155px;"></th>
               <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
-                <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name}}">Edit</button>
+                <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.name | sanitize}}">Edit</button>
                 <button (click)="delete(row)" class="mdc-button">Delete</button>
-                <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.name}}" [title]="'Edit Product: ' + row.fullname" accept="Save" cancel="Cancel">
+                <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.name | sanitize}}" [title]="'Edit Product: ' + row.fullname" accept="Save" cancel="Cancel">
                   <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
                     <div class="col-6">
                       <div class="form-group my-2 mdc-text-field w-100">

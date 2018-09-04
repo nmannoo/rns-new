@@ -1,5 +1,5 @@
 <div class="card">
-    <div id="{{elId}}" class="carousel slide card-img-top" data-ride="carousel" swipe>
+    <div id="{{elId}}" class="carousel slide carousel-fade card-img-top" data-ride="carousel" swipe>
       <ng-container *ngIf="slidePost.length > 0; else default;">
         <div class="carousel-inner">
             <div *ngFor="let slide of slidePost; index as i;" class="carousel-item" [class.active]="i === 0" >

@@ -7,20 +7,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  private formData: FormData;
+  private filename: string;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
-  uploadFile(event) {
+  loadFile(event) {
+    this.formData = null;
     const elem = event.target;
-    const formData = new FormData();
+    this.formData = new FormData();
     if (elem.files.length > 0) {
-      formData.append('file', elem.files[0]);
+      this.filename = elem.files[0].name;
+      this.formData.append('file', elem.files[0]);
     }
-    console.log(elem.files[0]);
-    this.http.post('/upload', formData).subscribe(
+    console.log(this.filename);
+    console.log(this.formData);
+  }
+
+  uploadFile() {
+    this.http.post('/upload', this.formData).subscribe(
       (data) => {
         console.log(data);
       },

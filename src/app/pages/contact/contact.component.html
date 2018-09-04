@@ -2,10 +2,10 @@
   <div class="col-12 col-lg-6">
     <h2 class="rns-heading-blue text-left mb-3">Contact Us</h2>
     <p class="rns-body-text">
-        Can we help you with something? Would you like to have more information on a specific product listed on our website ? Please feel free to fill in the form below. We'll try to answer as fast as possible. We'd love to hear from you!
+        Can we help you with something? Would you like to have more information on a specific product listed on our website? Please feel free to fill in the form below. We'll try to answer as fast as possible. We'd love to hear from you!
     </p>
     <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" id="contactForm" autocomplete="off">
-      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 my-2">
+      <div class="form-group mdc-text-field mdc-text-field--outlined h-auto w-100 my-2">
         <input formControlName="name" type="text" id="name" name="name" class="mdc-text-field__input h-auto" autocomplete="off" required>
         <label for="name" class="mdc-floating-label">Name</label>
         <div class="mdc-notched-outline">
@@ -21,7 +21,7 @@
         </p>
       </ng-container>
 
-      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 mb-2">
+      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 h-auto mb-2">
         <input formControlName="email"type="email" id="email_address" name="email_address" class="mdc-text-field__input h-auto" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$">
         <label for="email_address" class="mdc-floating-label">Email address</label>
         <div class="mdc-notched-outline">
@@ -39,7 +39,7 @@
           Email format is invalid.
         </p>
       </ng-container>
-      <div class="form-group mdc-text-field mdc-text-field--outlined w-100 mb-2">
+      <div class="form-group mdc-text-field mdc-text-field--outlined h-auto w-100 mb-2">
         <input formControlName="subject" type="text" id="subject" name="subject" class="mdc-text-field__input h-auto" autocomplete="off" required>
         <label for="subject" class="mdc-floating-label">Subject</label>
         <div class="mdc-notched-outline">
@@ -54,7 +54,7 @@
           Subject is a required field.
         </p>
       </ng-container>
-      <div class="form-group mdc-text-field mdc-text-field--textarea w-100">
+      <div class="form-group mdc-text-field mdc-text-field--textarea h-auto w-100">
         <textarea formControlName="message" name="message" id="message" class="mdc-text-field__input h-auto" autocomplete="off" required></textarea>
         <label for="subject" class="mdc-floating-label">Your message</label>
       </div>

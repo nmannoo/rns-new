@@ -20,6 +20,7 @@ import { FirecoreModule } from '../firecore/firecore.module';
 
 import { AuthGuard } from '../../guard/auth.guard';
 import { SnackbarModule } from '../snackbar/snackbar.module';
+import { SanitizePipe } from '../../pipes/sanitize.pipe';
 
 
 const adminroutes: Routes = [
@@ -68,7 +69,8 @@ const adminroutes: Routes = [
     ProductsComponent,
     SortPipe,
     PagesComponent,
-    SlidersComponent
+    SlidersComponent,
+    SanitizePipe
   ],
   providers: [
     AuthGuard

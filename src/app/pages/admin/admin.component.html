@@ -1,6 +1,18 @@
-<div class="row py-3">
+<div class="row py-1">
   <div class="col-12">
-    <p>Test</p>
-    <input type="file" (change)="uploadFile($event)">
+    <h3 class="rns-headband text-white text-left my-3 py-3" style="font-size: 1.6rem;">Upload File</h3>
+  </div>
+  <div class="col-12 col-lg-6">
+    <form id="upload" autocomplete="off">
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" (change)="loadFile($event)" class="custom-file-input" id="inputGroupFile02">
+          <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <button class="input-group-text" id="inputGroupFileAddon02">Upload</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
