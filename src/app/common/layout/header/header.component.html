@@ -75,17 +75,17 @@
           </nav>
           <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
               <div id="search" class="input-group mb-4 d-flex h-100" style="align-items: center">
-                  <input (keydown)="searchAuto($event)" type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2">
+                  <input (keydown)="searchAuto($event)" type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2" #search>
                   <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="button" id="button-addon2">
                           <i class="material-icons">search</i>
                       </button>
                   </div>
               </div>
-              <div *ngIf="searchResults?.length > 0" id="search-dropdown" class="position-absolute">
+              <div *ngIf="search.value !== '' && searchResults?.length > 0" id="search-dropdown" class="position-absolute">
                 <ul>
                   <ng-container *ngFor="let res of searchResults; index as i;">
-                    <li><a href="#">{{res.name}}</a></li>
+                    <li><a [routerLink]="['/' + res.blocktitle + '/' + res.category ]" routerLinkActive="router-link-active" >{{res.fullname}}</a></li>
                   </ng-container>
                 </ul>
               </div>

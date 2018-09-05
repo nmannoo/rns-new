@@ -12,13 +12,18 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AdminHeaderComponent implements OnInit {
   public nav: any = AdminNavigation;
-  public currentUser: string;
+  public currentUser: any;
 
   constructor(
     private auth: AuthService,
     private router: Router
   ) {
-    this.currentUser = auth.currentUser;
+    this.auth.user.subscribe(data => {
+      if (data) {
+        this.currentUser = data.username;
+      }
+    });
+
   }
 
   ngOnInit() {

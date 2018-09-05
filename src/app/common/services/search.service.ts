@@ -17,7 +17,7 @@ export class SearchService {
   searchQuery(start, end) {
     this.searchRes = this.afs.collection('products', ref => {
       let query: firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
-      query = query.limit(5).orderBy('name').startAt(start).endAt(end);
+      query = query.limit(5).orderBy('category').startAt(start).endAt(end);
       return query;
     });
     this.search = this.searchRes.valueChanges();

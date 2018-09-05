@@ -1,20 +1,20 @@
 <section id="mainslider" class="row mt-3">
     <div class="col">
-        <div id="{{elementId}}-slider" class="carousel slide carousel-fade" data-ride="carousel" swipe lazy-load-images>
+        <div id="{{elementId}}-slider" class="carousel slide carousel-fade" data-ride="carousel" swipe [lazy-load-images]="{ rootMargin: '50px' }">
             <div class="carousel-inner" style="border-radius: 5px;">
               <ng-container *ngIf="data?.slides; else default">
                 <ng-container *ngFor="let data of data?.slides; index as i;">
                     <div [routerLink]="['/' + data.category + '/' + data.slug]" class="carousel-item carousel-hover" [class.active]="i === 0">
-                        <img class="d-none d-md-block w-100" attr.data-src="assets/images/sliders/{{data.name}}_lg.png" alt="{{data.slug}}">
+                        <img class="d-none d-md-block w-100" [src]="'assets/images/sliders/ph_lg.png'" [attr.data-src]="'assets/images/sliders/' + data.name + '_lg.png'" [alt]="data.slug">
                         <!-- <img class="d-block d-md-none w-100" attr.data-src="assets/images/sliders/{{data.name}}_sm.png" alt="{{data.slug}}"> -->
-                        <img class="d-block d-md-none w-100" attr.data-src="assets/images/sliders/ph_sm.png" alt="{{data.slug}}">
+                        <img class="d-block d-md-none w-100" [src]="'assets/images/sliders/ph_lg.png'" [attr.data-src]="'assets/images/sliders/ph_sm.png'" [alt]="data.slug">
                     </div>
                 </ng-container>
               </ng-container>
               <ng-template #default>
                 <div class="carousel-item active">
-                    <img class="d-none d-md-block w-100" attr.data-src="assets/images/sliders/ph_lg.png" alt="ph_lg">
-                    <img class="d-block d-md-none w-100" attr.data-src="assets/images/sliders/ph_sm.png" alt="ph_sm">
+                    <img class="d-none d-md-block w-100" [attr.src]="'assets/images/sliders/ph_lg.png'" alt="ph_lg">
+                    <img class="d-block d-md-none w-100" [attr.src]="'assets/images/sliders/ph_sm.png'" alt="ph_sm">
                 </div>
               </ng-template>
             </div>

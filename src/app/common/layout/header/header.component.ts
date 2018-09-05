@@ -104,15 +104,15 @@ export class HeaderComponent implements OnInit {
   }
 
   searchAuto($event: any) {
-    if ($event.timeStamp - this.lastKeypress > 200) {
-      if ($event.target.value) {
+    if ($event.timeStamp - this.lastKeypress > 500) {
+      if ($event.target.value !== '') {
         const q = $event.target.value;
         this.startAt.next(q);
         this.endAt.next(q + '\uf8ff');
 
         combineLatest(this.startObs, this.endObs).subscribe((value) => {
           this.search.searchQuery(value[0], value[1]).subscribe(data => {
-            this.searchResults = data;
+            this.searchResults = this.parseBlock(data);
           });
         });
       } else {
@@ -120,6 +120,26 @@ export class HeaderComponent implements OnInit {
       }
     }
     this.lastKeypress = $event.timeStamp;
+    console.log(this.searchResults);
+  }
+
+  parseBlock(data: any[]) {
+    // tslint:disable-next-line:curly
+    if (!data) return null;
+
+    const newarr = data.slice();
+    for (let i = 0; i < newarr.length; i++) {
+      const item = newarr[i].blocktitle;
+      if (item === '1') {
+        newarr[i].blocktitle = 'paper';
+      } else if (item === '2') {
+        newarr[i].blocktitle = 'stationery';
+      } else {
+        newarr[i].blocktitle = 'packaging';
+      }
+    }
+    return newarr;
+
   }
 
 }
