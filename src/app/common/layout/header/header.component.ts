@@ -104,6 +104,8 @@ export class HeaderComponent implements OnInit {
   }
 
   searchAuto($event: any) {
+    const el = <HTMLElement>$event.target;
+
     if ($event.timeStamp - this.lastKeypress > 500) {
       if ($event.target.value !== '') {
         const q = $event.target.value;
@@ -113,6 +115,7 @@ export class HeaderComponent implements OnInit {
         combineLatest(this.startObs, this.endObs).subscribe((value) => {
           this.search.searchQuery(value[0], value[1]).subscribe(data => {
             this.searchResults = this.parseBlock(data);
+            console.log(this.searchResults);
           });
         });
       } else {
@@ -120,7 +123,6 @@ export class HeaderComponent implements OnInit {
       }
     }
     this.lastKeypress = $event.timeStamp;
-    console.log(this.searchResults);
   }
 
   parseBlock(data: any[]) {
@@ -140,6 +142,10 @@ export class HeaderComponent implements OnInit {
     }
     return newarr;
 
+  }
+
+  resetSearch() {
+    this.searchResults = [];
   }
 
 }
