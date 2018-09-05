@@ -3,9 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 125" style="enable-background:new 0 0 400 125;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-dasharray:164.9336,56.9779;}
+	.st0{fill:#666666;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-dasharray:164.9336,56.9779;}
 </style>
-<circle class="st0" cx="200" cy="62.5" r="46.5">
+<rect class="st0" width="400" height="125"/>
+<circle class="st1" cx="200" cy="62.5" r="46.5">
 <animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0s" calcMode="linear" dur="1s" fill="remove" keyTimes="0;1" repeatCount="indefinite" restart="always" type="rotate" values="0 50 50;360 50 50">
 	</animateTransform>
 </circle>
