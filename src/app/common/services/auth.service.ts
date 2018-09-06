@@ -50,7 +50,7 @@ export class AuthService {
     return from(this.afAuth.auth
       .signInWithEmailAndPassword(info.username, info.password)
       .then((creds) => {
-        this.updateUserData(creds.user);
+        // this.updateUserData(creds.user);
       }));
   }
 
@@ -100,10 +100,9 @@ export class AuthService {
     const data: User = {
       uid: user.uid,
       email: user.email,
-      role: 'admin',
-      username: ''
+      role: 'admin'
     };
 
-    return userRef.set(data);
+    return userRef.set(data, { merge: true });
   }
 }

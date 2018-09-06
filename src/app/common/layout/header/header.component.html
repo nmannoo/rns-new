@@ -75,7 +75,7 @@
           </nav>
           <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
               <div id="search" class="input-group mb-4 d-flex h-100" style="align-items: center">
-                  <input (keydown)="searchAuto($event)" type="text" name="searchform" class="form-control" placeholder="Search for a product" aria-label="Search for a product" aria-describedby="button-addon2" #search>
+                  <input (keydown)="searchAuto($event)" type="text" id="searchform" name="searchform" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon2" #search>
                   <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="button" id="button-addon2">
                           <i class="material-icons">search</i>
@@ -85,8 +85,16 @@
               <div *ngIf="search.value !== '' && searchResults?.length > 0" id="search-dropdown" class="position-absolute">
                 <ul>
                   <ng-container *ngFor="let res of searchResults; index as i;">
-                    <li><a (click)="resetSearch()" [routerLink]="['/' + res.blocktitle + '/' + res.category]" routerLinkActive="router-link-active" >{{res.fullname}}</a></li>
+                    <li>
+                      <a (click)="resetSearch()" [routerLink]="['/' + res.blocktitle + '/' + res.category]" routerLinkActive="router-link-active">
+                        {{res.fullname}}
+                      </a>
+                    </li>
                   </ng-container>
+                  <hr class="w-auto" style="border-color:rgba(0,0,0,0.2);">
+                  <li class="px-3 py-2 text-left">
+                    <img class="img-fluid" src="/assets/images/search-by-algolia-light.svg" alt="algolia-search">
+                  </li>
                 </ul>
               </div>
           </div>

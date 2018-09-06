@@ -21,7 +21,7 @@
                 <ng-container *ngFor="let post2 of posts; index as j;">
                     <ng-container *ngIf="post.blocktitle === post2.blocktitle">
                         <div class="col-12 col-sm-6 mb-3 half-gutter">
-                            <app-slider-card [elId]="post2.name" [post]="post2.images" [bg-post]="post2"></app-slider-card>
+                            <app-slider-card [elId]="post2.name" [post]="post2.images" [bg-post]="post2" [name]="post2.fullname"></app-slider-card>
                         </div>
                     </ng-container>
                 </ng-container>

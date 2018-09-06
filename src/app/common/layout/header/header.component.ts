@@ -25,8 +25,8 @@ export class HeaderComponent implements OnInit {
   public child;
   public nav: any = Navigation;
 
-  private startAt = new Subject();
-  private endAt = new Subject();
+  private startAt = new Subject<string>();
+  private endAt = new Subject<string>();
 
   // tslint:disable-next-line:no-inferrable-types
   private lastKeypress: number = 0;
@@ -103,26 +103,41 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  // searchAuto($event: any) {
+  //   const el = <HTMLElement>$event.target;
+
+  //   if ($event.timeStamp - this.lastKeypress > 500) {
+  //     if ($event.target.value !== '') {
+  //       const q = $event.target.value;
+  //       this.startAt.next(q);
+  //       this.endAt.next(q + '\uf8ff');
+
+  //       combineLatest(this.startObs, this.endObs).subscribe((value) => {
+  //         this.search.searchQuery(value[0], value[1]).subscribe(data => {
+  //           this.searchResults = this.parseBlock(data);
+  //           console.log(this.searchResults);
+  //         });
+  //       });
+  //     } else {
+  //       this.searchResults = [];
+  //     }
+  //   }
+  //   this.lastKeypress = $event.timeStamp;
+  // }
+
   searchAuto($event: any) {
-    const el = <HTMLElement>$event.target;
+    if ($event.target.value !== '') {
+      const q = $event.target.value;
+      this.startAt.next(q);
 
-    if ($event.timeStamp - this.lastKeypress > 500) {
-      if ($event.target.value !== '') {
-        const q = $event.target.value;
-        this.startAt.next(q);
-        this.endAt.next(q + '\uf8ff');
-
-        combineLatest(this.startObs, this.endObs).subscribe((value) => {
-          this.search.searchQuery(value[0], value[1]).subscribe(data => {
-            this.searchResults = this.parseBlock(data);
-            console.log(this.searchResults);
-          });
+      this.startObs.subscribe((value) => {
+        this.search.searchQuery(value).subscribe((responses) => {
+          this.searchResults = this.parseBlock(responses.hits);
         });
-      } else {
-        this.searchResults = [];
-      }
+      });
+    } else {
+      this.searchResults = [];
     }
-    this.lastKeypress = $event.timeStamp;
   }
 
   parseBlock(data: any[]) {
@@ -141,7 +156,6 @@ export class HeaderComponent implements OnInit {
       }
     }
     return newarr;
-
   }
 
   resetSearch() {

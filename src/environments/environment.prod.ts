@@ -1,5 +1,9 @@
 export const environment = {
   production: true,
+  algolia: {
+    appId: '20KAL7STYT',
+    apiKey: '356284a26c76df7b8128811dfb848ef2',
+  },
   firebase: {
     apiKey: 'AIzaSyDKfdcR2yR-IZb1sG5u1PfJKR74PTOsKGY',
     authDomain: 'rollnsheet.firebaseapp.com',
