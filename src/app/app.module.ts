@@ -15,23 +15,22 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './common/layout/layout.component';
 import { HeaderComponent } from './common/layout/header/header.component';
 import { FooterComponent } from './common/layout/footer/footer.component';
-import { SliderComponent } from './common/slider/slider.component';
+import { SliderComponent } from './common/utilities/slider/slider.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EmptyRouterLinkDirective } from './common/directive/emptyrouterlink.directive';
-import { SliderCardComponent } from './common/slider-card/slider-card.component';
+import { SliderCardComponent } from './common/utilities/slider-card/slider-card.component';
 import { ProdcatComponent } from './pages/prodcat/prodcat.component';
 import { RegionalMarketComponent } from './pages/regional-market/regional-market.component';
 import { GlossaryComponent } from './pages/glossary/glossary.component';
 import { SwipeDirective } from './common/directive/swipe.directive';
 import { DropdownDirective } from './common/directive/dropdown.directive';
 import { FilterPipe } from './common/pipes/filter.pipe';
-import { DropdownComponent } from './common/layout/header/dropdown/dropdown.component';
 import { DialogModule } from './common/modules/dialog/dialog.module';
 import { LoadingModule } from './common/modules/loading/loading.module';
 import { FirecoreModule } from './common/modules/firecore/firecore.module';
-import { LinkmapComponent } from './common/linkmap/linkmap.component';
+import { LinkmapComponent } from './common/utilities/linkmap/linkmap.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +50,6 @@ import { LinkmapComponent } from './common/linkmap/linkmap.component';
     SwipeDirective,
     DropdownDirective,
     FilterPipe,
-    DropdownComponent,
     LinkmapComponent
   ],
   imports: [

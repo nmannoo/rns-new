@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SliderCard } from '../classes/slider-card';
+import { SliderCard } from '../../classes/slider-card';
 
 @Component({
   selector: 'app-slider-card',

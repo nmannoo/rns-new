@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SnackbarComponent } from '../../snackbar/snackbar.component';
+import { SnackbarComponent } from '../../utilities/snackbar/snackbar.component';
 import { SnackbarService } from '../../services/snackbar.service';
 
 @NgModule({

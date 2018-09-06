@@ -2,7 +2,7 @@ import { Directive, OnInit, Input, ElementRef } from '@angular/core';
 
 import { MDCDialog } from '@material/dialog';
 
-import { PlatformService } from '../services/platform.service';
+import { PlatformService } from '../../services/platform.service';
 
 @Directive({
   // tslint:disable-next-line:directive-selector

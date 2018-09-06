@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DialogComponent } from '../../dialog/dialog.component';
-import { DialogDirective } from '../../dialog/dialog.directive';
+import { DialogComponent } from '../../utilities/dialog/dialog.component';
+import { DialogDirective } from '../../utilities/dialog/dialog.directive';
 
 @NgModule({
   imports: [

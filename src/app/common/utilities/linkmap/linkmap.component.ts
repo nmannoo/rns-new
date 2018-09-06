@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlatformService } from '../services/platform.service';
+import { PlatformService } from '../../services/platform.service';
 
 import { mapConfig } from './map.config';
 
