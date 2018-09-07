@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 400 125" style="enable-background:new 0 0 400 125;" xml:space="preserve">
+	 viewBox="0 0 192 111" style="enable-background:new 0 0 192 111;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:#666666;stroke-width:6;stroke-dasharray:125.9336,56.9779;}
 </style>
-<rect class="st0" width="400" height="125"/>
-<circle class="st1" cx="200" cy="62.5" r="28">
-<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0s" calcMode="linear" dur="1s" fill="remove" keyTimes="0;1" repeatCount="indefinite" restart="always" type="rotate" values="0 200 62.5;360 200 62.5">
+<rect class="st0" width="192" height="111"/>
+<circle class="st1" cx="96" cy="55.5" r="24">
+<animateTransform  accumulate="none" additive="replace" attributeName="transform" begin="0s" calcMode="linear" dur="1s" fill="remove" keyTimes="0;1" repeatCount="indefinite" restart="always" type="rotate" values="0 96 55.5;360 96 55.5">
 	</animateTransform>
 </circle>
 </svg>
