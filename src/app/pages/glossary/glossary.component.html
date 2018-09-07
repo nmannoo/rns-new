@@ -28,13 +28,18 @@
       </nav>
     </div>
 </div>
-<div class="row pb-4">
-  <div class="col-12">
-      <div [@flyIn]="searchString" class="position-relative">
-        <span *ngFor="let gloss of glossary | filter: searchString: 'name'; index as i;" class="d-block">
-          <strong>{{gloss.name | uppercase}}</strong>
-          <p>{{gloss.description}}</p>
-        </span>
-      </div>
+
+<loading *ngIf="showSpinner"></loading>
+
+<ng-container *ngIf="!showSpinner">
+  <div class="row pb-4">
+    <div class="col-12">
+        <div [@flyIn]="searchString" class="position-relative">
+          <span *ngFor="let gloss of glossary | filter: searchString: 'name'; index as i;" class="d-block">
+            <strong>{{gloss.name | uppercase}}</strong>
+            <p>{{gloss.description}}</p>
+          </span>
+        </div>
+    </div>
   </div>
-</div>
+</ng-container>

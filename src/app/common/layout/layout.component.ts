@@ -3,13 +3,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PlatformService } from '../services/platform.service';
 import { CookieService } from '../services/cookie.service';
 
-import { fadeAnimation } from '../classes/animations';
+import { fadeAnimation, slideAnimation } from '../classes/animations';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
-  animations: [ fadeAnimation ]
+  animations: [ fadeAnimation, slideAnimation ]
 })
 export class LayoutComponent implements OnInit, OnDestroy {
 

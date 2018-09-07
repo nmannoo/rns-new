@@ -23,6 +23,28 @@ trigger('fadeAnimation', [
     ])
 ]);
 
+export const slideAnimation =
+trigger('slideAnimation', [
+  transition('* <=> *', [
+    style({ height: '!' }),
+    query(':enter', [
+      style({ transform: 'translateX(100%)' })
+    ], { optional: true }),
+    query(':enter, :leave', [
+      style({ position: 'absolute', top: 0, left: 0, right: 0 })
+    ], { optional: true }),
+    group([
+      query(':leave', [
+          animate('0.3s cubic-bezier(.35,0,.25,1)', style({ transform: 'translateX(-100%)' })),
+      ], { optional: true }),
+      // and now reveal the enter
+      query(':enter', [
+        animate('0.3s cubic-bezier(.35,0,.25,1)', style({ transform: 'translateX(0)' }))
+      ], { optional: true }),
+    ]),
+  ])
+]);
+
 export const flyInAnimation =
 trigger('flyIn', [
   transition('* <=> *', [ // each time the binding value changes

@@ -15,7 +15,7 @@ import { AuthGuard } from '../../guard/auth.guard';
     CommonModule,
     AngularFireModule.initializeApp(environment.firebase, 'rollnsheet'),
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
   ],
   declarations: [],
   providers: [

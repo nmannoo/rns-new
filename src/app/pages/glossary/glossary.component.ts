@@ -11,13 +11,17 @@ import { flyInAnimation } from '../../common/classes/animations';
 })
 export class GlossaryComponent implements OnInit {
   public glossary: any;
-  public searchString: string;
+  // tslint:disable-next-line:no-inferrable-types
+  public searchString: string = '';
   public alphabets: any;
+
+  showSpinner = true;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.getContent().subscribe(data => {
+      this.showSpinner = false;
       this.glossary = data;
     });
     this.searchString = 'a';
