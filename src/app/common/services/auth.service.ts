@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
-import * as firebase from 'firebase/app';
 
 import { Users, User } from '../classes/users';
 
@@ -95,12 +94,11 @@ export class AuthService {
   }
 
   private updateUserData(user) {
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc<User>(`users/${user.uid}`);
 
     const data: User = {
       uid: user.uid,
-      email: user.email,
-      role: 'admin'
+      email: user.email
     };
 
     return userRef.set(data, { merge: true });

@@ -12,7 +12,7 @@ import { PlatformService } from '../../services/platform.service';
 import { SearchService } from '../../services/search.service';
 import { LoadingService } from '../../services/loading.service';
 
-import { Observable, Subject, of, combineLatest } from 'rxjs';
+import { Observable, BehaviorSubject, of, combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -25,14 +25,8 @@ export class HeaderComponent implements OnInit {
   public child;
   public nav: any = Navigation;
 
-  private startAt = new Subject<string>();
-  private endAt = new Subject<string>();
-
-  // tslint:disable-next-line:no-inferrable-types
-  private lastKeypress: number = 0;
-
+  private startAt = new BehaviorSubject<string>('');
   private startObs = this.startAt.asObservable();
-  private endObs = this.endAt.asObservable();
 
   public searchResults = [];
 
@@ -102,28 +96,6 @@ export class HeaderComponent implements OnInit {
       });
     }
   }
-
-  // searchAuto($event: any) {
-  //   const el = <HTMLElement>$event.target;
-
-  //   if ($event.timeStamp - this.lastKeypress > 500) {
-  //     if ($event.target.value !== '') {
-  //       const q = $event.target.value;
-  //       this.startAt.next(q);
-  //       this.endAt.next(q + '\uf8ff');
-
-  //       combineLatest(this.startObs, this.endObs).subscribe((value) => {
-  //         this.search.searchQuery(value[0], value[1]).subscribe(data => {
-  //           this.searchResults = this.parseBlock(data);
-  //           console.log(this.searchResults);
-  //         });
-  //       });
-  //     } else {
-  //       this.searchResults = [];
-  //     }
-  //   }
-  //   this.lastKeypress = $event.timeStamp;
-  // }
 
   searchAuto($event: any) {
     if ($event.target.value !== '') {

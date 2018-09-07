@@ -7,7 +7,7 @@ import { MDCDialog } from '@material/dialog';
 
 import { PlatformService } from '../../common/services/platform.service';
 import { ContactService } from '../../common/services/contact.service';
-import { ContactForm } from '../../common/classes/forms';
+import { Contact } from '../../common/classes/content';
 
 import { environment } from '../../../environments/environment';
 
