@@ -1,24 +1,31 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { Router, Params, ActivatedRoute } from '@angular/router';
 
 import { ContentService } from '../../common/services/content.service';
 import { SliderService } from '../../common/services/slider.service';
+import { PlatformService } from '../../common/services/platform.service';
+
 import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-prodcat',
   templateUrl: './prodcat.component.html',
   styleUrls: ['./prodcat.component.scss']
 })
-export class ProdcatComponent implements OnInit, OnDestroy {
+export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
   public params: any;
   public sliderdata: any;
   public state: string;
 
   public posts: any;
 
+  private id: string;
+
   // Subscriptions
   private slidesData: Subscription;
+
+  private count;
 
   showSpinner = true;
 
@@ -26,7 +33,8 @@ export class ProdcatComponent implements OnInit, OnDestroy {
     private router: Router,
     private route: ActivatedRoute,
     private content: ContentService,
-    private slider: SliderService
+    private slider: SliderService,
+    private platform: PlatformService
   ) {
     this.route.params.subscribe(data => {
       this.state = data['child'];
@@ -41,6 +49,11 @@ export class ProdcatComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.slidesData.unsubscribe();
+    clearTimeout(this.count);
+  }
+
+  ngAfterViewInit() {
+
   }
 
   getPageData() {
@@ -64,8 +77,26 @@ export class ProdcatComponent implements OnInit, OnDestroy {
       this.content.fetchProdbyChild().subscribe(data => {
         this.posts = data;
         this.showSpinner = false;
+        this.count = setTimeout(() => {
+          this.scrollTo();
+          clearTimeout(this.count);
+        }, 500);
       });
     });
+  }
+
+  scrollTo() {
+    this.route.queryParams
+      .pipe(filter(params => params.id))
+      .subscribe(params => {
+        if (this.platform.platformCheck) {
+          if (params) {
+            const el = document.getElementById(`${params.id}`);
+            el.scrollIntoView({ behavior: 'smooth' });
+            el.parentElement.classList.add('anim');
+          }
+        }
+      });
   }
 
 }

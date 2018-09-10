@@ -123,4 +123,8 @@ export const AdminNavigation = [
     slug: '/admin/sliders',
     name: 'Sliders'
   },
+  // {
+  //   slug: '/admin/users',
+  //   name: 'Users'
+  // }
 ];

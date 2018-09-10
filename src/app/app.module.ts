@@ -12,9 +12,9 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './common/layout/layout.component';
-import { HeaderComponent } from './common/layout/header/header.component';
-import { FooterComponent } from './common/layout/footer/footer.component';
+import { MainComponent } from './common/layout/main/main.component';
+import { HeaderComponent } from './common/layout/main/header/header.component';
+import { FooterComponent } from './common/layout/main/footer/footer.component';
 import { SliderComponent } from './common/utilities/slider/slider.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -35,7 +35,7 @@ import { LinkmapComponent } from './common/utilities/linkmap/linkmap.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
+    MainComponent,
     HeaderComponent,
     FooterComponent,
     SliderComponent,

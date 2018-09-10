@@ -6,11 +6,11 @@ import { MDCList } from '@material/list';
 import { MDCRipple } from '@material/ripple';
 import { MDCLinearProgress, MDCLinearProgressFoundation } from '@material/linear-progress';
 
-import { Navigation } from '../../classes/navigation';
+import { Navigation } from '../../../classes/navigation';
 
-import { PlatformService } from '../../services/platform.service';
-import { SearchService } from '../../services/search.service';
-import { LoadingService } from '../../services/loading.service';
+import { PlatformService } from '../../../services/platform.service';
+import { SearchService } from '../../../services/search.service';
+import { LoadingService } from '../../../services/loading.service';
 
 import { Observable, BehaviorSubject, of, combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -112,7 +112,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  parseBlock(data: any[]) {
+  parseBlock(data: any[]): any[] {
     // tslint:disable-next-line:curly
     if (!data) return null;
 

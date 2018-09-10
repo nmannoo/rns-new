@@ -1,17 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { PlatformService } from '../services/platform.service';
-import { CookieService } from '../services/cookie.service';
+import { PlatformService } from '../../services/platform.service';
+import { CookieService } from '../../services/cookie.service';
 
-import { fadeAnimation, slideAnimation } from '../classes/animations';
+import { fadeAnimation, slideAnimation } from '../../classes/animations';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
   animations: [ fadeAnimation, slideAnimation ]
 })
-export class LayoutComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit, OnDestroy {
 
   constructor(
     private cookie: CookieService,

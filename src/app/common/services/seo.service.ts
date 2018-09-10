@@ -35,19 +35,19 @@ export class SeoService {
   ssrFirestoreDoc(path: string) {
     const exists = this.state.get(PAGE_KEY, {} as any);
     this.pagesData = this.afs.doc<any>(path).valueChanges()
-        .pipe(
-          tap(page => {
-            if (page) {
-              this.state.set(PAGE_KEY, page);
-              this.meta.generateTags({
-                title: this.title + ' | ' + page.title,
-                description: page.description,
-                keywords: page.keywords
-              });
-            }
-          }),
-          startWith(exists)
-        );
+      .pipe(
+        tap(page => {
+          if (page) {
+            this.state.set(PAGE_KEY, page);
+            this.meta.generateTags({
+              title: this.title + ' | ' + page.title,
+              description: page.description,
+              keywords: page.keywords
+            });
+          }
+        }),
+        startWith(exists)
+      );
     return this.pagesData;
   }
 }

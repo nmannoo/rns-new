@@ -6,9 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import { AdminComponent } from '../../../pages/admin/admin.component';
-import { AdminLayoutComponent } from '../../admin-layout/admin-layout.component';
-import { AdminHeaderComponent } from '../../admin-layout/admin-header/admin-header.component';
-import { AdminFooterComponent } from '../../admin-layout/admin-footer/admin-footer.component';
+import { AdminLayoutComponent } from '../../layout/admin/admin-layout.component';
+import { AdminHeaderComponent } from '../../layout/admin/admin-header/admin-header.component';
+import { AdminFooterComponent } from '../../layout/admin/admin-footer/admin-footer.component';
 import { ProductsComponent } from '../../../pages/admin/products/products.component';
 import { PagesComponent } from '../../../pages/admin/pages/pages.component';
 import { SlidersComponent } from '../../../pages/admin/sliders/sliders.component';
@@ -21,6 +21,7 @@ import { FirecoreModule } from '../firecore/firecore.module';
 import { AuthGuard } from '../../guard/auth.guard';
 import { SnackbarModule } from '../snackbar/snackbar.module';
 import { SanitizePipe } from '../../pipes/sanitize.pipe';
+import { UsersComponent } from '../../../pages/admin/users/users.component';
 
 
 const adminroutes: Routes = [
@@ -43,6 +44,10 @@ const adminroutes: Routes = [
       {
         path: 'sliders',
         component: SlidersComponent
+      },
+      {
+        path: 'users',
+        component: UsersComponent
       }
     ],
     canActivate: [AuthGuard]
@@ -70,7 +75,8 @@ const adminroutes: Routes = [
     SortPipe,
     PagesComponent,
     SlidersComponent,
-    SanitizePipe
+    SanitizePipe,
+    UsersComponent
   ],
   providers: [
     AuthGuard
