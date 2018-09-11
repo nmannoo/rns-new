@@ -5,7 +5,7 @@ import { ContentService } from '../../common/services/content.service';
 import { SliderService } from '../../common/services/slider.service';
 import { PlatformService } from '../../common/services/platform.service';
 
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -80,7 +80,7 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
         this.count = setTimeout(() => {
           this.scrollTo();
           clearTimeout(this.count);
-        }, 500);
+        }, 1000);
       });
     });
   }
@@ -92,8 +92,10 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
         if (this.platform.platformCheck) {
           if (params) {
             const el = document.getElementById(`${params.id}`);
-            el.scrollIntoView({ behavior: 'smooth' });
-            el.parentElement.classList.add('anim');
+            if (el !== null) {
+              el.scrollIntoView({ behavior: 'smooth' });
+              el.parentElement.classList.add('anim');
+            }
           }
         }
       });

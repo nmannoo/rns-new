@@ -12,8 +12,8 @@ import { PlatformService } from '../../../services/platform.service';
 import { SearchService } from '../../../services/search.service';
 import { LoadingService } from '../../../services/loading.service';
 
-import { Observable, BehaviorSubject, of, combineLatest } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Observable, BehaviorSubject, fromEvent, of } from 'rxjs';
+import { filter, delay, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -66,6 +66,27 @@ export class HeaderComponent implements OnInit {
       }
 
       const navRespButton = new MDCRipple(document.querySelector('.rns-menu-button'));
+
+      const searchField = <HTMLInputElement>document.querySelector('input[type="search"]');
+
+      fromEvent(searchField, 'blur').subscribe(() => {
+        searchField.placeholder = 'Search for products...';
+        if (searchField.value.trim().length > 0) {
+          searchField.classList.add('unBlurred-value');
+          of(true).pipe(
+            delay(1000),
+            tap(() => {
+              this.searchResults = [];
+            })
+          );
+        } else {
+          searchField.classList.remove('unBlurred-value');
+        }
+      });
+
+      fromEvent(searchField, 'focus').subscribe(() => {
+        searchField.placeholder = '';
+      });
     }
   }
 

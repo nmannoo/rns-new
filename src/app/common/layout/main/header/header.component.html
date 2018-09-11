@@ -74,19 +74,17 @@
               </ul>
           </nav>
           <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
-              <form id="search" class="input-group mb-4 d-flex h-100" style="align-items: center" autocomplete="off">
-                  <input (keydown)="searchAuto($event)" type="text" id="searchform" name="searchform" class="form-control" placeholder="Search for products..." aria-label="Search for products..." aria-describedby="button-addon2" autocomplete="off" #search>
-                  <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="submit" id="button-addon2" disabled>
-                          <i class="material-icons">search</i>
-                      </button>
-                  </div>
-                </form>
+            <ng-container>
+              <form id="search" class="search-form mb-4 d-flex w-100 h-100" style="align-items: center" autocomplete="off">
+                <input (keydown)="searchAuto($event)" type="search" id="search" name="search" class="form-control" autocomplete="off" placeholder="Search for products..." #search>
+                <label for="search">
+                </label>
+              </form>
               <div *ngIf="search.value !== '' && searchResults?.length > 0" id="search-dropdown" class="position-absolute">
                 <ul>
                   <ng-container *ngFor="let res of searchResults; index as i;">
                     <li>
-                      <a (click)="resetSearch()" [routerLink]="['/' + res.blocktitle + '/' + res.category]" [queryParams]="{ id: res.name }">
+                      <a (click)="resetSearch()" [routerLink]="['/' + res.blocktitle + '/' + res.category]" [queryParams]="{ id: res.name }" style="font-size: 13px;">
                         {{res.fullname}}
                       </a>
                     </li>
@@ -97,6 +95,7 @@
                   </li>
                 </ul>
               </div>
+            </ng-container>
           </div>
       </div>
     </header>
