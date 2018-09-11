@@ -2,7 +2,7 @@
     "name": "RollnSheet",
     "short_name": "RollnSheet",
     "theme_color": "#0c127e",
-    "background_color": "#ffffff",
+    "background_color": "#0c127e",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
