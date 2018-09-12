@@ -37,8 +37,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.routeget.unsubscribe();
-    this.pageview.unsubscribe();
+
   }
 
   scrollTop() {
