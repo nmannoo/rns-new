@@ -60,16 +60,32 @@ app.set('views', join(DIST_FOLDER, APP_NAME));
 
 // Static Assets
 app.use('/', express.static(join(DIST_FOLDER, APP_NAME), {
-  dotfiles: 'allow'
+  dotfiles: 'allow',
+  maxAge: 86400000,
+  setHeaders: function(res, path) {
+    res.setHeader('Expires', new Date(Date.now() + 2592000000 * 30).toUTCString());
+  }
 }));
 app.use('/assets/images', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'images'), {
-  index: false
+  index: false,
+  maxAge: 86400000,
+  setHeaders: function(res, path) {
+    res.setHeader('Expires', new Date(Date.now() + 2592000000 * 30).toUTCString());
+  }
 }));
 app.use('/assets/icons', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'icons'), {
-  index: false
+  index: false,
+  maxAge: 86400000,
+  setHeaders: function(res, path) {
+    res.setHeader('Expires', new Date(Date.now() + 2592000000 * 30).toUTCString());
+  }
 }));
 app.use('/assets/data', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'data'), {
-  index: false
+  index: false,
+  maxAge: 86400000,
+  setHeaders: function(res, path) {
+    res.setHeader('Expires', new Date(Date.now() + 2592000000 * 30).toUTCString());
+  }
 }));
 
 // Router Configs
