@@ -129,7 +129,7 @@ app.post('/email', bodyParser.json(), (req, res) => {
         });
 });
 
-app.post('/upload', (req, res) => {
+app.post('/upload', (req: any, res: any) => {
   if (req.files) {
     const file = req.files.file,
           filename = file.name;
