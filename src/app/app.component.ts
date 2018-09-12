@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 import { PlatformService } from './common/services/platform.service';
 import { SeoService } from './common/services/seo.service';
 
+import { Subscription } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
@@ -13,8 +14,11 @@ import { environment } from '../environments/environment';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'Roll n Sheet Ltd';
+
+  private routeget: Subscription;
+  private pageview: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,8 +36,13 @@ export class AppComponent implements OnInit {
     this.sendPageView();
   }
 
+  ngOnDestroy() {
+    this.routeget.unsubscribe();
+    this.pageview.unsubscribe();
+  }
+
   scrollTop() {
-    this.router.events.subscribe((evt) => {
+    this.routeget = this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
@@ -61,7 +70,7 @@ export class AppComponent implements OnInit {
 
   sendPageView() {
     if (this.platform.platformCheck) {
-      this.router.events.subscribe(event => {
+      this.pageview = this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           if (environment.production) {
             (window as any).ga('set', 'page', event.urlAfterRedirects);
