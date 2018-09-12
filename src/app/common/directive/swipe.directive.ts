@@ -32,7 +32,8 @@ export class SwipeDirective implements OnInit {
 
       // disable pause on hover carousel
       $(carousel).carousel({
-        pause: false
+        pause: false,
+        interval: 7000
       });
 
       // behavior functions on swipe

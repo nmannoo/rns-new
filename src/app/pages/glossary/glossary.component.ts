@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { flyInAnimation } from '../../common/classes/animations';
+
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-glossary',
@@ -9,7 +11,7 @@ import { flyInAnimation } from '../../common/classes/animations';
   styleUrls: ['./glossary.component.scss'],
   animations: [ flyInAnimation ]
 })
-export class GlossaryComponent implements OnInit {
+export class GlossaryComponent implements OnInit, OnDestroy {
   public glossary: any;
   // tslint:disable-next-line:no-inferrable-types
   public searchString: string = '';
@@ -17,15 +19,21 @@ export class GlossaryComponent implements OnInit {
 
   showSpinner = true;
 
+  private content: Subscription;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getContent().subscribe(data => {
+    this.content = this.getContent().subscribe(data => {
       this.showSpinner = false;
       this.glossary = data;
     });
     this.searchString = 'a';
     this.alphabets = this.genCharArray('a', 'z');
+  }
+
+  ngOnDestroy() {
+    this.content.unsubscribe();
   }
 
   getContent() {
