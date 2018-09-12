@@ -59,10 +59,18 @@ app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, APP_NAME));
 
 // Static Assets
-app.use('/', express.static(join(DIST_FOLDER, APP_NAME), { dotfiles: 'allow' }));
-app.use('/assets/images', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'images'), { index: false }));
-app.use('/assets/icons', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'icons'), { index: false }));
-app.use('/assets/data', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'data'), { index: false }));
+app.use('/', express.static(join(DIST_FOLDER, APP_NAME), {
+  dotfiles: 'allow'
+}));
+app.use('/assets/images', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'images'), {
+  index: false
+}));
+app.use('/assets/icons', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'icons'), {
+  index: false
+}));
+app.use('/assets/data', express.static(join(DIST_FOLDER, APP_NAME, 'assets', 'data'), {
+  index: false
+}));
 
 // Router Configs
 app.post('/email', bodyParser.json(), (req, res) => {

@@ -12,7 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   platformBrowserDynamic().bootstrapModule(AppModule)
     .then(() => {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/ngsw-worker.js');
+        navigator.serviceWorker.register('/ngsw-worker.js')
+          .then((data) => {
+            console.log('SW Registered');
+          })
+          .catch((err) => {
+            console.log('SW Not Registered: ' + err);
+          });
       }
     })
     .catch(err => console.log(err));
