@@ -20,7 +20,7 @@ import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 import { join } from 'path';
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4100;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 const APP_NAME = 'ng-rns';
 

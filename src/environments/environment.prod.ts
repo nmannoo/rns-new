@@ -14,7 +14,7 @@ export const environment = {
   },
   cookieConfig: {
     cookie: {
-      domain: 'localhost'
+      domain: 'rollnsheet.mu'
     },
     palette: {
       popup: {
