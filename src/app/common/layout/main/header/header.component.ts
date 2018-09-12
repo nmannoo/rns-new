@@ -73,12 +73,9 @@ export class HeaderComponent implements OnInit {
         searchField.placeholder = 'Search for products...';
         if (searchField.value.trim().length > 0) {
           searchField.classList.add('unBlurred-value');
-          of(true).pipe(
-            delay(1000),
-            tap(() => {
-              this.searchResults = [];
-            })
-          );
+          of(true).pipe(delay(100)).subscribe(() => {
+            this.searchResults = [];
+          });
         } else {
           searchField.classList.remove('unBlurred-value');
         }

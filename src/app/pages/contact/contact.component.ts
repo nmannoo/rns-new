@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit {
     if (this.platform.platformCheck) {
       const dialog = document.querySelector('.mdc-dialog');
       const mdcDialog = MDCDialog.attachTo(dialog);
-      this.contact.sendMail(this.contactForm.value).subscribe(
+      this.contact.sendMail(<Contact>this.contactForm.value).subscribe(
         (data) => {
           this.response = data;
           mdcDialog.show();

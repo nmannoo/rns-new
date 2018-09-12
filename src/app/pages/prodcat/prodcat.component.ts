@@ -5,8 +5,8 @@ import { ContentService } from '../../common/services/content.service';
 import { SliderService } from '../../common/services/slider.service';
 import { PlatformService } from '../../common/services/platform.service';
 
-import { Subscription, Observable } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Subscription, Observable, of } from 'rxjs';
+import { filter, delay, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-prodcat',
@@ -24,8 +24,10 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Subscriptions
   private slidesData: Subscription;
+  private pageData: Subscription;
+  private productsData: Subscription;
 
-  private count;
+  private count: Subscription;
 
   showSpinner = true;
 
@@ -49,7 +51,9 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy() {
     this.slidesData.unsubscribe();
-    clearTimeout(this.count);
+    this.pageData.unsubscribe();
+    this.productsData.unsubscribe();
+    this.count.unsubscribe();
   }
 
   ngAfterViewInit() {
@@ -58,7 +62,7 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getPageData() {
     this.route.params.forEach((params: Params) => {
-      this.content.fetchContent().subscribe(data => {
+      this.pageData = this.content.fetchContent().subscribe(data => {
         this.params = data;
       });
     });
@@ -74,13 +78,12 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getProducts() {
     this.route.params.forEach((params: Params) => {
-      this.content.fetchProdbyChild().subscribe(data => {
+      this.productsData = this.content.fetchProdbyChild().subscribe(data => {
         this.posts = data;
         this.showSpinner = false;
-        this.count = setTimeout(() => {
+        this.count = of(true).pipe(delay(700)).subscribe(() => {
           this.scrollTo();
-          clearTimeout(this.count);
-        }, 1000);
+        });
       });
     });
   }
