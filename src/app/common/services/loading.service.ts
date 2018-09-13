@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationError, NavigationEnd, ActivatedRoute } from '@angular/router';
 
-
-
 @Injectable({
   providedIn: 'root'
 })

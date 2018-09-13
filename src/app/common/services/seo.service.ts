@@ -8,7 +8,7 @@ import { MetadataService } from './metadata.service';
 import { Observable } from 'rxjs';
 import { startWith, tap } from 'rxjs/operators';
 
-const PAGE_KEY = makeStateKey<any>('pages');
+const PAGE_KEY: StateKey<string> = makeStateKey<any>('pages');
 
 @Injectable({
   providedIn: 'root'

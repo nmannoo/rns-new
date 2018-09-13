@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, Data } from '@angular/router';
 
 import { PlatformService } from './common/services/platform.service';
 import { SeoService } from './common/services/seo.service';
 
-import { Subscription } from 'rxjs';
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { Subscription, BehaviorSubject } from 'rxjs';
+import { filter, map, mergeMap, switchMap } from 'rxjs/operators';
 
-import { environment } from '../environments/environment';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -20,17 +20,30 @@ export class AppComponent implements OnInit, OnDestroy {
   private routeget: Subscription;
   private pageview: Subscription;
 
+  child = new BehaviorSubject<string>('');
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private platform: PlatformService,
     private seo: SeoService,
   ) {
-
+    router.events
+      .pipe(filter(evt => evt instanceof NavigationEnd))
+      .subscribe((evt) => {
+        let r = this.route;
+        // tslint:disable-next-line:curly
+        while (r.firstChild) r = r.firstChild;
+        r.params.subscribe(params => {
+          if (params['child']) {
+            this.child.next(params['child']);
+          }
+        });
+      });
   }
 
   ngOnInit() {
-    this.updateMetadata();
+    this.updateMetadata().subscribe();
     this.scrollTop();
     this.initGAnalytics();
     this.sendPageView();
@@ -81,7 +94,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   updateMetadata() {
-    this.router.events.pipe(
+    return this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
       map(() => this.route),
       map((route) => {
@@ -90,24 +103,17 @@ export class AppComponent implements OnInit, OnDestroy {
         return route;
       }),
       filter((route) => route.outlet === 'primary'),
-      mergeMap((route) => route.data)
-    ).subscribe((event) => {
-      if (event.state !== undefined) {
-        this.seo.ssrFirestoreDoc(`pages/${event.state}`).subscribe();
-      } else {
-        this.router.events.pipe(
-          filter(evt => evt instanceof NavigationEnd)
-        ).subscribe((evt) => {
-          let r = this.route;
-          // tslint:disable-next-line:curly
-          while (r.firstChild) r = r.firstChild;
-          r.params.subscribe(params => {
-            const child = params['child'];
-            this.seo.ssrFirestoreDoc(`pages/${child}`).subscribe();
-          });
-        });
-      }
-    });
+      mergeMap((route) => route.data),
+      switchMap((event: Data) => {
+        if (event !== undefined) {
+          if (event.state !== undefined) {
+            return this.seo.ssrFirestoreDoc(`pages/${event.state}`);
+          } else {
+            return this.seo.ssrFirestoreDoc(`pages/${this.child.value}`);
+          }
+        }
+      })
+    );
   }
 
 

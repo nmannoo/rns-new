@@ -5,7 +5,7 @@ import * as firebase from 'firebase';
 
 import { PlatformService } from '../services/platform.service';
 
-import { environment } from '../../../environments/environment';
+import { environment } from '@environments/environment';
 
 import { Observable, from, of } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
