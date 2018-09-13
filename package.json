@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "build:ssr": "ng build --prod && ng run ng-rns:server && npm run webpack:server",
     "serve:ssr": "node dist/ng-rns/server.js",
-    "webpack:server": "webpack --config webpack.server.config.js"
+    "webpack:server": "webpack --config webpack.server.config.js",
+    "push": "git add . && git commit -m \"new commit\" && git push origin master"
   },
   "private": true,
   "dependencies": {
