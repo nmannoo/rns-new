@@ -29,16 +29,26 @@ export class AppComponent implements OnInit, OnDestroy {
     private seo: SeoService,
   ) {
     router.events
-      .pipe(filter(evt => evt instanceof NavigationEnd))
-      .subscribe((evt) => {
-        let r = this.route;
-        // tslint:disable-next-line:curly
-        while (r.firstChild) r = r.firstChild;
-        r.params.subscribe(params => {
-          if (params['child']) {
-            this.child.next(params['child']);
-          }
-        });
+      .pipe(
+        filter(evt => evt instanceof NavigationEnd),
+        map(() => this.route),
+        map((rt) => {
+          // tslint:disable-next-line:curly
+          while (rt.firstChild) rt = rt.firstChild;
+          return rt;
+        }),
+        map((r) => {
+          const rt = r.params;
+          return rt;
+        }),
+        switchMap((params) => {
+           return params;
+        })
+      )
+      .subscribe((params) => {
+        if (params['child']) {
+          this.child.next(params['child']);
+        }
       });
   }
 
