@@ -56,6 +56,12 @@ label {
   padding-top: 75px;
 }
 
+@media (min-width: 1200px) {
+  main#main-content {
+    padding: 0px 15px;
+  }
+}
+
 /* Input */
 
 .form-control {

@@ -12,13 +12,13 @@
       </div>
 
       <div class="d-none d-md-block col-md-4 text-center">
-          <i class="material-icons mr-2">location_on</i> <span class="d-none d-lg-inline"><strong>Address:</strong>&nbsp;Le Hochet, </span>Terre Rouge, Mauritius
+          <i class="material-icons mr-2">location_on</i> <span class="d-none d-lg-inline"><strong>Address:</strong>&nbsp;<span id="address">Le Hochet, </span></span>Terre Rouge, Mauritius
       </div>
       <div class="d-none d-md-block col-md-4 text-center">
-          <i class="material-icons mr-2">phone</i> <span class="d-none d-lg-inline"><strong>Telephone:</strong>&nbsp;</span>+ 230 249 3003<span class="d-none d-lg-inline"> / <strong>Fax:</strong> + 230 249 2634</span>
+          <i class="material-icons mr-2">phone</i> <span class="d-none d-lg-inline"><strong>Telephone:</strong>&nbsp;</span>+ 230 249 3003<span id="fax" class="d-none d-lg-inline"> / <strong>Fax:</strong> + 230 249 2634</span>
       </div>
       <div class="d-none d-md-block col-md-4 text-center">
-          <i class="material-icons mr-2">mail_outline</i> <span><strong class="d-none d-lg-inline">E-mail address:</strong>&nbsp;</span><a href="mailto:marketing@rollnsheet.mu">marketing@rollnsheet.mu</a>
+          <i class="material-icons mr-2">mail_outline</i> <span><strong class="d-none d-lg-inline">E-mail<span id="email" style="font-weight: inherit"> address</span>:</strong>&nbsp;</span><a href="mailto:marketing@rollnsheet.mu">marketing@rollnsheet.mu</a>
       </div>
       <div class="d-block d-md-none col text-center">
           <i class="material-icons mr-2">phone</i> <strong>Contact us on:</strong> + 230 249 3003
@@ -73,7 +73,7 @@
                 </ng-container>
               </ul>
           </nav>
-          <div class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
+          <div id="search-section" class="d-none d-md-none d-lg-flex flex-fill flex-lg-shrink-1 position-relative">
             <ng-container>
               <form id="search" class="search-form mb-4 d-flex w-100 h-100" style="align-items: center" autocomplete="off">
                 <input (keydown)="searchAuto($event)" type="search" id="search" name="search" class="form-control" autocomplete="off" placeholder="Search for products..." #search>

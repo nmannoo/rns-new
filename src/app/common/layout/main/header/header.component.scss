@@ -1,0 +1,9 @@
+@media (min-width: 991px) and (max-width: 1160px) {
+    span#fax, span#email, span#address {
+        display: none !important;
+    }
+
+    #search-section {
+        display: none !important;
+    }
+}
