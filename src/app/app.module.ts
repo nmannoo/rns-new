@@ -8,7 +8,7 @@ import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsen
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
-import { environment } from '@environments/environment';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

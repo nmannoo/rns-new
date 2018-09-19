@@ -26,7 +26,7 @@ trigger('fadeAnimation', [
 export const slideAnimation =
 trigger('slideAnimation', [
   transition('* <=> *', [
-    style({ height: '!' }),
+    style({ height: '!', paddingTop: '80px' }),
     query(':enter', [
       style({ transform: 'translateX(100%)' })
     ], { optional: true }),

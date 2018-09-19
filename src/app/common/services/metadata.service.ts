@@ -3,7 +3,7 @@ import { Meta, Title } from '@angular/platform-browser';
 
 import { PlatformService } from '../services/platform.service';
 
-import { environment } from '@environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

@@ -7,7 +7,7 @@ import { SeoService } from './common/services/seo.service';
 import { Subscription, BehaviorSubject } from 'rxjs';
 import { filter, map, mergeMap, switchMap } from 'rxjs/operators';
 
-import { environment } from '@environments/environment';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',

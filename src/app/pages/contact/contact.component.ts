@@ -9,7 +9,7 @@ import { PlatformService } from '../../common/services/platform.service';
 import { ContactService } from '../../common/services/contact.service';
 import { Contact } from '../../common/classes/content';
 
-import { environment } from '@environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
