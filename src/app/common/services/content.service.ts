@@ -44,6 +44,7 @@ export class ContentService {
   // Content
 
   fetchContent() {
+    // get content
     this.pageContent = this.afs.collection('pages').doc(`${this.child}`);
     this.pageData = this.pageContent.snapshotChanges().pipe(
       map(a => {
