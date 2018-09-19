@@ -2,7 +2,7 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
 
 export const fadeAnimation =
 trigger('fadeAnimation', [
-    transition('* <=> *', [
+    transition('* => *', [
         query(':enter', [
             style({ opacity: 0 })
         ],
