@@ -40,7 +40,7 @@
             </app-dialog>
         </div>
         <div class="card-body p-0">
-          <table cdk-table [dataSource]="dataSource$" class="table table-prods">
+          <table cdk-table [dataSource]="dataSource$" [trackBy]="trackByFn" class="table table-prods">
             <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
             <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
 
@@ -78,7 +78,7 @@
               <td cdk-cell *cdkCellDef="let row; index as i;" style="font-size: 13px;">
                 <button (click)="switchData(row, i)" class="mdc-button" dialog="{{row.id}}">Edit</button>
                 <button (click)="delete(row)" class="mdc-button">Delete</button>
-                <app-dialog (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.id}}" [title]="'Edit Product: ' + row.pagename" accept="Save" cancel="Cancel">
+                <app-dialog *ngIf="images" (onAccept)="update()" (onCancel)="cancelEdit()" dialogID="{{row.id}}" [title]="'Edit Product: ' + row.pagename" accept="Save" cancel="Cancel">
                   <form [formGroup]="editForm" class="row" autocomplete="off" [attr.id]="'editForm' + i">
                     <div class="col-12">
                       <div class="form-group my-2 mdc-text-field w-100">

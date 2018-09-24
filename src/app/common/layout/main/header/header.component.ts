@@ -13,7 +13,7 @@ import { SearchService } from '../../../services/search.service';
 import { LoadingService } from '../../../services/loading.service';
 
 import { Observable, BehaviorSubject, fromEvent, of } from 'rxjs';
-import { filter, delay, tap } from 'rxjs/operators';
+import { filter, delay, tap, map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -25,8 +25,8 @@ export class HeaderComponent implements OnInit {
   public child;
   public nav: any = Navigation;
 
-  private startAt = new BehaviorSubject<string>('');
-  private startObs = this.startAt.asObservable();
+  private startAt: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private startObs: Observable<string> = this.startAt.asObservable();
 
   public searchResults = [];
 
@@ -38,15 +38,20 @@ export class HeaderComponent implements OnInit {
     private router: Router
   ) {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        let r = this.route;
-        // tslint:disable-next-line:curly
-        while (r.firstChild) r = r.firstChild;
-        r.params.subscribe(params => {
-          this.parent = params['parent'];
-          this.child = params['child'];
-        });
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.route),
+        map((r) => {
+          // tslint:disable-next-line:curly
+          while (r.firstChild) r = r.firstChild;
+          return r;
+        }),
+        map(r => r.params),
+        switchMap((params) => params)
+      )
+      .subscribe((params) => {
+        this.parent = params['parent'];
+        this.child = params['child'];
       });
   }
 

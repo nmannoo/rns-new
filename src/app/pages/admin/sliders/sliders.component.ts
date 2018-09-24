@@ -60,6 +60,10 @@ export class SlidersComponent implements OnInit {
     this.materialButtons();
   }
 
+  trackByFn(index, item) {
+    return index;
+  }
+
   // Material Design
 
   materialButtons() {

@@ -17,9 +17,6 @@ import { environment } from '../environments/environment';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'Roll n Sheet Ltd';
 
-  private routeget: Subscription;
-  private pageview: Subscription;
-
   child = new BehaviorSubject<string>('');
 
   constructor(
@@ -37,13 +34,8 @@ export class AppComponent implements OnInit, OnDestroy {
           while (rt.firstChild) rt = rt.firstChild;
           return rt;
         }),
-        map((r) => {
-          const rt = r.params;
-          return rt;
-        }),
-        switchMap((params) => {
-           return params;
-        })
+        map(r => r.params),
+        switchMap((params) => params)
       )
       .subscribe((params) => {
         if (params['child']) {
@@ -64,7 +56,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   scrollTop() {
-    this.routeget = this.router.events.subscribe((evt) => {
+    this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
@@ -92,7 +84,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   sendPageView() {
     if (this.platform.platformCheck) {
-      this.pageview = this.router.events.subscribe(event => {
+      this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           if (environment.production) {
             (window as any).ga('set', 'page', event.urlAfterRedirects);

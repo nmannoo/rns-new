@@ -104,4 +104,8 @@ export class ProdcatComponent implements OnInit, OnDestroy, AfterViewInit {
       });
   }
 
+  trackByFn(index, item) {
+    return index;
+  }
+
 }

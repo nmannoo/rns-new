@@ -59,6 +59,10 @@ export class PagesComponent implements OnInit {
     this.materialButtons();
   }
 
+  trackByFn(index, item) {
+    return index;
+  }
+
   // Material Design
 
   materialButtons() {

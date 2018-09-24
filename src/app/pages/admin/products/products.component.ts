@@ -76,6 +76,10 @@ export class ProductsComponent implements OnInit {
     this.materialButtons();
   }
 
+  trackByFn(index, item) {
+    return index;
+  }
+
   materialButtons() {
     if (this.platform.platformCheck) {
       const buttons = document.querySelectorAll('.mdc-button');

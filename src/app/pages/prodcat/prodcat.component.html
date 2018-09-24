@@ -15,10 +15,10 @@
     </div>
   </ng-container>
   <ng-container *ngIf="posts?.length > 0; else nocontent">
-    <ng-container *ngFor="let post of posts; index as i;">
+    <ng-container *ngFor="let post of posts; index as i; trackBy: trackByFn">
         <ng-container *ngIf="post.blocktitle !== posts[i+1]?.blocktitle">
             <div class="row py-2">
-                <ng-container *ngFor="let post2 of posts; index as j;">
+                <ng-container *ngFor="let post2 of posts; index as j; trackBy: trackByFn">
                     <ng-container *ngIf="post.blocktitle === post2.blocktitle">
                         <div class="col-12 col-sm-6 mb-3 half-gutter">
                             <app-slider-card (click)="scrollTo()" [elId]="post2.name" [post]="post2.images" [bg-post]="post2" [name]="post2.fullname"></app-slider-card>

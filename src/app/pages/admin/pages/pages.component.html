@@ -35,7 +35,7 @@
             </app-dialog>
         </div>
         <div class="card-body p-0">
-          <table cdk-table [dataSource]="dataSource$" class="table table-hover table-prods">
+          <table cdk-table [dataSource]="dataSource$" [trackBy]="trackByFn" class="table table-hover table-prods">
             <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
             <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
 
