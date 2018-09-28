@@ -6,7 +6,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { AuthService } from '../services/auth.service';
 
 import { Observable, from } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 
 import { Content } from '../classes/content';
 import * as firebase from 'firebase';
@@ -28,16 +28,23 @@ export class ContentService {
 
   constructor(private afs: AngularFirestore, private auth: AuthService, private route: ActivatedRoute, private router: Router) {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        let r = this.route;
-        while (r.firstChild) {
-          r = r.firstChild;
-        }
-        r.params.subscribe(params => {
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.route),
+        map((r) => {
+          while (r.firstChild) {
+            r = r.firstChild;
+          }
+          return r.params;
+        }),
+        switchMap((parObs) => {
+          const param = parObs;
+          return param;
+        })
+      )
+      .subscribe((params) => {
           this.parent = params['parent'];
           this.child = params['child'];
-        });
       });
   }
 
