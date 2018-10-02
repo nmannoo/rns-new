@@ -125,10 +125,12 @@ export class HeaderComponent implements OnInit {
       const q = $event.target.value;
       this.startAt.next(q);
 
-      this.startObs.subscribe((value) => {
-        this.search.searchQuery(value).subscribe((responses) => {
-          this.searchResults = this.parseBlock(responses.hits);
-        });
+      this.startObs.pipe(
+        switchMap((value) => {
+          return this.search.searchQuery(value);
+        })
+      ).subscribe((responses) => {
+        this.searchResults = this.parseBlock(responses.hits);
       });
     } else {
       this.searchResults = [];

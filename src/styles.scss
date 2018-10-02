@@ -380,17 +380,26 @@ nav#mainmenu ul li.dropdown.show a.dropdown-toggle {
 }
 
 nav#mainmenu ul li.dropdown .dropdown-menu {
-    width: 100%;
-    margin-top: 0px;
-    border-radius: 0px;
-    padding: 0;
-    border: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    padding-bottom: 0px !important;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+  background-color: #fff;
+  // background: url('/assets/images/banner.jpg') no-repeat;
+  // background-size: cover;
+  // background-position: bottom;
+  border-radius: 0px;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  margin-top: 0px;
+  margin-right: 29px;
+  margin-left: 40px;
+  overflow: hidden;
 }
+
+// nav#mainmenu ul li.dropdown .dropdown-menu .row div a {
+//   height: auto;
+//   font-size: 16.5px;
+//   color: #0c127e;
+// }
 
 nav#mainmenu ul li.dropdown .dropdown-menu img {
     width: 100%;
@@ -399,6 +408,7 @@ nav#mainmenu ul li.dropdown .dropdown-menu img {
 }
 
 nav#mainmenu ul li.dropdown .dropdown-menu a.dropdown-item {
+    font-size: 16.5px;
     color: #252525;
 }
 

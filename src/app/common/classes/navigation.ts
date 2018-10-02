@@ -77,6 +77,10 @@ export const Navigation = [
                 slug: '/envelopes',
                 name: 'Envelopes'
             },
+            {
+              slug: '/thermal',
+              name: 'Thermal Paper'
+            },
 
         ]
     },
@@ -90,14 +94,11 @@ export const Navigation = [
                 slug: '/cake-boards',
                 name: 'Cake Boards'
             },
-            {
-                slug: '/plastic-film',
-                name: 'Plastic Film'
-            },
-            {
-              slug: '/thermal',
-              name: 'Thermal'
-            },
+            // {
+            //     slug: '/plastic-film',
+            //     name: 'Plastic Film'
+            // },
+
         ]
     },
     {

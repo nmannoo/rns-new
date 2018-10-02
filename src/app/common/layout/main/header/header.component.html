@@ -42,7 +42,7 @@
                     <a [routerLink]="(nav.slug && !nav.children) ? nav.slug : null" [routerLinkActive]="!nav?.children ? 'active': 'drop'" [routerLinkActiveOptions]="{exact: true}" [attr.id]="nav.children ? nav?.prefix + 'dropdown' : null" class="menu-item" [class.dropdown-toggle]="nav?.children" [attr.data-toggle]="nav.children ? 'dropdown' : null" role="button" [attr.aria-haspopup]="nav.children ? 'true' : null" [class.active]="nav?.children && nav.prefix === parent" [attr.aria-expanded]="nav.children ? 'false' : null" dropdown>
                       {{nav.name}}
                     </a>
-                    <div *ngIf="nav.children" class="dropdown-menu row py-2" [attr.aria-labelledby]="nav?.prefix + 'dropdown'">
+                    <div *ngIf="nav.children" class="dropdown-menu row pt-2 pb-0 w-auto" [attr.aria-labelledby]="nav?.prefix + 'dropdown'">
                         <div class="d-flex flex-column px-3 float-left w-25">
                             <ng-container *ngFor="let subnav of nav?.children; index as in;">
                                 <a *ngIf="in + 1 <= 3" [routerLink]="nav.routeprefix + subnav.slug" class="dropdown-item">
@@ -67,8 +67,10 @@
                         <div class="d-flex flex-column px-3 float-right" style="width: 15%;">
                             <img src="assets/images/dropdown/{{nav?.prefix}}_dp.png" class="mt-0 position-relative">
                         </div>
-                        <img src="assets/images/dropdown/{{nav?.prefix}}_dd.png" onerror="this.src = 'assets/images/dropdown/ph_16x1.png'">
+                        <!-- <img src="assets/images/dropdown/{{nav?.prefix}}_dd.png" onerror="this.src = 'assets/images/dropdown/ph_16x1.png'"> -->
+                        <img class="img-fluid" src="assets/images/dropdown/ph_16x1.png" style="height: 0;">
                     </div>
+
                   </li>
                 </ng-container>
               </ul>

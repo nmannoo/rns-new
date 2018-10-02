@@ -31,7 +31,7 @@ export class SearchService {
 
       const index = client.initIndex('dev_PRODS');
       this.algosearch = from(index.search(query)).pipe(
-        debounceTime(2000)
+        debounceTime(1200)
       );
       return this.algosearch;
     } else {
