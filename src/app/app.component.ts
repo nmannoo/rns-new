@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, NavigationEnd, Data } from '@angular/router';
 import { PlatformService } from './common/services/platform.service';
 import { SeoService } from './common/services/seo.service';
 
-import { Subscription, BehaviorSubject } from 'rxjs';
+import { Subscription, BehaviorSubject, of } from 'rxjs';
 import { filter, map, mergeMap, switchMap } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
@@ -110,8 +110,10 @@ export class AppComponent implements OnInit, OnDestroy {
         if (event !== undefined) {
           if (event.state !== undefined) {
             return this.seo.ssrFirestoreDoc(`pages/${event.state}`);
-          } else {
+          } else if (this.child.value === '') {
             return this.seo.ssrFirestoreDoc(`pages/${this.child.value}`);
+          } else {
+            return of(null);
           }
         }
       })

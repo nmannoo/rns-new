@@ -64,7 +64,7 @@
         </p>
       </ng-container>
       <div class="form-group w-100 mt-3">
-        <ngx-recaptcha2 [size]="size" [hl]="lang" [theme]="theme" [type]="type" (success)="handleSuccess($event)" formControlName="recaptcha"></ngx-recaptcha2>
+        <ngx-recaptcha2 [siteKey]="siteKey" [size]="size" [hl]="lang" [theme]="theme" [type]="type" (success)="handleSuccess($event)" formControlName="recaptcha"></ngx-recaptcha2>
       </div>
       <div class="form-group mt-4">
         <button mdc-button raised="true" type="submit" class="mdc-button mdc-button--raised parrot-button" [disabled]="!contactForm.valid ? 'true': null">
@@ -79,7 +79,8 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.1174918544816!2d57.532569799362314!3d-20.139058756965625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c511288475d27%3A0xa0b092f643e83c89!2sRoll+n+Sheet+Ltd!5e0!3m2!1sfr!2smu!4v1534416851169" width="100%" height="370" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="card-body">
-        <h4 class="rns-heading-blue text-left mb-3">Roll <span class="red">n</span> Sheet Ltd</h4>
+        <!-- <h4 class="rns-heading-blue text-left mb-3">Roll <span class="red">n</span> Sheet Ltd</h4> -->
+        <img width="200px" src="/assets/images/logo.png" alt="Logo" class="position-relative mb-3">
         <p class="rns-body-text-lg" style="line-height: 24px;">
           Avenue des Kerries,<br>
           Morc Raffray,<br>

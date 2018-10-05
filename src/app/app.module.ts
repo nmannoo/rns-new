@@ -32,6 +32,8 @@ import { LoadingModule } from './common/modules/loading/loading.module';
 import { FirecoreModule } from './common/modules/firecore/firecore.module';
 import { LinkmapComponent } from './common/utilities/linkmap/linkmap.component';
 
+import { SanitizeModule } from './common/modules/sanitize/sanitize.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,10 +66,9 @@ import { LinkmapComponent } from './common/utilities/linkmap/linkmap.component';
     NgcCookieConsentModule.forRoot(<NgcCookieConsentConfig>environment.cookieConfig),
     DialogModule,
     LoadingModule,
-    NgxCaptchaModule.forRoot({
-      reCaptcha2SiteKey: environment.reCAPTCHA.siteKey
-    }),
-    LazyLoadImagesModule
+    NgxCaptchaModule,
+    LazyLoadImagesModule,
+    SanitizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

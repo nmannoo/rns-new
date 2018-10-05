@@ -20,7 +20,8 @@ import { FirecoreModule } from '../firecore/firecore.module';
 
 import { AuthGuard } from '../../guard/auth.guard';
 import { SnackbarModule } from '../snackbar/snackbar.module';
-import { SanitizePipe } from '../../pipes/sanitize.pipe';
+import { SanitizeModule } from '../sanitize/sanitize.module';
+
 import { UsersComponent } from '../../../pages/admin/users/users.component';
 
 
@@ -64,7 +65,8 @@ const adminroutes: Routes = [
     CdkTableModule,
     DialogModule,
     LoadingModule,
-    SnackbarModule
+    SnackbarModule,
+    SanitizeModule
   ],
   declarations: [
     AdminComponent,
@@ -75,7 +77,7 @@ const adminroutes: Routes = [
     SortPipe,
     PagesComponent,
     SlidersComponent,
-    SanitizePipe,
+    // SanitizePipe,
     UsersComponent
   ],
   providers: [
