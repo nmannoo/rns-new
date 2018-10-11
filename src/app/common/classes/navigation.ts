@@ -19,7 +19,7 @@ export const Navigation = [
             },
             {
                 slug: '/folding-boxboard',
-                name: 'Folding Boxboard'
+                name: 'Folding Box Board'
             },
             {
                 slug: '/coated-paper',

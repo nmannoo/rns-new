@@ -110,10 +110,8 @@ export class AppComponent implements OnInit, OnDestroy {
         if (event !== undefined) {
           if (event.state !== undefined) {
             return this.seo.ssrFirestoreDoc(`pages/${event.state}`);
-          } else if (this.child.value === '') {
-            return this.seo.ssrFirestoreDoc(`pages/${this.child.value}`);
           } else {
-            return of(null);
+            return this.seo.ssrFirestoreDoc(`pages/${this.child.value}`);
           }
         }
       })
